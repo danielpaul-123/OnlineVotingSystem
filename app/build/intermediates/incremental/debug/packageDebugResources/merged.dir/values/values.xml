@@ -37,6 +37,7 @@
     <string name="google_app_id" translatable="false">1:281761267368:android:d53817db12303512f40c9d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCto-GlG38BVFjM4S1iENIRwK0uxE41bO4</string>
     <string name="google_storage_bucket" translatable="false">election-online-prj.appspot.com</string>
+    <string name="login">login</string>
     <string name="project_id" translatable="false">election-online-prj</string>
     <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         

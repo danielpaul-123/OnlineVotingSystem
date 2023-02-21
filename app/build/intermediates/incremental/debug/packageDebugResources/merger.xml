@@ -15,7 +15,7 @@
         <item>@font/acme</item>
         <item>@font/open_sans_light</item>
         <item>@font/open_sans_semibold</item>
-    </array></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Online Voting System</string></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values\styles.xml" qualifiers=""><style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </array></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Online Voting System</string><string name="login">login</string></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values\styles.xml" qualifiers=""><style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="windowActionBar">false</item>
@@ -36,7 +36,7 @@
         
         <item name="android:statusBarColor">#3A3A3A</item>
         
-    </style></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values-night\strings.xml" qualifiers="night-v8"><string name="login">login</string></file><file path="E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

@@ -14,7 +14,7 @@
             android:layout_height="65dp"
             android:backgroundTint="#314977"
             android:fontFamily="@font/abeezee"
-            android:text="login"
+            android:text="@string/login"
             android:textColor="#FFFFFF"
             android:textSize="22sp"
             app:cornerRadius="25dp"

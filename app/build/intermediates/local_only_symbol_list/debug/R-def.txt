@@ -49,6 +49,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string login
 string project_id
 style DemoTheme
 style Theme.OnlineVotingSystem
