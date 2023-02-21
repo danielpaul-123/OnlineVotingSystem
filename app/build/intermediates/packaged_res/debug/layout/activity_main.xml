@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loginpage"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="170dp"
+            android:layout_height="65dp"
+            android:backgroundTint="#314977"
+            android:fontFamily="@font/abeezee"
+            android:text="login"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.765" />
+
+        <EditText
+            android:id="@+id/voterid"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_corner"
+            android:drawableLeft="@drawable/baseline_remember_me_24"
+            android:ems="10"
+            android:hint="  Voter's ID"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#B3AEAE"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.42" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_corner"
+            android:drawableLeft="@drawable/baseline_key_24"
+            android:ems="10"
+            android:hint="  Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColorHint="#B3AEAE"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.628" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_corner"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:ems="10"
+            android:hint="  User name"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textColorHint="#B3AEAE"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.524" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.105"
+            app:srcCompat="@drawable/icon_foreground_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

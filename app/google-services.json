@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "281761267368",
+    "firebase_url": "https://election-online-prj-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "election-online-prj",
+    "storage_bucket": "election-online-prj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281761267368:android:6fe95cc900a928bdf40c9d",
+        "android_client_info": {
+          "package_name": "com.project.onlineelection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCto-GlG38BVFjM4S1iENIRwK0uxE41bO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281761267368:android:d53817db12303512f40c9d",
+        "android_client_info": {
+          "package_name": "com.project.onlinevotingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCto-GlG38BVFjM4S1iENIRwK0uxE41bO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

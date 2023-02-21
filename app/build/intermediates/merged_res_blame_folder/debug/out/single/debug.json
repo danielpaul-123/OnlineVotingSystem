@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-hdpi_icon_round.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-hdpi/icon_round.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xxhdpi_icon.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xxhdpi/icon.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/xml_backup_rules.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/anim_fade_in.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/anim_fade_out.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-hdpi_icon.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_rounded_corner.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/rounded_corner.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xxxhdpi_icon.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xxxhdpi/icon.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_bg_gradient.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/bg_gradient.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_open_sans_light.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/open_sans_light.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/layout_activity_main.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_baseline_remember_me_24.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/baseline_remember_me_24.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/layout_activity_splash.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_actor.ttf.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/actor.ttf"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_advent_pro_bold.ttf.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/advent_pro_bold.ttf"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_abeezee.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/abeezee.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xxxhdpi_icon_round.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xxxhdpi/icon_round.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_baseline_person_24.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/baseline_person_24.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_open_sans_semibold.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/open_sans_semibold.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xxhdpi_icon_round.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xxhdpi/icon_round.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_baseline_key_24.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/baseline_key_24.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_advent_pro_thin.ttf.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/advent_pro_thin.ttf"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xhdpi_icon.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xhdpi/icon.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_icon_foreground_login.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/icon_foreground_login.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-mdpi_icon_round.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-mdpi/icon_round.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-mdpi_icon.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-mdpi/icon.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_acme.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/acme.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/xml_data_extraction_rules.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-xhdpi_icon_round.png.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-xhdpi/icon_round.png"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-anydpi-v26_icon_round.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-anydpi-v26/icon_round.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_icon_foreground.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/icon_foreground.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/mipmap-anydpi-v26_icon.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/mipmap-anydpi-v26/icon.xml"
+    }
+]
