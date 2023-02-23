@@ -29,6 +29,7 @@ font advent_pro_bold
 font advent_pro_thin
 font open_sans_light
 font open_sans_semibold
+id electionlinear
 id electionscroll
 id imageView
 id loginbutton

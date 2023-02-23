@@ -1,6 +1,7 @@
 package com.project.onlinevotingsystem;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         electionview = findViewById(R.id.electionlinear);
         read();
     }
+    @SuppressLint("SetTextI18n")
     private void read(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference collectionRef = db.collection("Election_Data");
@@ -35,23 +37,30 @@ public class HomeActivity extends AppCompatActivity {
                 date = documentSnapshot.getString("Date");
 
                 LinearLayout linearLayout = new LinearLayout(this);
+
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
-                linearLayout.setLayoutParams(new LinearLayout.LayoutParams(
+
+                LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+                layoutParams1.setMargins(0,10,0,10);
+
+                linearLayout.setLayoutParams(layoutParams1);
 
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(this);
                 nameview.setText(name);
+                nameview.setTextSize(20);
                 nameview.setLayoutParams(new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
                 linearLayout.addView(nameview);
 
                 TextView dateview = new TextView(this);
-                dateview.setText(date);
+                dateview.setText("Date:"+date);
+                dateview.setTextSize(20);
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
                 linearLayout.addView(dateview);
 
