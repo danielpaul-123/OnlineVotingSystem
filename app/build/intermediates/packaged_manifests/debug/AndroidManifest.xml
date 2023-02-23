@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.OnlineVotingSystem" >
         <activity
+            android:name="com.project.onlinevotingsystem.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.project.onlinevotingsystem.SplashActivity"
             android:exported="true" >
             <intent-filter>
@@ -42,8 +45,7 @@
         </activity>
         <activity
             android:name="com.project.onlinevotingsystem.MainActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
+            "outputFile": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-31:\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\themes.xml",
@@ -71,6 +71,74 @@
                         "startOffsets": "727,802,913,1002,1103,1210,1317,1416,1523,1626,1714,1838,1940,2042,2158,2260,2374,2502,2618,2740,2876,2996,3130,3250,3362,4148,4265,4389,4519,4641,4779,4913,5029",
                         "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "797,908,997,1098,1205,1312,1411,1518,1621,1709,1833,1935,2037,2153,2255,2369,2497,2613,2735,2871,2991,3125,3245,3357,3483,4260,4384,4514,4636,4774,4908,5024,5144"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "36",
+                        "startColumns": "4",
+                        "startOffsets": "3554",
+                        "endLines": "48",
+                        "endColumns": "12",
+                        "endOffsets": "4120"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\7fc5a28e9b3439055681e2452656b3d1\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,49",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "161,231,315,399,495,597,699,4125",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "226,310,394,490,592,694,788,4209"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\strings.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "98,-1",
+                        "endColumns": "65,-1",
+                        "endOffsets": "159,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,39",
+                        "endOffsets": "116,156"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\f9c28eb245f4c8bc1c8af3a3eff5b023\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,50,51,52,53,54,55,56,57",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "793,868,979,1068,1169,1276,1383,1482,1589,1692,1780,1904,2006,2108,2224,2326,2440,2568,2684,2806,2942,3062,3196,3316,3428,4214,4331,4455,4585,4707,4845,4979,5095",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "863,974,1063,1164,1271,1378,1477,1584,1687,1775,1899,2001,2103,2219,2321,2435,2563,2679,2801,2937,3057,3191,3311,3423,3549,4326,4450,4580,4702,4840,4974,5090,5210"
                     }
                 }
             ]

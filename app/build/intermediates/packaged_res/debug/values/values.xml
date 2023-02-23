@@ -31,6 +31,7 @@
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Online Voting System</string>
     <string name="default_web_client_id" translatable="false">281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com</string>
+    <string name="electionscrollview">electionScrollView</string>
     <string name="firebase_database_url" translatable="false">https://election-online-prj-default-rtdb.asia-southeast1.firebasedatabase.app</string>
     <string name="gcm_defaultSenderId" translatable="false">281761267368</string>
     <string name="google_api_key" translatable="false">AIzaSyCto-GlG38BVFjM4S1iENIRwK0uxE41bO4</string>

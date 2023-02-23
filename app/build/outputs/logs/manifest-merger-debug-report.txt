@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.google.android.material:material:1.8.0] E:\AndroidStudioGradle\caches\transforms-3\f9c28eb245f4c8bc1c8af3a3eff5b023\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] E:\AndroidStudioGradle\caches\transforms-3\0fbfde8a1145d3d69645a284c16bc2d9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] E:\AndroidStudioGradle\caches\transforms-3\34f2f08679cba25cde825a91c6feac06\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -55,27 +55,27 @@ MERGED from [androidx.print:print:1.0.0] E:\AndroidStudioGradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] E:\AndroidStudioGradle\caches\transforms-3\a1b22f2b00c84b59b593fe6023277808\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.50.2] E:\AndroidStudioGradle\caches\transforms-3\1ddc7b9e32653c573a88042b7cb2254a\transformed\grpc-android-1.50.2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] E:\AndroidStudioGradle\caches\transforms-3\cfb51d0d05fa3bf25aaa889bdd19e840\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.google.android.material:material:1.8.0] E:\AndroidStudioGradle\caches\transforms-3\f9c28eb245f4c8bc1c8af3a3eff5b023\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] E:\AndroidStudioGradle\caches\transforms-3\f9c28eb245f4c8bc1c8af3a3eff5b023\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] E:\AndroidStudioGradle\caches\transforms-3\0fbfde8a1145d3d69645a284c16bc2d9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -122,34 +122,40 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] E:\AndroidS
 		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:12:9-56
 	android:dataExtractionRules
 		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:7:9-65
+activity#com.project.onlinevotingsystem.HomeActivity
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:14:9-16:40
+	android:exported
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:16:13-37
+	android:name
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:15:13-41
 activity#com.project.onlinevotingsystem.SplashActivity
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:14:9-22:20
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:exported
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:16:13-36
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:15:13-43
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:18:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:23:27-74
 activity#com.project.onlinevotingsystem.MainActivity
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:24:9-27:20
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:26:9-28:49
 	android:exported
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:26:13-37
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:27:13-41
 meta-data#preloaded_fonts
-ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:29:9-31:57
+ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:30:9-32:57
 	android:resource
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:31:13-54
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:32:13-54
 	android:name
-		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:30:13-43
+		ADDED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:31:13-43
 uses-sdk
 INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml

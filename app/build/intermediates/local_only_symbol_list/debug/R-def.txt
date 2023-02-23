@@ -29,6 +29,7 @@ font advent_pro_bold
 font advent_pro_thin
 font open_sans_light
 font open_sans_semibold
+id electionscroll
 id imageView
 id loginbutton
 id loginpage
@@ -37,12 +38,14 @@ id logoRelativeView
 id password
 id username
 id voterid
+layout activity_home
 layout activity_main
 layout activity_splash
 mipmap icon
 mipmap icon_round
 string app_name
 string default_web_client_id
+string electionscrollview
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
