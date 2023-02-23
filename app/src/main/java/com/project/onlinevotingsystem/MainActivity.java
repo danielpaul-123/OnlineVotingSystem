@@ -2,6 +2,7 @@ package com.project.onlinevotingsystem;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -67,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
                         if(usrcheck && pswdcheck)
                         {
-                            Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
+                            Intent a = new Intent(MainActivity.this,HomeActivity.class);
+                            startActivity(a);
+                            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                            finish();
                         }
                         else
                         {
@@ -84,4 +88,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
