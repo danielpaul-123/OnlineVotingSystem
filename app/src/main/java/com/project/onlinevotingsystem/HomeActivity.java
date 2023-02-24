@@ -2,6 +2,8 @@ package com.project.onlinevotingsystem;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,31 +40,55 @@ public class HomeActivity extends AppCompatActivity {
 
                 LinearLayout linearLayout = new LinearLayout(this);
 
+                GradientDrawable shape = new GradientDrawable();
+                shape.setShape(GradientDrawable.RECTANGLE);
+                float[] cornerRadii = new float[] { 40, 40, 40, 40, 40, 40, 40, 40 };
+                shape.setCornerRadii(cornerRadii);
+                String colorhash = "#1FFFFFFF";
+                int colorint = Color.parseColor(colorhash);
+                shape.setColors(new int[]{colorint,colorint});
+
+                linearLayout.setPadding(20,10,20,10);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
 
                 LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
-                layoutParams1.setMargins(0,10,0,10);
+                layoutParams1.setMargins(0,20,0,40);
 
                 linearLayout.setLayoutParams(layoutParams1);
+                linearLayout.setBackground(shape);
 
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(this);
                 nameview.setText(name);
-                nameview.setTextSize(20);
+                nameview.setTextSize(30);
+                nameview.setTextColor(Color.WHITE);
+                nameview.setPadding(05,10,0,10);
                 nameview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
                 linearLayout.addView(nameview);
 
                 TextView dateview = new TextView(this);
-                dateview.setText("Date:"+date);
+                dateview.setText("On "+date);
                 dateview.setTextSize(20);
+                dateview.setTextColor(Color.WHITE);
+                dateview.setPadding(05,10,0,10);
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
                 linearLayout.addView(dateview);
+
+                TextView timeview = new TextView(this);
+                timeview.setText("From 09:00 AM to 03:00 PM");
+                timeview.setTextSize(20);
+                timeview.setTextColor(Color.WHITE);
+                timeview.setPadding(05,10,0,10);
+                timeview.setLayoutParams(new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                linearLayout.addView(timeview);
 
                 // Add the Linear Layout to the parent view
                 electionview.addView(linearLayout);

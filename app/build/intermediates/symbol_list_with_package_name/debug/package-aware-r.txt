@@ -2763,6 +2763,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dynamic_linearlayout_style
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -2779,6 +2780,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon_foreground
 drawable icon_foreground_login
+drawable linearlayoutbg
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password

@@ -48,6 +48,6 @@ public class SplashActivity extends AppCompatActivity {
 
 
         imageView.startAnimation(animationSet);
-        handler.postDelayed(runnable,1850);
+        handler.postDelayed(runnable,1800);
     }
 }

@@ -20,6 +20,10 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-hdpi\\icon.png"
     },
     {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_dynamic_linearlayout_style.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\drawable\\dynamic_linearlayout_style.xml"
+    },
+    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_open_sans_light.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\open_sans_light.xml"
     },
@@ -82,6 +86,10 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_icon_foreground.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\drawable\\icon_foreground.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_linearlayoutbg.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\drawable\\linearlayoutbg.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_baseline_key_24.xml.flat",
