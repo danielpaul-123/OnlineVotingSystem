@@ -15,7 +15,6 @@
         </item>
     </string-array>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/abeezee</item>
         <item>@font/acme</item>
         <item>@font/open_sans_light</item>
         <item>@font/open_sans_semibold</item>

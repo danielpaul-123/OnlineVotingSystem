@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
                 linearLayout.setLayoutParams(layoutParams1);
                 linearLayout.setBackground(shape);
 
-                Typeface textfont = Typeface.createFromFile("res\\font\\abeezee.ttf");
+                Typeface textfont = Typeface.createFromAsset(getAssets(),"abeezee.ttf");
 
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(this);
