@@ -64,12 +64,16 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-mdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\mipmap-mdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-mdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\layout_logout_confirm_popup.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\layout\\logout_confirm_popup.xml"
     },
     {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_abeezee.ttf.flat",
-        "source": "com.project.onlinevotingsystem.app-main-35:/font/abeezee.ttf"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_abeezee.ttf.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\abeezee.ttf"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\mipmap-mdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-mdpi\\icon.png"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_abeezee.xml.flat",
@@ -102,6 +106,10 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_actor.ttf.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\actor.ttf"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/layout_logout_confirm_popup.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/layout/logout_confirm_popup.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_rounded_corner.xml.flat",

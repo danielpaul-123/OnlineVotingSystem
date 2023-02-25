@@ -2,10 +2,11 @@ package com.project.onlinevotingsystem;
 
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ public class HomeActivity extends AppCompatActivity {
 
     String name,date;
     LinearLayout electionview;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +63,6 @@ public class HomeActivity extends AppCompatActivity {
                 linearLayout.setLayoutParams(layoutParams1);
                 linearLayout.setBackground(shape);
 
-                Typeface textfont = Typeface.createFromAsset(getAssets(),"abeezee.ttf");
-
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(this);
                 nameview.setText(name);
@@ -71,7 +72,6 @@ public class HomeActivity extends AppCompatActivity {
                 nameview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
-                nameview.setTypeface(textfont);
                 linearLayout.addView(nameview);
 
                 TextView dateview = new TextView(this);
@@ -82,7 +82,6 @@ public class HomeActivity extends AppCompatActivity {
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
-                dateview.setTypeface(textfont);
                 linearLayout.addView(dateview);
 
                 TextView timeview = new TextView(this);
@@ -93,15 +92,13 @@ public class HomeActivity extends AppCompatActivity {
                 timeview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
-                timeview.setTypeface(textfont);
                 linearLayout.addView(timeview);
 
                 // Add the Linear Layout to the parent view
                 electionview.addView(linearLayout);
 
-
-
             }
         }).addOnFailureListener(e -> Toast.makeText(HomeActivity.this,"Failed to Read Documents",Toast.LENGTH_LONG).show());
     }
+
 }
