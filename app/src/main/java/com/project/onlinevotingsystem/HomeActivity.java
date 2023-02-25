@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,8 +23,6 @@ public class HomeActivity extends AppCompatActivity {
     String name,date;
     LinearLayout electionview;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
 
         electionview = findViewById(R.id.electionlinear);
         read();
+
     }
     @SuppressLint("SetTextI18n")
     private void read(){
@@ -54,7 +54,11 @@ public class HomeActivity extends AppCompatActivity {
 
                 linearLayout.setPadding(20,10,20,10);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
+                linearLayout.setClickable(true);
 
+                linearLayout.setOnClickListener(v -> {
+
+                });
                 LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
