@@ -19,7 +19,6 @@ drawable baseline_key_24
 drawable baseline_person_24
 drawable baseline_remember_me_24
 drawable bg_gradient
-drawable dynamic_linearlayout_style
 drawable icon_foreground
 drawable icon_foreground_login
 drawable linearlayoutbg

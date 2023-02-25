@@ -3,6 +3,7 @@ package com.project.onlinevotingsystem;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -44,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
                 shape.setShape(GradientDrawable.RECTANGLE);
                 float[] cornerRadii = new float[] { 40, 40, 40, 40, 40, 40, 40, 40 };
                 shape.setCornerRadii(cornerRadii);
-                String colorhash = "#1FFFFFFF";
+                String colorhash = "#2FFFFFFF";
                 int colorint = Color.parseColor(colorhash);
                 shape.setColors(new int[]{colorint,colorint});
 
@@ -59,35 +60,40 @@ public class HomeActivity extends AppCompatActivity {
                 linearLayout.setLayoutParams(layoutParams1);
                 linearLayout.setBackground(shape);
 
+                Typeface textfont = Typeface.createFromFile("res\\font\\abeezee.ttf");
+
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(this);
                 nameview.setText(name);
                 nameview.setTextSize(30);
                 nameview.setTextColor(Color.WHITE);
-                nameview.setPadding(05,10,0,10);
+                nameview.setPadding(5,10,0,10);
                 nameview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
+                nameview.setTypeface(textfont);
                 linearLayout.addView(nameview);
 
                 TextView dateview = new TextView(this);
                 dateview.setText("On "+date);
                 dateview.setTextSize(20);
                 dateview.setTextColor(Color.WHITE);
-                dateview.setPadding(05,10,0,10);
+                dateview.setPadding(5,10,0,10);
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
+                dateview.setTypeface(textfont);
                 linearLayout.addView(dateview);
 
                 TextView timeview = new TextView(this);
                 timeview.setText("From 09:00 AM to 03:00 PM");
                 timeview.setTextSize(20);
                 timeview.setTextColor(Color.WHITE);
-                timeview.setPadding(05,10,0,10);
+                timeview.setPadding(5,10,0,10);
                 timeview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
+                timeview.setTypeface(textfont);
                 linearLayout.addView(timeview);
 
                 // Add the Linear Layout to the parent view

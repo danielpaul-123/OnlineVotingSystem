@@ -20,10 +20,6 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-hdpi\\icon.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_dynamic_linearlayout_style.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\drawable\\dynamic_linearlayout_style.xml"
-    },
-    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_open_sans_light.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\open_sans_light.xml"
     },
@@ -72,8 +68,8 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-mdpi\\icon.png"
     },
     {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/layout_activity_home.xml.flat",
-        "source": "com.project.onlinevotingsystem.app-main-35:/layout/activity_home.xml"
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/font_abeezee.ttf.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/font/abeezee.ttf"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_abeezee.xml.flat",
@@ -132,12 +128,12 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\open_sans_semibold.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\layout_activity_home.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\layout\\activity_home.xml"
-    },
-    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_advent_pro_bold.ttf.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\advent_pro_bold.ttf"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\layout_activity_home.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\layout\\activity_home.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\mipmap-xxhdpi_icon_round.png.flat",
