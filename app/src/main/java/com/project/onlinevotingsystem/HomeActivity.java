@@ -2,12 +2,9 @@ package com.project.onlinevotingsystem;
 
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         read();
 
     }
+
     @SuppressLint("SetTextI18n")
     private void read(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();

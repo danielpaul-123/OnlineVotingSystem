@@ -48,6 +48,10 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\mipmap-xxxhdpi\\icon_round.png"
     },
     {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/drawable_bg_gradient.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-35:/drawable/bg_gradient.xml"
+    },
+    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\anim_fade_out.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\anim\\fade_out.xml"
     },
@@ -106,10 +110,6 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\font_actor.ttf.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-35:\\font\\actor.ttf"
-    },
-    {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-33:/layout_logout_confirm_popup.xml.flat",
-        "source": "com.project.onlinevotingsystem.app-main-35:/layout/logout_confirm_popup.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-33:\\drawable_rounded_corner.xml.flat",
