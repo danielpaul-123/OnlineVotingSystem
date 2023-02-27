@@ -4,4 +4,5 @@
     <string name="electionscrollview">electionScrollView</string>
     <string name="change_password">Change Password</string>
     <string name="logout">Logout</string>
+    <string name="home">Home</string>
 </resources>

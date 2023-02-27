@@ -49,7 +49,61 @@
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         app:headerLayout="@layout/navigation_header"
-        app:footerLayout=""
-        android:layout_gravity="start" />
+        android:layout_gravity="start" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#838383"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="v1.35_alpha"
+                android:textColor="#838383"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Department of Computer Engineering"
+                android:textColor="#838383"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="MTI Thrissur"
+                android:textColor="#838383"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="All Rights Reserved"
+                android:textColor="#838383"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

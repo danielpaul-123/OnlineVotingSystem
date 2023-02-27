@@ -2,6 +2,7 @@
 <resources>
     <string name="change_password">Change Password</string>
     <string name="electionscrollview">electionScrollView</string>
+    <string name="home">Home</string>
     <string name="login">login</string>
     <string name="logout">Logout</string>
     <style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">

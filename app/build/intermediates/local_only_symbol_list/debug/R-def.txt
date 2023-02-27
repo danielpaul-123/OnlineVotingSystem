@@ -15,6 +15,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable baseline_cottage_24
 drawable baseline_key_24
 drawable baseline_logout_24
 drawable baseline_menu_24
@@ -37,6 +38,7 @@ id button_no
 id button_yes
 id change_password
 id change_username
+id home
 id imageView
 id loginbutton
 id loginpage
@@ -59,6 +61,7 @@ layout activity_main
 layout activity_navigation_home
 layout activity_splash
 layout logout_confirm_popup
+layout navigation_footer
 layout navigation_header
 menu navigation_menu
 mipmap icon
@@ -75,6 +78,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string home
 string login
 string logout
 string menu_gallery
