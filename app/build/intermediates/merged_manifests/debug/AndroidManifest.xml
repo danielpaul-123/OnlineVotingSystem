@@ -8,10 +8,11 @@
         android:minSdkVersion="28"
         android:targetSdkVersion="33" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
         android:name="com.project.onlinevotingsystem.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -32,7 +33,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.OnlineVotingSystem" >
         <activity
-            android:name="com.project.onlinevotingsystem.HomeActivity"
+            android:name="com.project.onlinevotingsystem.Navigation_HomeActivity"
             android:exported="false" />
         <activity
             android:name="com.project.onlinevotingsystem.SplashActivity"
@@ -58,6 +59,9 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
         <provider
@@ -77,6 +81,10 @@
             android:value="@integer/google_play_services_version" />
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.project.onlinevotingsystem.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.project.onlinevotingsystem.androidx-startup"
             android:exported="false" >
@@ -87,6 +95,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>

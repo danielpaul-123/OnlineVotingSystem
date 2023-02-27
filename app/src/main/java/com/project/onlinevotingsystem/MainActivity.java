@@ -68,7 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
                         if(usrcheck && pswdcheck)
                         {
-                            Intent a = new Intent(MainActivity.this,HomeActivity.class);
+                            Bundle userdata = new Bundle();
+                            userdata.putString("username",userName);
+                            userdata.putString("voterid",voterID);
+                            Intent a = new Intent(MainActivity.this,Navigation_HomeActivity.class);
+                            a.putExtra("userdatabundle",userdata);
                             startActivity(a);
                             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                             finish();

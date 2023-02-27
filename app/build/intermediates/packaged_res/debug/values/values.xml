@@ -28,7 +28,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="action_settings">Settings</string>
     <string name="app_name">Online Voting System</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_username">Change Username</string>
     <string name="default_web_client_id" translatable="false">281761267368-0o6kimevf1pmsl2je40clic7qb2ocmnu.apps.googleusercontent.com</string>
     <string name="electionscrollview">electionScrollView</string>
     <string name="firebase_database_url" translatable="false">https://election-online-prj-default-rtdb.asia-southeast1.firebasedatabase.app</string>
@@ -38,7 +41,18 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCto-GlG38BVFjM4S1iENIRwK0uxE41bO4</string>
     <string name="google_storage_bucket" translatable="false">election-online-prj.appspot.com</string>
     <string name="login">login</string>
+    <string name="logout">Logout</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="project_id" translatable="false">election-online-prj</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_navigation_menu">NavigationMenuActivity</string>
     <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
@@ -62,4 +76,10 @@
         <item name="android:statusBarColor">#3A3A3A</item>
         
     </style>
+    <style name="Theme.OnlineVotingSystem.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.OnlineVotingSystem.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.OnlineVotingSystem.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>
