@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_rights_reserved">All Rights Reserved</string>
     <string name="change_password">Change Password</string>
+    <string name="department_of_computer_engineering">Department of Computer Engineering</string>
     <string name="electionscrollview">electionScrollView</string>
     <string name="home">Home</string>
     <string name="login">login</string>
     <string name="logout">Logout</string>
+    <string name="mti_thrissur">MTI Thrissur</string>
+    <string name="v1_35_alpha">v1.35_alpha</string>
     <style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

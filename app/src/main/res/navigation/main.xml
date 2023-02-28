@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.project.onlinevotingsystem.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/change_username"
+        android:name="com.project.onlinevotingsystem.ChangeUsernameFragment"
+        android:label="Change Username"
+        tools:layout="@layout/fragment_change_username" />
+    <fragment
+        android:id="@+id/change_password"
+        android:name="com.project.onlinevotingsystem.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+
+</navigation>

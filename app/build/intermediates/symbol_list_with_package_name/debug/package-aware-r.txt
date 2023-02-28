@@ -1447,6 +1447,7 @@ color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color icon_background
+color lightgreytext
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3112,6 +3113,8 @@ id easeOut
 id east
 id edit_query
 id elastic
+id electionlinear
+id electionscroll
 id embed
 id end
 id endToStart
@@ -3190,6 +3193,7 @@ id logoRelativeView
 id logout
 id ltr
 id m3_side_sheet
+id main
 id marquee
 id masked
 id match_constraint
@@ -3262,6 +3266,7 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
+id navigation_host_fragment
 id navigationlayout
 id navigationtoolbar
 id never
@@ -3593,6 +3598,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_change_password
+layout fragment_change_username
+layout fragment_home
 layout logout_confirm_popup
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3645,7 +3653,6 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
-layout navigation_footer
 layout navigation_header
 layout notification_action
 layout notification_action_tombstone
@@ -3669,6 +3676,7 @@ layout support_simple_spinner_dropdown_item
 menu navigation_menu
 mipmap icon
 mipmap icon_round
+navigation main
 plurals mtrl_badge_content_description
 raw firebase_common_keep
 string abc_action_bar_home_description
@@ -3699,6 +3707,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string all_rights_reserved
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3734,6 +3743,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
 string define_roundedimageview
+string department_of_computer_engineering
 string electionscrollview
 string error_a11y_label
 string error_icon_content_description
@@ -3746,6 +3756,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home
 string icon_content_description
@@ -3797,6 +3808,7 @@ string material_timepicker_text_input_mode_description
 string menu_gallery
 string menu_home
 string menu_slideshow
+string mti_thrissur
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3881,6 +3893,7 @@ string side_sheet_behavior
 string status_bar_notification_info_overflow
 string title_activity_navigation
 string title_activity_navigation_menu
+string v1_35_alpha
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

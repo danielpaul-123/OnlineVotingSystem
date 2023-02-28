@@ -1446,6 +1446,7 @@ int color foreground_material_light 0x7f060067
 int color highlighted_text_material_dark 0x7f060068
 int color highlighted_text_material_light 0x7f060069
 int color icon_background 0x7f06006a
+int color lightgreytext 0x7f060292
 int color m3_appbar_overlay_color 0x7f06006b
 int color m3_assist_chip_icon_tint_color 0x7f06006c
 int color m3_assist_chip_stroke_color 0x7f06006d
@@ -3111,6 +3112,8 @@ int id easeOut 0x7f0a00b4
 int id east 0x7f0a00b5
 int id edit_query 0x7f0a00b6
 int id elastic 0x7f0a00b7
+int id electionlinear 0x7f0a021c
+int id electionscroll 0x7f0a021d
 int id embed 0x7f0a00b8
 int id end 0x7f0a00b9
 int id endToStart 0x7f0a00ba
@@ -3189,6 +3192,7 @@ int id logoRelativeView 0x7f0a0102
 int id logout 0x7f0a0103
 int id ltr 0x7f0a0104
 int id m3_side_sheet 0x7f0a0105
+int id main 0x7f0a021a
 int id marquee 0x7f0a0106
 int id masked 0x7f0a0107
 int id match_constraint 0x7f0a0108
@@ -3261,6 +3265,7 @@ int id navigation_bar_item_labels_group 0x7f0a014a
 int id navigation_bar_item_large_label_view 0x7f0a014b
 int id navigation_bar_item_small_label_view 0x7f0a014c
 int id navigation_header_container 0x7f0a014d
+int id navigation_host_fragment 0x7f0a021b
 int id navigationlayout 0x7f0a014e
 int id navigationtoolbar 0x7f0a014f
 int id never 0x7f0a0150
@@ -3592,6 +3597,9 @@ int layout design_navigation_menu 0x7f0d002b
 int layout design_navigation_menu_item 0x7f0d002c
 int layout design_text_input_end_icon 0x7f0d002d
 int layout design_text_input_start_icon 0x7f0d002e
+int layout fragment_change_password 0x7f0d0078
+int layout fragment_change_username 0x7f0d0079
+int layout fragment_home 0x7f0d007a
 int layout logout_confirm_popup 0x7f0d002f
 int layout m3_alert_dialog 0x7f0d0030
 int layout m3_alert_dialog_actions 0x7f0d0031
@@ -3644,7 +3652,6 @@ int layout mtrl_picker_text_input_date 0x7f0d005f
 int layout mtrl_picker_text_input_date_range 0x7f0d0060
 int layout mtrl_search_bar 0x7f0d0061
 int layout mtrl_search_view 0x7f0d0062
-int layout navigation_footer 0x7f0d0063
 int layout navigation_header 0x7f0d0064
 int layout notification_action 0x7f0d0065
 int layout notification_action_tombstone 0x7f0d0066
@@ -3668,6 +3675,7 @@ int layout support_simple_spinner_dropdown_item 0x7f0d0077
 int menu navigation_menu 0x7f0f0000
 int mipmap icon 0x7f100000
 int mipmap icon_round 0x7f100001
+int navigation main 0x7f170000
 int plurals mtrl_badge_content_description 0x7f110000
 int raw firebase_common_keep 0x7f120000
 int string abc_action_bar_home_description 0x7f130000
@@ -3698,6 +3706,7 @@ int string abc_shareactionprovider_share_with 0x7f130018
 int string abc_shareactionprovider_share_with_application 0x7f130019
 int string abc_toolbar_collapse_description 0x7f13001a
 int string action_settings 0x7f13001b
+int string all_rights_reserved 0x7f1300d2
 int string androidx_startup 0x7f13001c
 int string app_name 0x7f13001d
 int string appbar_scrolling_view_behavior 0x7f13001e
@@ -3733,6 +3742,7 @@ int string common_signin_button_text 0x7f13003b
 int string common_signin_button_text_long 0x7f13003c
 int string default_web_client_id 0x7f13003d
 int string define_roundedimageview 0x7f13003e
+int string department_of_computer_engineering 0x7f1300d3
 int string electionscrollview 0x7f13003f
 int string error_a11y_label 0x7f130040
 int string error_icon_content_description 0x7f130041
@@ -3745,6 +3755,7 @@ int string google_api_key 0x7f130047
 int string google_app_id 0x7f130048
 int string google_crash_reporting_api_key 0x7f130049
 int string google_storage_bucket 0x7f13004a
+int string hello_blank_fragment 0x7f1300d4
 int string hide_bottom_view_on_scroll_behavior 0x7f13004b
 int string home 0x7f1300d1
 int string icon_content_description 0x7f13004c
@@ -3796,6 +3807,7 @@ int string material_timepicker_text_input_mode_description 0x7f130079
 int string menu_gallery 0x7f13007a
 int string menu_home 0x7f13007b
 int string menu_slideshow 0x7f13007c
+int string mti_thrissur 0x7f1300d5
 int string mtrl_badge_numberless_content_description 0x7f13007d
 int string mtrl_checkbox_button_icon_path_checked 0x7f13007e
 int string mtrl_checkbox_button_icon_path_group_name 0x7f13007f
@@ -3880,6 +3892,7 @@ int string side_sheet_behavior 0x7f1300cd
 int string status_bar_notification_info_overflow 0x7f1300ce
 int string title_activity_navigation 0x7f1300cf
 int string title_activity_navigation_menu 0x7f1300d0
+int string v1_35_alpha 0x7f1300d6
 int style AlertDialog_AppCompat 0x7f140000
 int style AlertDialog_AppCompat_Light 0x7f140001
 int style Animation_AppCompat_Dialog 0x7f140002
