@@ -2791,6 +2791,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_account_circle_24
 drawable baseline_cottage_24
 drawable baseline_key_24
 drawable baseline_logout_24
@@ -2988,9 +2989,13 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_change_password_to_enternewpassword
+id action_change_username_to_enternewusername
 id action_container
 id action_context_bar
 id action_divider
+id action_home_to_change_password2
+id action_home_to_change_username2
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3063,6 +3068,7 @@ id closest
 id collapseActionView
 id compress
 id confirm_button
+id confirmnewpassword
 id constraint
 id container
 id content
@@ -3121,6 +3127,10 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id enternewpassword
+id enternewusername
+id enterpasswordlayout
+id enterusernamelayout
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3272,6 +3282,8 @@ id navigationtoolbar
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newpassword
+id newusername
 id noScroll
 id noState
 id none
@@ -3394,6 +3406,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id submitbutton
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3448,6 +3461,7 @@ id unlabeled
 id up
 id useLogo
 id username
+id usernameconfirm
 id usernameview
 id vertical_only
 id view_offset_helper
@@ -3600,6 +3614,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_change_password
 layout fragment_change_username
+layout fragment_enter_new_password
+layout fragment_enter_new_username
 layout fragment_home
 layout logout_confirm_popup
 layout m3_alert_dialog
@@ -3878,6 +3894,7 @@ string nav_header_subtitle
 string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3893,6 +3910,7 @@ string side_sheet_behavior
 string status_bar_notification_info_overflow
 string title_activity_navigation
 string title_activity_navigation_menu
+string user_name
 string v1_35_alpha
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

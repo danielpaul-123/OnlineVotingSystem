@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -24,8 +26,10 @@ public class Navigation_HomeActivity extends AppCompatActivity {
 
     DrawerLayout navigationlayout;
     RoundedImageView profile_image;
-    TextView usernameview,voteridview;
+    TextView usernameview,voteridview,title;
     NavigationView nav_menu;
+    static String voterid;
+    String username;
 
 
     @Override
@@ -34,8 +38,10 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation_home);
         navigationlayout = findViewById(R.id.navigationlayout);
         nav_menu = findViewById(R.id.nav_menu);
+        title = findViewById(R.id.apptitle);
         NavController navController = Navigation.findNavController(this,R.id.navigation_host_fragment);
         NavigationUI.setupWithNavController(nav_menu, navController);
+        navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> title.setText(navDestination.getLabel()));
 
         View view = nav_menu.inflateHeaderView(R.layout.navigation_header);
         profile_image = view.findViewById(R.id.profile_picture);
@@ -45,8 +51,9 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         Intent userdata = getIntent();
         Bundle userdatabundle = userdata.getBundleExtra("userdatabundle");
 
-        String username = userdatabundle.getString("username");
-        String voterid = userdatabundle.getString("voterid");
+        username = userdatabundle.getString("username");
+        voterid = userdatabundle.getString("voterid");
+
 
         usernameview.setText(username);
         voteridview.setText(voterid);
@@ -64,7 +71,10 @@ public class Navigation_HomeActivity extends AppCompatActivity {
 
         findViewById(R.id.menubutton).setOnClickListener(v -> navigationlayout.openDrawer(GravityCompat.START));
 
-
-
     }
+    public static String voteridreturn()
+    {
+        return voterid;
+    }
+
 }

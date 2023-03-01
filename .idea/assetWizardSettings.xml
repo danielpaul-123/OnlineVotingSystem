@@ -326,7 +326,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../AndroidStudioSDK/icons/material/materialicons/cottage/baseline_cottage_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../AndroidStudioSDK/icons/material/materialicons/account_circle/baseline_account_circle_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -337,7 +337,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="f1f1f1" />
-                            <entry key="outputName" value="baseline_cottage_24" />
+                            <entry key="outputName" value="baseline_account_circle_24" />
                             <entry key="sourceFile" value="E:\AndroidStudioProjects\OnlineVotingSystem" />
                           </map>
                         </option>

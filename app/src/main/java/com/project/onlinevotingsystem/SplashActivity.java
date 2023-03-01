@@ -28,26 +28,41 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         ImageView imageView = findViewById(R.id.logo);
-
         AnimationSet animationSet = new AnimationSet(true);
-
-        // Reduce the size of the image
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 0.9f, 1.0f, 0.9f,
-                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        scaleAnimation.setDuration(1000);
-        scaleAnimation.setStartOffset(100);
-        animationSet.addAnimation(scaleAnimation);
-
-        // Move the image to a specific position
-        TranslateAnimation translateAnimation = new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
-                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -0.5f);
-        translateAnimation.setDuration(1000);
-        translateAnimation.setStartOffset(1500);
-        animationSet.addAnimation(translateAnimation);
+        Thread animation = new Thread(new Runnable() {
+            @Override
+            public void run() {
 
 
-        imageView.startAnimation(animationSet);
-        handler.postDelayed(runnable,1800);
+                // Reduce the size of the image
+                ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 0.9f, 1.0f, 0.9f,
+                        Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                scaleAnimation.setDuration(1000);
+                scaleAnimation.setStartOffset(100);
+                animationSet.addAnimation(scaleAnimation);
+
+                // Move the image to a specific position
+
+            }
+        });
+        Thread animation2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                TranslateAnimation translateAnimation = new TranslateAnimation(
+                        Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                        Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -0.5f);
+                translateAnimation.setDuration(1000);
+                translateAnimation.setStartOffset(1500);
+                animationSet.addAnimation(translateAnimation);
+                imageView.startAnimation(animationSet);
+            }
+        });
+
+        Thread postdelay = new Thread(() -> handler.postDelayed(runnable,1900));
+
+        animation.start();
+        animation2.start();
+        postdelay.start();
+
     }
 }

@@ -7,4 +7,6 @@
     <string name="all_rights_reserved">All Rights Reserved</string>
     <string name="department_of_computer_engineering">Department of Computer Engineering</string>
     <string name="mti_thrissur">MTI Thrissur</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
 </resources>

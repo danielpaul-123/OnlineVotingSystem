@@ -1,12 +1,27 @@
 package com.project.onlinevotingsystem;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
+
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,9 +35,7 @@ public class ChangeUsernameFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public String voterid;
 
     public ChangeUsernameFragment() {
         // Required empty public constructor
@@ -50,8 +63,9 @@ public class ChangeUsernameFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -59,6 +73,72 @@ public class ChangeUsernameFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_change_username, container, false);
+        View view = inflater.inflate(R.layout.fragment_change_username, container, false);
+        usernamefield = view.findViewById(R.id.username);
+        passwordfield = view.findViewById(R.id.password);
+        submitbutton = view.findViewById(R.id.submitbutton);
+
+        return view;
+
     }
+
+    EditText usernamefield,passwordfield;
+    Button submitbutton;
+    String username,password,userNamehash,passWordhash;
+    Boolean usrcheck,pswdcheck;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        NavController navController = Navigation.findNavController(view);
+
+        voterid=Navigation_HomeActivity.voteridreturn();
+        submitbutton.setOnClickListener(v -> {
+            if(usernamefield.getText().toString().isEmpty())
+            {
+                usernamefield.setError("Please Enter Your Username");
+            }
+            else if(passwordfield.getText().toString().isEmpty())
+            {
+                passwordfield.setError("Please Enter Your Password");
+            }
+            else
+            {
+                username = usernamefield.getText().toString();
+                password = passwordfield.getText().toString();
+
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                DocumentReference docRef = db.collection("Test_User").document(voterid);
+                docRef.get().addOnSuccessListener(documentSnapshot -> {
+                            if (documentSnapshot.exists()) {
+
+                                Map<String, Object> data = documentSnapshot.getData();
+                                userNamehash = data.get("Username").toString();
+                                passWordhash = data.get("Password").toString();
+
+                                usrcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(username, userNamehash);
+                                pswdcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(password, passWordhash);
+
+                                if(usrcheck && pswdcheck)
+                                {
+                                    Toast.makeText(getActivity(),"Username and Password Correct",Toast.LENGTH_LONG).show();
+                                    navController.navigate(R.id.enternewusername);
+
+                                }
+                                else
+                                {
+                                    Toast.makeText(getActivity(),"Incorrect Username or Password. Please Try Again",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                            else
+                            {
+                                Toast.makeText(getActivity(),"No User Account Found. Please Try Again",Toast.LENGTH_LONG).show();
+                            }
+                        })
+                        .addOnFailureListener(e -> Toast.makeText(getActivity(),"Failed to Connect to Server. Please Try Again",Toast.LENGTH_LONG).show());
+            }
+        });
+
+    }
+
 }

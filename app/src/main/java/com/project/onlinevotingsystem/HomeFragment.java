@@ -103,11 +103,11 @@ public class HomeFragment extends Fragment {
                 shape.setShape(GradientDrawable.RECTANGLE);
                 float[] cornerRadii = new float[] { 40, 40, 40, 40, 40, 40, 40, 40 };
                 shape.setCornerRadii(cornerRadii);
-                String linearlayoutcolorhash = "#121212";
+                String linearlayoutcolorhash = "#AA121212";
                 int colorint = Color.parseColor(linearlayoutcolorhash);
                 shape.setColors(new int[]{colorint,colorint});
 
-                linearLayout.setPadding(20,10,20,15);
+                linearLayout.setPadding(20,10,20,5);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
                 linearLayout.setClickable(true);
 
@@ -127,7 +127,7 @@ public class HomeFragment extends Fragment {
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(getContext());
                 nameview.setText(name);
-                nameview.setTextSize(30);
+                nameview.setTextSize(23);
                 nameview.setTypeface(font);
                 nameview.setTextColor(textcolor);
                 nameview.setPadding(5,10,0,10);
@@ -138,8 +138,8 @@ public class HomeFragment extends Fragment {
 
                 TextView dateview = new TextView(getContext());
                 dateview.setTypeface(font);
-                dateview.setText("On "+date);
-                dateview.setTextSize(20);
+                dateview.setText(date);
+                dateview.setTextSize(15);
                 dateview.setTextColor(textcolor);
                 dateview.setPadding(5,10,0,10);
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
@@ -149,9 +149,9 @@ public class HomeFragment extends Fragment {
 
 
                 TextView timeview = new TextView(getContext());
-                timeview.setText("From 09:00 AM to 03:00 PM");
+                timeview.setText("09:00 AM to 03:00 PM");
                 timeview.setTypeface(font);
-                timeview.setTextSize(20);
+                timeview.setTextSize(15);
                 timeview.setTextColor(textcolor);
                 timeview.setPadding(5,10,0,10);
                 timeview.setLayoutParams(new LinearLayout.LayoutParams(

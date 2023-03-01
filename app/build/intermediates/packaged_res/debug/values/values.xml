@@ -56,9 +56,11 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="password">Password</string>
     <string name="project_id" translatable="false">election-online-prj</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="title_activity_navigation_menu">NavigationMenuActivity</string>
+    <string name="user_name">User name</string>
     <string name="v1_35_alpha">v1.35_alpha</string>
     <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         

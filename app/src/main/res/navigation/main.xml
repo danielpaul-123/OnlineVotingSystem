@@ -9,16 +9,45 @@
         android:id="@+id/home"
         android:name="com.project.onlinevotingsystem.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_change_username2"
+            app:destination="@id/change_username" />
+        <action
+            android:id="@+id/action_home_to_change_password2"
+            app:destination="@id/change_password"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
     <fragment
         android:id="@+id/change_username"
         android:name="com.project.onlinevotingsystem.ChangeUsernameFragment"
         android:label="Change Username"
-        tools:layout="@layout/fragment_change_username" />
+        tools:layout="@layout/fragment_change_username" >
+        <action
+            android:id="@+id/action_change_username_to_enternewusername"
+            app:destination="@id/enternewusername"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
     <fragment
         android:id="@+id/change_password"
         android:name="com.project.onlinevotingsystem.ChangePasswordFragment"
         android:label="Change Password"
-        tools:layout="@layout/fragment_change_password" />
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_change_password_to_enternewpassword"
+            app:destination="@id/enternewpassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/enternewusername"
+        android:name="com.project.onlinevotingsystem.EnterNewUsernameFragment"
+        android:label="Enter New Username"
+        tools:layout="@layout/fragment_enter_new_username"/>
+    <fragment
+        android:id="@+id/enternewpassword"
+        android:name="com.project.onlinevotingsystem.EnterNewPasswordFragment"
+        android:label="Enter New Password"
+        tools:layout="@layout/fragment_enter_new_password"/>
 
 </navigation>
