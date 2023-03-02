@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 anim fade_in
 anim fade_out
+anim translate
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -18,6 +19,7 @@ color teal_700
 color white
 drawable baseline_account_circle_24
 drawable baseline_cottage_24
+drawable baseline_how_to_vote_40
 drawable baseline_key_24
 drawable baseline_logout_24
 drawable baseline_menu_24
@@ -35,10 +37,6 @@ font advent_pro_bold
 font advent_pro_thin
 font open_sans_light
 font open_sans_semibold
-id action_change_password_to_enternewpassword
-id action_change_username_to_enternewusername
-id action_home_to_change_password2
-id action_home_to_change_username2
 id apptitle
 id button_no
 id button_yes
@@ -124,9 +122,12 @@ string title_activity_navigation_menu
 string user_name
 string v1_35_alpha
 style DemoTheme
+style MyAlertDialogStyle
 style Theme.OnlineVotingSystem
 style Theme.OnlineVotingSystem.AppBarOverlay
 style Theme.OnlineVotingSystem.NoActionBar
 style Theme.OnlineVotingSystem.PopupOverlay
+transition slide_in
+transition slide_out
 xml backup_rules
 xml data_extraction_rules

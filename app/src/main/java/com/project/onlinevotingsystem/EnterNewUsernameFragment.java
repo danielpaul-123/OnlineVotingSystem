@@ -1,13 +1,26 @@
 package com.project.onlinevotingsystem;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,6 +59,11 @@ public class EnterNewUsernameFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    Button submit;
+    EditText newusername,confirmnewusername;
+    String usernamenew,newusernamehash,voterid;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,9 +78,57 @@ public class EnterNewUsernameFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_enter_new_username, container, false);
+        View view = inflater.inflate(R.layout.fragment_enter_new_username, container, false);
+        submit = view.findViewById(R.id.submitbutton);
+        newusername = view.findViewById(R.id.newusername);
+        confirmnewusername = view.findViewById(R.id.usernameconfirm);
+        return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        NavController navController = Navigation.findNavController(view);
 
+        voterid = Navigation_HomeActivity.voteridreturn();
+        submit.setOnClickListener(v -> {
 
+            if(newusername.getText().toString().isEmpty())
+            {
+                newusername.setError("Please Enter Your Username");
+            }
+            else if(confirmnewusername.getText().toString().isEmpty())
+            {
+                confirmnewusername.setError("Please Enter Your Password");
+            }
+            else
+            {
+                if ((newusername.getText().toString()).equals(confirmnewusername.getText().toString()))
+                {
+                    usernamenew = newusername.getText().toString();
+                    newusernamehash = new Argon2PasswordEncoder(16, 32, 1, 1 << 14, 2).encode(usernamenew);
+
+                    FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    DocumentReference ref = db.collection("Test_User").document(String.valueOf(voterid));
+
+                    Map<String,Object> hashdata = new HashMap<>();
+                    hashdata.put("Username",newusernamehash);
+
+                    ref.update(hashdata)
+                            .addOnSuccessListener(unused -> {
+                                Toast.makeText(getActivity(),"Username Updated Successfully ",Toast.LENGTH_LONG).show();
+                                navController.navigate(R.id.home);
+
+                            })
+                            .addOnFailureListener(e -> Toast.makeText(getActivity(),"Failed to Update Username. Please Try Again",Toast.LENGTH_LONG).show());
+
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),"Usernames do not match. Please Try Again",Toast.LENGTH_LONG).show();
+                }
+            }
+
+        });
+    }
 }

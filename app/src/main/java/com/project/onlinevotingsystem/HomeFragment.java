@@ -1,10 +1,13 @@
 package com.project.onlinevotingsystem;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -75,7 +78,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(),callback);
+        return view;
     }
 
 
@@ -165,5 +170,19 @@ public class HomeFragment extends Fragment {
             }
         }).addOnFailureListener(e -> Toast.makeText(getContext(),"Failed to Read Documents",Toast.LENGTH_LONG).show());
     }
+
+    OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+        @Override
+        public void handleOnBackPressed() {
+            AlertDialog.Builder exitdialog = new AlertDialog.Builder(getActivity(),R.style.MyAlertDialogStyle);
+            exitdialog.setIcon(R.drawable.baseline_how_to_vote_40);
+            exitdialog.setTitle(R.string.app_name);
+            exitdialog.setMessage("Are you sure you want to Exit?");
+            exitdialog.setPositiveButton("Yes", (dialog, which) -> getActivity().finish());
+            exitdialog.setNegativeButton("Cancel",null);
+            exitdialog.show();
+
+        }
+    };
 
 }

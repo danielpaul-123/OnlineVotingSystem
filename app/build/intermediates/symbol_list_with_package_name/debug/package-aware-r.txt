@@ -47,6 +47,7 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim translate
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -2793,6 +2794,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_account_circle_24
 drawable baseline_cottage_24
+drawable baseline_how_to_vote_40
 drawable baseline_key_24
 drawable baseline_logout_24
 drawable baseline_menu_24
@@ -2989,13 +2991,9 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_change_password_to_enternewpassword
-id action_change_username_to_enternewusername
 id action_container
 id action_context_bar
 id action_divider
-id action_home_to_change_password2
-id action_home_to_change_username2
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -4217,6 +4215,7 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style MyAlertDialogStyle
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -5187,5 +5186,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+transition slide_in
+transition slide_out
 xml backup_rules
 xml data_extraction_rules

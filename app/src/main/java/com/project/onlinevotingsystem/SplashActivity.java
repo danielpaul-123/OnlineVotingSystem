@@ -58,7 +58,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        Thread postdelay = new Thread(() -> handler.postDelayed(runnable,1900));
+        Thread postdelay = new Thread(() -> handler.postDelayed(runnable,1800));
 
         animation.start();
         animation2.start();
