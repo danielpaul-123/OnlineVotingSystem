@@ -131,4 +131,5 @@ public class EnterNewUsernameFragment extends Fragment {
 
         });
     }
+
 }

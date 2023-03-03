@@ -21,10 +21,4 @@
         android:iconTint="@color/icon_background"
         android:title="@string/change_password"></item>
 
-    <item
-        android:id="@+id/logout"
-        android:icon="@drawable/baseline_logout_24"
-        android:iconTint="@color/icon_background"
-        android:title="@string/logout"></item>
-
 </menu>

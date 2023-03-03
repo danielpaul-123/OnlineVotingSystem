@@ -9,4 +9,6 @@
     <string name="mti_thrissur">MTI Thrissur</string>
     <string name="user_name">User name</string>
     <string name="password">Password</string>
+    <string name="layout_button">Layout Button</string>
+    <string name="logoutbutton">logoutbutton</string>
 </resources>

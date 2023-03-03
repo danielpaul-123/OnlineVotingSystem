@@ -6,6 +6,74 @@
                 {
                     "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "4170",
+                        "endLines": "59",
+                        "endColumns": "12",
+                        "endOffsets": "4736"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\7fc5a28e9b3439055681e2452656b3d1\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "15,16,17,18,19,20,21,60",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "777,847,931,1015,1111,1213,1315,4741",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "842,926,1010,1106,1208,1310,1404,4825"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,14,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,4,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,737,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,-1,53,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,786,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,183,281,347,385,441,481,523,577,631,677,725",
+                        "endColumns": "67,59,97,65,37,55,39,41,53,53,45,47,51",
+                        "endOffsets": "118,178,276,342,380,436,476,518,572,626,672,720,772"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\f9c28eb245f4c8bc1c8af3a3eff5b023\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,61,62,63,64,65,66,67,68",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1409,1484,1595,1684,1785,1892,1999,2098,2205,2308,2396,2520,2622,2724,2840,2942,3056,3184,3300,3422,3558,3678,3812,3932,4044,4830,4947,5071,5201,5323,5461,5595,5711",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "1479,1590,1679,1780,1887,1994,2093,2200,2303,2391,2515,2617,2719,2835,2937,3051,3179,3295,3417,3553,3673,3807,3927,4039,4165,4942,5066,5196,5318,5456,5590,5706,5826"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-51:\\values-night-v8\\values-night-v8.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
                         "startLines": "3",
                         "startColumns": "4",
                         "startOffsets": "101",

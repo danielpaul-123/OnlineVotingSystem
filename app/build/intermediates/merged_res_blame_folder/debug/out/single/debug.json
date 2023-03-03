@@ -16,8 +16,8 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\open_sans_light.xml"
     },
     {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-53:/drawable_baseline_how_to_vote_40.xml.flat",
-        "source": "com.project.onlinevotingsystem.app-main-55:/drawable/baseline_how_to_vote_40.xml"
+        "merged": "com.project.onlinevotingsystem.app-merged_res-53:/menu_navigation_menu.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-55:/menu/navigation_menu.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_open_sans_semibold.xml.flat",
@@ -154,6 +154,10 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\xml_data_extraction_rules.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_how_to_vote_40.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_how_to_vote_40.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_rounded_corner.xml.flat",

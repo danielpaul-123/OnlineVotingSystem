@@ -5,8 +5,10 @@
     <string name="department_of_computer_engineering">Department of Computer Engineering</string>
     <string name="electionscrollview">electionScrollView</string>
     <string name="home">Home</string>
+    <string name="layout_button">Layout Button</string>
     <string name="login">login</string>
     <string name="logout">Logout</string>
+    <string name="logoutbutton">logoutbutton</string>
     <string name="mti_thrissur">MTI Thrissur</string>
     <string name="password">Password</string>
     <string name="user_name">User name</string>

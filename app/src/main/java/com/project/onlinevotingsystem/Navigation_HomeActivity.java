@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -31,6 +31,8 @@ public class Navigation_HomeActivity extends AppCompatActivity {
     NavigationView nav_menu;
     static String voterid;
     String username;
+    ImageButton logoutbutton;
+
 
 
     @Override
@@ -71,13 +73,26 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         voteridview.setText(voterid);
 
         findViewById(R.id.menubutton).setOnClickListener(v -> navigationlayout.openDrawer(GravityCompat.START));
+        findViewById(R.id.navigationtoolbar).setOnTouchListener((v, event) -> false);
+
+        logoutbutton = findViewById(R.id.logoutbuttonab);
+        logoutbutton.bringToFront();
+        logoutbutton.setEnabled(true);
+        findViewById(R.id.logoutbuttonab).setOnClickListener(v -> {
+            AlertDialog.Builder logoutalert = new AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
+            logoutalert.setIcon(R.drawable.baseline_how_to_vote_40).setTitle(R.string.app_name);
+            logoutalert.setMessage("Are you sure you want to logout?");
+            logoutalert.setPositiveButton("Yes", (dialog, which) -> {
+                Intent a = new Intent(this, MainActivity.class);
+                startActivity(a);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                finish();
+            }).setNegativeButton("Cancel",null);
+            logoutalert.show();
+        });
 
     }
-    public static String voteridreturn()
-    {
-        return voterid;
-    }
-
+    public static String voteridreturn() {return voterid;}
 
 
 }
