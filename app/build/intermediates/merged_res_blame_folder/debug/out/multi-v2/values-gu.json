@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-51:/values-gu/values-gu.xml",
+            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-52:/values-gu/values-gu.xml",
             "map": [
-                {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\1fc68120dd3fdf196d75e6724d2fdc00\\transformed\\play-services-basement-18.1.0\\res\\values-gu\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "142",
-                        "endOffsets": "337"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "4718",
-                        "endColumns": "146",
-                        "endOffsets": "4860"
-                    }
-                },
                 {
                     "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\f9c28eb245f4c8bc1c8af3a3eff5b023\\transformed\\material-1.8.0\\res\\values-gu\\values-gu.xml",
                     "from": {
@@ -40,6 +23,40 @@
                     }
                 },
                 {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\0917dd0fe99e6ad60185a6f6ad13027a\\transformed\\jetified-play-services-base-18.0.1\\res\\values-gu\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,297,459,580,688,822,940,1047,1143,1287,1391,1551,1672,1811,1957,2014,2076",
+                        "endColumns": "103,161,120,107,133,117,106,95,143,103,159,120,138,145,56,61,77",
+                        "endOffsets": "296,458,579,687,821,939,1046,1142,1286,1390,1550,1671,1810,1956,2013,2075,2153"
+                    },
+                    "to": {
+                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3736,3844,4010,4135,4247,4385,4507,4618,4865,5013,5121,5285,5410,5553,5703,5764,5830",
+                        "endColumns": "107,165,124,111,137,121,110,99,147,107,163,124,142,149,60,65,81",
+                        "endOffsets": "3839,4005,4130,4242,4380,4502,4613,4713,5008,5116,5280,5405,5548,5698,5759,5825,5907"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\7a1ecf21cdf0df3598176627d4c456bb\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-gu\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "142",
+                        "endOffsets": "337"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "4718",
+                        "endColumns": "146",
+                        "endOffsets": "4860"
+                    }
+                },
+                {
                     "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\d126b211a393bb8eed6f3bd9fa4fb48f\\transformed\\navigation-ui-2.5.3\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3",
@@ -54,23 +71,6 @@
                         "startOffsets": "10013,10123",
                         "endColumns": "109,114",
                         "endOffsets": "10118,10233"
-                    }
-                },
-                {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\756e26356ce30d9ce8eee13690c7d474\\transformed\\play-services-base-18.0.1\\res\\values-gu\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,297,459,580,688,822,940,1047,1143,1287,1391,1551,1672,1811,1957,2014,2076",
-                        "endColumns": "103,161,120,107,133,117,106,95,143,103,159,120,138,145,56,61,77",
-                        "endOffsets": "296,458,579,687,821,939,1046,1142,1286,1390,1550,1671,1810,1956,2013,2075,2153"
-                    },
-                    "to": {
-                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3736,3844,4010,4135,4247,4385,4507,4618,4865,5013,5121,5285,5410,5553,5703,5764,5830",
-                        "endColumns": "107,165,124,111,137,121,110,99,147,107,163,124,142,149,60,65,81",
-                        "endOffsets": "3839,4005,4130,4242,4380,4502,4613,4713,5008,5116,5280,5405,5548,5698,5759,5825,5907"
                     }
                 },
                 {

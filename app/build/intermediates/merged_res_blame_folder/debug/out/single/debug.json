@@ -1,210 +1,230 @@
 [
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-hdpi_icon_round.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-hdpi\\icon_round.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_progress_bar_dots.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\progress_bar_dots.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_fragment_change_password.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\fragment_change_password.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-mdpi_icon_round.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-mdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xhdpi_icon_round.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xhdpi\\icon_round.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_rounded_corner.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\rounded_corner.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_open_sans_light.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\open_sans_light.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_change_username.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_username.xml"
     },
     {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-53:/menu_navigation_menu.xml.flat",
-        "source": "com.project.onlinevotingsystem.app-main-55:/menu/navigation_menu.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\anim_translate.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\anim\\translate.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_open_sans_semibold.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\open_sans_semibold.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_key_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_key_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_activity_splash.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\activity_splash.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_logout_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_logout_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_fragment_change_username.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\fragment_change_username.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_home.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-mdpi_icon_round.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-mdpi\\icon_round.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_change_password.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xxxhdpi_icon_round.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xxxhdpi\\icon_round.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_double_arrow_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_double_arrow_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-hdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-hdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_enter_new_password.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_enter_new_password.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\navigation_main.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\navigation\\main.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_activity_main.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_main.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xxhdpi_icon_round.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xxhdpi\\icon_round.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\anim_fade_in.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\anim\\fade_in.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\anim_translate.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\anim\\translate.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_double_inactive_arrow_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_double_inactive_arrow_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_fragment_home.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\fragment_home.xml"
+        "merged": "com.project.onlinevotingsystem.app-merged_res-54:/layout_fragment_voting.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-56:/layout/fragment_voting.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-mdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-mdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_acme.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\acme.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_abeezee.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\abeezee.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_advent_pro_bold.ttf.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\advent_pro_bold.ttf"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xhdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xhdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_linearlayoutbg.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\linearlayoutbg.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_fragment_enter_new_username.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\fragment_enter_new_username.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_how_to_vote_40.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_how_to_vote_40.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\anim_fade_out.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\anim\\fade_out.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_icon_foreground.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\icon_foreground.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\menu_navigation_menu.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\menu\\navigation_menu.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xxhdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xxhdpi\\icon.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-anydpi-v26_icon.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-anydpi-v26\\icon.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xxhdpi_icon_round.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xxhdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_activity_navigation_home.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\activity_navigation_home.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\anim_fade_out.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\anim\\fade_out.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_icon_foreground.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\icon_foreground.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\transition_slide_in.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\transition\\slide_in.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_activity_main.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\activity_main.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_remember_me_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_remember_me_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_fragment_enter_new_password.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\fragment_enter_new_password.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\navigation_main.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\navigation\\main.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\transition_slide_in.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\transition\\slide_in.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-anydpi-v26_icon.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-anydpi-v26\\icon.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_bg_gradient.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\bg_gradient.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-hdpi_icon_round.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-hdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_logout_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_logout_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_voting.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_voting.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_icon_foreground_login.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\icon_foreground_login.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\transition_slide_out.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\transition\\slide_out.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_remember_me_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_remember_me_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_lato.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\lato.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_key_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_key_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xxxhdpi_icon_round.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xxxhdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\transition_slide_out.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\transition\\slide_out.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_advent_pro_thin.ttf.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\advent_pro_thin.ttf"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_account_circle_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_account_circle_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_icon_foreground_login.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\icon_foreground_login.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_menu_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_menu_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_activity_navigation_home.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_navigation_home.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\anim_fade_in.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\anim\\fade_in.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_cottage_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_cottage_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_logout_confirm_popup.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\logout_confirm_popup.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\xml_backup_rules.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\xml_backup_rules.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\xml\\backup_rules.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_actor.ttf.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\actor.ttf"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\xml_data_extraction_rules.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\xml\\data_extraction_rules.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_open_sans_light.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\open_sans_light.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_how_to_vote_40.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_how_to_vote_40.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xxxhdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xxxhdpi\\icon.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_rounded_corner.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\rounded_corner.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_navigation_header.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\navigation_header.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_advent_pro_thin.ttf.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\advent_pro_thin.ttf"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xhdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xhdpi\\icon.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xxxhdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xxxhdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-anydpi-v26_icon_round.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-anydpi-v26\\icon_round.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_actor.ttf.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\actor.ttf"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_logout_confirm_popup.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\logout_confirm_popup.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_cottage_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_cottage_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-xhdpi_icon_round.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-xhdpi\\icon_round.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-anydpi-v26_icon_round.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-anydpi-v26\\icon_round.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_activity_splash.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\mipmap-xxhdpi_icon.png.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\mipmap-xxhdpi\\icon.png"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_enter_new_username.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_enter_new_username.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\layout_navigation_header.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\layout\\navigation_header.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\menu_navigation_menu.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\menu\\navigation_menu.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_baseline_person_24.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\baseline_person_24.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_open_sans_semibold.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\open_sans_semibold.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_acme.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\acme.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_person_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_person_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\drawable_linearlayoutbg.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\drawable\\linearlayoutbg.xml"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-hdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-hdpi\\icon.png"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-53:\\font_advent_pro_bold.ttf.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-55:\\font\\advent_pro_bold.ttf"
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\xml_data_extraction_rules.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_bg_gradient.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\bg_gradient.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_account_circle_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_menu_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_menu_24.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-mdpi_icon.png.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-mdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_abeezee.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\font\\abeezee.xml"
     }
 ]

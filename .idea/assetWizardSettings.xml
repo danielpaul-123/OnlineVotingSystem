@@ -326,7 +326,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../AndroidStudioSDK/icons/material/materialicons/logout/baseline_logout_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../AndroidStudioSDK/icons/material/materialicons/double_arrow/baseline_double_arrow_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -336,8 +336,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="f1f1f1" />
-                            <entry key="outputName" value="baseline_logout_24" />
+                            <entry key="color" value="1a6cd0" />
+                            <entry key="outputName" value="baseline_double_arrow_24" />
                             <entry key="sourceFile" value="E:\AndroidStudioProjects\OnlineVotingSystem" />
                           </map>
                         </option>

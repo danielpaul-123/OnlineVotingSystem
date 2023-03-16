@@ -5,12 +5,14 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     EditText voterid,username,password;
     String voterID,userName,passWord,userNamehash,passWordhash;
     boolean usrcheck,pswdcheck;
+    LinearDotsLoader linearDotsLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         voterid = findViewById(R.id.voterid);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        linearDotsLoader = findViewById(R.id.loginprogress);
 
         login.setOnClickListener(v -> {
 
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
+                linearDotsLoader.setVisibility(View.VISIBLE);
                 voterID = voterid.getText().toString();
                 userName = username.getText().toString();
                 passWord = password.getText().toString();
@@ -80,15 +85,18 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(getApplicationContext(),"Incorrect Username or Password. Please Try Again",Toast.LENGTH_LONG).show();
+                            linearDotsLoader.setVisibility(View.GONE);
                         }
                     }
                     else
                     {
                         Toast.makeText(getApplicationContext(),"No User Account Found. Please Try Again",Toast.LENGTH_LONG).show();
-                        Log.d(TAG, "No such document");
+                        linearDotsLoader.setVisibility(View.GONE);
                     }
                 })
-                .addOnFailureListener(e -> Toast.makeText(getApplicationContext(),"Failed to Connect to Server. Please Try Again",Toast.LENGTH_LONG).show());
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getApplicationContext(),"Failed to Connect to Server. Please Try Again",Toast.LENGTH_LONG).show();
+                    linearDotsLoader.setVisibility(View.GONE);});
             }
         });
     }

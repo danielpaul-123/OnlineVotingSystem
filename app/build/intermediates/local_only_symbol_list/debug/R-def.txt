@@ -9,8 +9,12 @@ array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
 color blue
+color blue_default
+color blue_selected
+color darknavyblue
 color icon_background
 color lightgreytext
+color navyblue
 color purple_200
 color purple_500
 color purple_700
@@ -19,6 +23,8 @@ color teal_700
 color white
 drawable baseline_account_circle_24
 drawable baseline_cottage_24
+drawable baseline_double_arrow_24
+drawable baseline_double_inactive_arrow_24
 drawable baseline_how_to_vote_40
 drawable baseline_key_24
 drawable baseline_logout_24
@@ -29,12 +35,14 @@ drawable bg_gradient
 drawable icon_foreground
 drawable icon_foreground_login
 drawable linearlayoutbg
+drawable progress_bar_dots
 drawable rounded_corner
 font abeezee
 font acme
 font actor
 font advent_pro_bold
 font advent_pro_thin
+font lato
 font open_sans_light
 font open_sans_semibold
 id apptitle
@@ -53,6 +61,7 @@ id home
 id imageView
 id loginbutton
 id loginpage
+id loginprogress
 id logo
 id logoRelativeView
 id logoutbuttonab
@@ -72,8 +81,12 @@ id username
 id usernameconfirm
 id usernameview
 id viewsupporter
+id votenametext
+id voteoption
+id voteoption2
 id voterid
 id voteridview
+id voting
 layout activity_main
 layout activity_navigation_home
 layout activity_splash
@@ -82,6 +95,7 @@ layout fragment_change_username
 layout fragment_enter_new_password
 layout fragment_enter_new_username
 layout fragment_home
+layout fragment_voting
 layout logout_confirm_popup
 layout navigation_header
 menu navigation_menu
@@ -106,6 +120,7 @@ string hello_blank_fragment
 string home
 string layout_button
 string login
+string logo
 string logout
 string logoutbutton
 string menu_gallery
@@ -123,6 +138,7 @@ string title_activity_navigation
 string title_activity_navigation_menu
 string user_name
 string v1_35_alpha
+string voter_s_id
 style DemoTheme
 style MyAlertDialogStyle
 style Theme.OnlineVotingSystem

@@ -16,13 +16,18 @@
     </string-array>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/acme</item>
+        <item>@font/lato</item>
         <item>@font/open_sans_light</item>
         <item>@font/open_sans_semibold</item>
     </array>
     <color name="black">#FF000000</color>
     <color name="blue">#3F51B5</color>
+    <color name="blue_default">#2F3455</color>
+    <color name="blue_selected">#1A307A</color>
+    <color name="darknavyblue">#20254A</color>
     <color name="icon_background">#FFFFFF</color>
     <color name="lightgreytext">#D6D6D6</color>
+    <color name="navyblue">#2A4AB8</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -47,6 +52,7 @@
     <string name="home">Home</string>
     <string name="layout_button">Layout Button</string>
     <string name="login">login</string>
+    <string name="logo">logo</string>
     <string name="logout">Logout</string>
     <string name="logoutbutton">logoutbutton</string>
     <string name="menu_gallery">Gallery</string>
@@ -64,6 +70,7 @@
     <string name="title_activity_navigation_menu">NavigationMenuActivity</string>
     <string name="user_name">User name</string>
     <string name="v1_35_alpha">v1.35_alpha</string>
+    <string name="voter_s_id">Voter\'s ID</string>
     <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-51:/values-lv/values-lv.xml",
+            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-52:/values-lv/values-lv.xml",
             "map": [
+                {
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\0917dd0fe99e6ad60185a6f6ad13027a\\transformed\\jetified-play-services-base-18.0.1\\res\\values-lv\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,296,453,582,686,824,951,1064,1166,1337,1442,1607,1738,1903,2054,2114,2178",
+                        "endColumns": "102,156,128,103,137,126,112,101,170,104,164,130,164,150,59,63,84",
+                        "endOffsets": "295,452,581,685,823,950,1063,1165,1336,1441,1606,1737,1902,2053,2113,2177,2262"
+                    },
+                    "to": {
+                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4022,4129,4290,4423,4531,4673,4804,4921,5193,5368,5477,5646,5781,5950,6105,6169,6237",
+                        "endColumns": "106,160,132,107,141,130,116,105,174,108,168,134,168,154,63,67,88",
+                        "endOffsets": "4124,4285,4418,4526,4668,4799,4916,5022,5363,5472,5641,5776,5945,6100,6164,6232,6321"
+                    }
+                },
                 {
                     "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\f9c28eb245f4c8bc1c8af3a3eff5b023\\transformed\\material-1.8.0\\res\\values-lv\\values-lv.xml",
                     "from": {
@@ -40,23 +57,6 @@
                     }
                 },
                 {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\756e26356ce30d9ce8eee13690c7d474\\transformed\\play-services-base-18.0.1\\res\\values-lv\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,296,453,582,686,824,951,1064,1166,1337,1442,1607,1738,1903,2054,2114,2178",
-                        "endColumns": "102,156,128,103,137,126,112,101,170,104,164,130,164,150,59,63,84",
-                        "endOffsets": "295,452,581,685,823,950,1063,1165,1336,1441,1606,1737,1902,2053,2113,2177,2262"
-                    },
-                    "to": {
-                        "startLines": "42,43,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4022,4129,4290,4423,4531,4673,4804,4921,5193,5368,5477,5646,5781,5950,6105,6169,6237",
-                        "endColumns": "106,160,132,107,141,130,116,105,174,108,168,134,168,154,63,67,88",
-                        "endOffsets": "4124,4285,4418,4526,4668,4799,4916,5022,5363,5472,5641,5776,5945,6100,6164,6232,6321"
-                    }
-                },
-                {
                     "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\d126b211a393bb8eed6f3bd9fa4fb48f\\transformed\\navigation-ui-2.5.3\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2,3",
@@ -91,7 +91,7 @@
                     }
                 },
                 {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\1fc68120dd3fdf196d75e6724d2fdc00\\transformed\\play-services-basement-18.1.0\\res\\values-lv\\values.xml",
+                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\7a1ecf21cdf0df3598176627d4c456bb\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-lv\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

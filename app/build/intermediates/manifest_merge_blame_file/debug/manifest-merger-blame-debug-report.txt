@@ -17,8 +17,8 @@
 13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 14    <!-- <uses-sdk android:minSdkVersion="14" /> -->
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:12:5-79
-15-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:12:22-76
+15-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:12:5-79
+15-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:12:22-76
 16
 17    <permission
 17-->[androidx.core:core:1.9.0] E:\AndroidStudioGradle\caches\transforms-3\2a6b8d47231ddcb1817ffe241541665b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
@@ -90,98 +90,98 @@
 53-->E:\AndroidStudioProjects\OnlineVotingSystem\app\src\main\AndroidManifest.xml:32:13-54
 54
 55        <service
-55-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:16:9-22:19
+55-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:16:9-22:19
 56            android:name="com.google.firebase.components.ComponentDiscoveryService"
-56-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:17:13-84
+56-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:17:13-84
 57            android:directBootAware="true"
-57-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+57-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:34:13-43
 58            android:exported="false" >
-58-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:18:13-37
+58-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:18:13-37
 59            <meta-data
-59-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:19:13-21:85
+59-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:19:13-21:85
 60                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-60-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:20:17-111
+60-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:20:17-111
 61                android:value="com.google.firebase.components.ComponentRegistrar" />
-61-->[com.google.firebase:firebase-firestore:24.4.3] E:\AndroidStudioGradle\caches\transforms-3\ffeff826099d0e6096fb75cee465a976\transformed\firebase-firestore-24.4.3\AndroidManifest.xml:21:17-82
+61-->[com.google.firebase:firebase-firestore:24.4.4] E:\AndroidStudioGradle\caches\transforms-3\e48d4274b04fb499b18a707b8416d373\transformed\jetified-firebase-firestore-24.4.4\AndroidManifest.xml:21:17-82
 62            <meta-data
-62-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\54b7efbc4057511141186ff94fcf4e8f\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
+62-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\a11c860338260cd3a02307a19db63053\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
 63                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-63-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\54b7efbc4057511141186ff94fcf4e8f\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
+63-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\a11c860338260cd3a02307a19db63053\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
 64                android:value="com.google.firebase.components.ComponentRegistrar" />
-64-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\54b7efbc4057511141186ff94fcf4e8f\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
+64-->[com.google.firebase:firebase-storage:20.1.0] E:\AndroidStudioGradle\caches\transforms-3\a11c860338260cd3a02307a19db63053\transformed\jetified-firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
 65        </service>
 66
 67        <provider
-67-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+67-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:25:9-30:39
 68            android:name="com.google.firebase.provider.FirebaseInitProvider"
-68-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+68-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:26:13-77
 69            android:authorities="com.project.onlinevotingsystem.firebaseinitprovider"
-69-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+69-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:27:13-72
 70            android:directBootAware="true"
-70-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+70-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:28:13-43
 71            android:exported="false"
-71-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+71-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:29:13-37
 72            android:initOrder="100" />
-72-->[com.google.firebase:firebase-common:20.2.0] E:\AndroidStudioGradle\caches\transforms-3\5e211577678f0c8938d2a8f5be22ff8f\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+72-->[com.google.firebase:firebase-common:20.3.1] E:\AndroidStudioGradle\caches\transforms-3\44929ca43f0542b190cb144731a0bbcc\transformed\jetified-firebase-common-20.3.1\AndroidManifest.xml:30:13-36
 73
 74        <activity
-74-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\756e26356ce30d9ce8eee13690c7d474\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+74-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\0917dd0fe99e6ad60185a6f6ad13027a\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 75            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-75-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\756e26356ce30d9ce8eee13690c7d474\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+75-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\0917dd0fe99e6ad60185a6f6ad13027a\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 76            android:exported="false"
-76-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\756e26356ce30d9ce8eee13690c7d474\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+76-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\0917dd0fe99e6ad60185a6f6ad13027a\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 77            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-77-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\756e26356ce30d9ce8eee13690c7d474\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+77-->[com.google.android.gms:play-services-base:18.0.1] E:\AndroidStudioGradle\caches\transforms-3\0917dd0fe99e6ad60185a6f6ad13027a\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 78
 79        <meta-data
-79-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\1fc68120dd3fdf196d75e6724d2fdc00\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+79-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\7a1ecf21cdf0df3598176627d4c456bb\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 80            android:name="com.google.android.gms.version"
-80-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\1fc68120dd3fdf196d75e6724d2fdc00\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+80-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\7a1ecf21cdf0df3598176627d4c456bb\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 81            android:value="@integer/google_play_services_version" />
-81-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\1fc68120dd3fdf196d75e6724d2fdc00\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+81-->[com.google.android.gms:play-services-basement:18.1.0] E:\AndroidStudioGradle\caches\transforms-3\7a1ecf21cdf0df3598176627d4c456bb\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 82
 83        <provider
-83-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d9701e46d34d9a219af600b789486fd6\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+83-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d4189a789196fe4abac36434ae07e88b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 84            android:name="com.squareup.picasso.PicassoProvider"
-84-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d9701e46d34d9a219af600b789486fd6\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+84-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d4189a789196fe4abac36434ae07e88b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 85            android:authorities="com.project.onlinevotingsystem.com.squareup.picasso"
-85-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d9701e46d34d9a219af600b789486fd6\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+85-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d4189a789196fe4abac36434ae07e88b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 86            android:exported="false" />
-86-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d9701e46d34d9a219af600b789486fd6\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+86-->[com.squareup.picasso:picasso:2.71828] E:\AndroidStudioGradle\caches\transforms-3\d4189a789196fe4abac36434ae07e88b\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 87        <provider
-87-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+87-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 88            android:name="androidx.startup.InitializationProvider"
-88-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+88-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
 89            android:authorities="com.project.onlinevotingsystem.androidx-startup"
-89-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+89-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 90            android:exported="false" >
-90-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+90-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 91            <meta-data
-91-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+91-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 92                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-92-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+92-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 93                android:value="androidx.startup" />
-93-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\4e0d57b59a48b0b47976dac5d8cbd717\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+93-->[androidx.emoji2:emoji2:1.2.0] E:\AndroidStudioGradle\caches\transforms-3\12fcc29f804b5553658754d238a2172c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 94            <meta-data
-94-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\7f99fec45baa6b482cb18a0f870840bf\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+94-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\ea9c163dcd31004394b3a5b25fe69c62\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-95-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\7f99fec45baa6b482cb18a0f870840bf\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+95-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\ea9c163dcd31004394b3a5b25fe69c62\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 96                android:value="androidx.startup" />
-96-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\7f99fec45baa6b482cb18a0f870840bf\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+96-->[androidx.lifecycle:lifecycle-process:2.4.1] E:\AndroidStudioGradle\caches\transforms-3\ea9c163dcd31004394b3a5b25fe69c62\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 97        </provider>
 98
 99        <uses-library
-99-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+99-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 100            android:name="androidx.window.extensions"
-100-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+100-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
 101            android:required="false" />
-101-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+101-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
 102        <uses-library
-102-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+102-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 103            android:name="androidx.window.sidecar"
-103-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+103-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
 104            android:required="false" />
-104-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\9e231cc669a98adc22f31757db979ac9\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+104-->[androidx.window:window:1.0.0] E:\AndroidStudioGradle\caches\transforms-3\26b1a223b251bdf6c50fd2b5d202af9d\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
 105    </application>
 106
 107</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VotingFragment"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/voteoption"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/votenametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:paddingStart="10dp"
+            android:textSize="35dp"
+            android:textColor="@color/lightgreytext"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/voteoption2"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+</FrameLayout>

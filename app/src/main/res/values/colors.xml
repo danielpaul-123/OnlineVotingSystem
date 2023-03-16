@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#3F51B5</color>
     <color name="lightgreytext">#D6D6D6</color>
-
+    <color name="darknavyblue">#20254A</color>
+    <color name="navyblue">#2A4AB8</color>
+    <color name="blue_default">#2F3455</color>
+    <color name="blue_selected">#1A307A</color>
 </resources>

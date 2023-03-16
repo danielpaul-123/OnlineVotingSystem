@@ -7,12 +7,14 @@
     <string name="home">Home</string>
     <string name="layout_button">Layout Button</string>
     <string name="login">login</string>
+    <string name="logo">logo</string>
     <string name="logout">Logout</string>
     <string name="logoutbutton">logoutbutton</string>
     <string name="mti_thrissur">MTI Thrissur</string>
     <string name="password">Password</string>
     <string name="user_name">User name</string>
     <string name="v1_35_alpha">v1.35_alpha</string>
+    <string name="voter_s_id">Voter\'s ID</string>
     <style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

@@ -30,5 +30,10 @@
         android:name="com.project.onlinevotingsystem.EnterNewPasswordFragment"
         android:label="Enter New Password"
         tools:layout="@layout/fragment_enter_new_password"/>
+    <fragment
+        android:id="@+id/voting"
+        android:name="com.project.onlinevotingsystem.VotingFragment"
+        android:label="Place Your Vote"
+        tools:layout="@layout/fragment_voting"/>
 
 </navigation>

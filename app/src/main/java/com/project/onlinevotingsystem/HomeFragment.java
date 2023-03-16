@@ -1,24 +1,24 @@
 package com.project.onlinevotingsystem;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-
-import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -63,6 +63,7 @@ public class HomeFragment extends Fragment {
     }
     String name,date;
     LinearLayout electionview;
+    static Integer id;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,7 +72,6 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
@@ -93,14 +93,14 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void read(){
+    protected void read(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference collectionRef = db.collection("Election_Data");
         collectionRef.get().addOnSuccessListener(queryDocumentSnapshots -> {
             for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-
                 name = documentSnapshot.getString("Name");
                 date = documentSnapshot.getString("Date");
+                id = Integer.valueOf(documentSnapshot.getId());
 
                 LinearLayout linearLayout = new LinearLayout(getContext());
 
@@ -115,10 +115,8 @@ public class HomeFragment extends Fragment {
                 linearLayout.setPadding(20,10,20,5);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
                 linearLayout.setClickable(true);
+                linearLayout.setId(id);
 
-                linearLayout.setOnClickListener(v -> {
-
-                });
                 LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -127,12 +125,14 @@ public class HomeFragment extends Fragment {
                 linearLayout.setLayoutParams(layoutParams1);
                 linearLayout.setBackground(shape);
                 int textcolor = ContextCompat.getColor(getContext(),R.color.lightgreytext);
-                Typeface font = Typeface.create("Abeezee",Typeface.NORMAL);
+                Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Regular.ttf");
+                Typeface datefont = Typeface.createFromAsset(getContext().getAssets(), "fonts/abeezee.ttf");
+                Typeface timefont = Typeface.createFromAsset(getContext().getAssets(), "fonts/Nunito.ttf");
 
                 // Create a new TextView for the data and add it to the Linear Layout
                 TextView nameview = new TextView(getContext());
                 nameview.setText(name);
-                nameview.setTextSize(23);
+                nameview.setTextSize(25);
                 nameview.setTypeface(font);
                 nameview.setTextColor(textcolor);
                 nameview.setPadding(5,10,0,10);
@@ -142,9 +142,9 @@ public class HomeFragment extends Fragment {
                 linearLayout.addView(nameview);
 
                 TextView dateview = new TextView(getContext());
-                dateview.setTypeface(font);
+                dateview.setTypeface(datefont);
                 dateview.setText(date);
-                dateview.setTextSize(15);
+                dateview.setTextSize(18);
                 dateview.setTextColor(textcolor);
                 dateview.setPadding(5,10,0,10);
                 dateview.setLayoutParams(new LinearLayout.LayoutParams(
@@ -155,10 +155,10 @@ public class HomeFragment extends Fragment {
 
                 TextView timeview = new TextView(getContext());
                 timeview.setText("09:00 AM to 03:00 PM");
-                timeview.setTypeface(font);
-                timeview.setTextSize(15);
+                timeview.setTypeface(timefont);
+                timeview.setTextSize(18);
                 timeview.setTextColor(textcolor);
-                timeview.setPadding(5,10,0,10);
+                timeview.setPadding(5,10,0,15);
                 timeview.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -167,8 +167,18 @@ public class HomeFragment extends Fragment {
                 // Add the Linear Layout to the parent view
                 electionview.addView(linearLayout);
 
+                linearLayout.setOnClickListener(v -> {
+                    //Toast.makeText(getContext(),String.valueOf(linearLayout.getId()),Toast.LENGTH_LONG).show();
+                    id = linearLayout.getId();
+                    NavController navController = Navigation.findNavController(getView());
+                    navController.navigate(R.id.voting);
+
+                });
+
             }
         }).addOnFailureListener(e -> Toast.makeText(getContext(),"Failed to Read Documents",Toast.LENGTH_LONG).show());
+
+
     }
 
     OnBackPressedCallback callback = new OnBackPressedCallback(true) {
@@ -185,4 +195,8 @@ public class HomeFragment extends Fragment {
         }
     };
 
+    public static Integer voteid()
+    {
+        return id;
+    }
 }
