@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-52:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "map": [
+                {
+                    "source": "E:\\AndroidStudioProjects\\OnlineVotingSystem\\app\\src\\main\\res\\values-w1240dp\\strings.xml",
+                    "from": {
+                        "startLines": "6,2,7,4,11,14,3,12,8,10,9,5,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "253,57,322,161,572,736,118,629,421,525,476,200,684",
+                        "endColumns": "67,59,97,37,55,37,41,53,53,45,47,51,50",
+                        "endOffsets": "316,112,415,194,623,769,155,678,470,566,519,247,730"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,183,281,319,375,413,455,509,563,609,657,709",
+                        "endColumns": "67,59,97,37,55,37,41,53,53,45,47,51,50",
+                        "endOffsets": "118,178,276,314,370,408,450,504,558,604,652,704,755"
+                    }
+                }
+            ]
+        }
+    ]
+}
