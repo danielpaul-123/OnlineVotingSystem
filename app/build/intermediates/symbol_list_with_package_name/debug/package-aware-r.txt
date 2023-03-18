@@ -1525,6 +1525,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color icon_background
@@ -2876,6 +2877,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_account_circle_24
+drawable baseline_check_circle_outline_24
 drawable baseline_cottage_24
 drawable baseline_double_arrow_24
 drawable baseline_double_inactive_arrow_24
@@ -2883,6 +2885,7 @@ drawable baseline_how_to_vote_40
 drawable baseline_key_24
 drawable baseline_logout_24
 drawable baseline_menu_24
+drawable baseline_mood_bad_24
 drawable baseline_person_24
 drawable baseline_remember_me_24
 drawable bg_gradient
@@ -2894,6 +2897,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_bg
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3007,6 +3011,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable progress_bar_dots
+drawable round_button
 drawable rounded_corner
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3122,6 +3127,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnDialog
 id buttonPanel
 id button_no
 id button_yes
@@ -3280,6 +3286,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loadingprogress
 id locale
 id loginbutton
 id loginpage
@@ -3515,6 +3522,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3564,6 +3574,7 @@ id voteoption
 id voteoption2
 id voterid
 id voteridview
+id votesubmitbuttonlayout
 id voting
 id west
 id wide
@@ -3702,6 +3713,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_negative
+layout dialog_positive
 layout fragment_change_password
 layout fragment_change_username
 layout fragment_enter_new_password
@@ -5147,7 +5160,7 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
-styleable CircleView circleRadius circleColor circleDrawOnlystroke circleStrokeWidth
+styleable CircleView circleColor circleDrawOnlystroke circleRadius circleStrokeWidth
 styleable CircularDotsLoader loader_bigCircleRadius
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor

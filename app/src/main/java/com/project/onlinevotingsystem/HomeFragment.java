@@ -20,7 +20,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -61,9 +64,10 @@ public class HomeFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    String name,date;
+    String name,date,voterid;
     LinearLayout electionview;
     static Integer id;
+    LinearDotsLoader progressloader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +93,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         electionview = view.findViewById(R.id.electionlinear);
+        progressloader = view.findViewById(R.id.loadingprogress);
         read();
 
     }
@@ -165,14 +170,45 @@ public class HomeFragment extends Fragment {
                 linearLayout.addView(timeview);
 
                 // Add the Linear Layout to the parent view
+                progressloader.setVisibility(View.GONE);
                 electionview.addView(linearLayout);
 
-                linearLayout.setOnClickListener(v -> {
-                    //Toast.makeText(getContext(),String.valueOf(linearLayout.getId()),Toast.LENGTH_LONG).show();
-                    id = linearLayout.getId();
-                    NavController navController = Navigation.findNavController(getView());
-                    navController.navigate(R.id.voting);
 
+                linearLayout.setOnClickListener(v -> {
+                    id = linearLayout.getId();
+                    System.out.println(id);
+                    voterid = Navigation_HomeActivity.voteridreturn();
+                    System.out.println(voterid);
+                    FirebaseFirestore database = FirebaseFirestore.getInstance();
+                    DocumentReference documentReference = database.collection("Test_User").document(voterid);
+                    documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
+                        if(documentSnapshot1.exists())
+                        {
+                            Double uservotestatus = documentSnapshot1.getDouble(String.valueOf(id));
+                            System.out.println(uservotestatus);
+                            if (uservotestatus == 1)
+                            {
+                                Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_SHORT);
+                                snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                                snackbar.show();
+                            }
+                            else
+                            {
+                                NavController navController = Navigation.findNavController(getView());
+                                navController.navigate(R.id.voting);
+                            }
+                        }
+                        else
+                        {
+                            Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_SHORT);
+                            snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                            snackbar.show();
+                        }
+                    }).addOnFailureListener(e -> {
+                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_SHORT);
+                        snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                        snackbar.show();
+                    });
                 });
 
             }
@@ -195,8 +231,5 @@ public class HomeFragment extends Fragment {
         }
     };
 
-    public static Integer voteid()
-    {
-        return id;
-    }
+    public static Integer voteid() {return id;}
 }

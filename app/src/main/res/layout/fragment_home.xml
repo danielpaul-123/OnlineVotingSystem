@@ -25,7 +25,27 @@
             android:id="@+id/electionlinear"
             android:orientation="vertical">
 
+            <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
+                android:id="@+id/loadingprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:layout_gravity="center"
+                app:loader_noOfDots="5"
+                app:loader_defaultColor="@color/darknavyblue"
+                app:loader_circleRadius="6dp"
+                app:loader_selectedColor="@color/navyblue"
+                app:loader_expandOnSelect="false"
+                app:loader_isSingleDir="false"
+                app:loader_selectedRadius="10dp"
+                app:loader_showRunningShadow="true"
+                app:loader_firstShadowColor="@color/blue_selected"
+                app:loader_secondShadowColor="@color/blue_default"
+                android:visibility="visible"/>
+
         </LinearLayout>
+
+
 
 
     </ScrollView>

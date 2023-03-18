@@ -1,11 +1,21 @@
 package com.project.onlinevotingsystem;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,17 +24,12 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-
+import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -75,10 +80,11 @@ public class VotingFragment extends Fragment {
     }
     Integer id;
     Integer notaid = 4862;
-    LinearLayout votedata,votedata2;
+    LinearLayout votedata,votedata2,votesubmitbuttonlayout;
     TextView votenametext;
-    String name,date,candidate;
+    String name,date,candidate,voterid;
     StringBuilder sb = new StringBuilder();
+    LinearDotsLoader loadingprogress;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -87,16 +93,19 @@ public class VotingFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_voting, container, false);
         return view;
+
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        NavController navController = Navigation.findNavController(view);
         votedata = view.findViewById(R.id.voteoption);
         votedata2 = view.findViewById(R.id.voteoption2);
         votenametext = view.findViewById(R.id.votenametext);
+        loadingprogress = view.findViewById(R.id.loadingprogress);
+        votesubmitbuttonlayout = view.findViewById(R.id.votesubmitbuttonlayout);
 
         id = HomeFragment.voteid();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -146,10 +155,12 @@ public class VotingFragment extends Fragment {
                         votecandidate.setText(candidate);
                         votecandidate.setTextSize(21);
                         votecandidate.setId(i);
+                        votecandidate.setTypeface(font);
+                        votecandidate.setTextColor(textcolor);
                         System.out.println(votecandidate.getId());
                         votecandidate.setTypeface(font2);
                         votecandidate.setButtonTintList(colorStateList);
-                        votecandidate.setPadding(30,30,0,30);
+                        votecandidate.setPadding(30,35,0,35);
                         voteoptionlist.addView(votecandidate, voteoptionlayout);
                     }
                     else
@@ -160,15 +171,134 @@ public class VotingFragment extends Fragment {
 
                 RadioButton votecandidate = new RadioButton(getContext());
                 votecandidate.setText("NOTA");
-                votecandidate.setTextSize(19);
+                votecandidate.setTextSize(21);
                 votecandidate.setId(notaid);
+                votecandidate.setTextColor(textcolor);
                 System.out.println(votecandidate.getId());
                 votecandidate.setTypeface(font2);
                 votecandidate.setButtonTintList(colorStateList);
-                votecandidate.setPadding(30,30,0,30);
+                votecandidate.setPadding(30,35,0,35);
                 voteoptionlist.addView(votecandidate, voteoptionlayout);
 
+                Button votesubmit = new Button(getContext());
+                votesubmit.setText("Submit Your Vote");
+                votesubmit.setTextSize(22);
+                votesubmit.setTypeface(font2);
+                votesubmit.setBackgroundResource(R.drawable.button_bg);
+                votesubmit.setPadding(10, 30, 10, 30);
+
                 votedata2.addView(voteoptionlist);
+                votesubmitbuttonlayout.addView(votesubmit);
+                loadingprogress.setVisibility(View.GONE);
+
+                votesubmit.setOnClickListener(v -> {
+                    votecandidate.setError(null);
+                    if (voteoptionlist.getCheckedRadioButtonId() <=0)
+                    {
+                        votecandidate.setError("Please select your option");
+                    }
+                    else if (voteoptionlist.getCheckedRadioButtonId() == notaid)
+                    {
+                        id = HomeFragment.voteid();
+                        voterid = Navigation_HomeActivity.voteridreturn();
+                        FirebaseFirestore update = FirebaseFirestore.getInstance();
+                        DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
+                        Map<String,Object> voteupdate = new HashMap<>();
+                        voteupdate.put("NOTA", FieldValue.increment(1));
+                        updateref.update(voteupdate)
+                                .addOnSuccessListener(unused -> {
+                                    DocumentReference updateuser = update.collection("Test_User").document(voterid);
+                                    Map<String,Object> userupdate = new HashMap<>();
+                                    userupdate.put(String.valueOf(id), FieldValue.increment(1));
+                                    updateuser.update(userupdate)
+                                            .addOnSuccessListener(unused1 -> {
+                                                AlertDialog.Builder alertdialog = new AlertDialog.Builder(getActivity(),R.style.MyAlertDialogStyle);
+                                                alertdialog.setIcon(R.drawable.baseline_how_to_vote_40);
+                                                alertdialog.setTitle(R.string.app_name);
+                                                alertdialog.setMessage("Congratulations! You have Voted Succesfully");
+                                                alertdialog.setCancelable(false);
+                                                alertdialog.setPositiveButton("Continue", (dialog, which) -> {
+                                                    NavController navController = Navigation.findNavController(getView());
+                                                    navController.navigate(R.id.home);
+                                                });
+                                                alertdialog.show();
+                                            })
+                                            .addOnFailureListener(e -> {
+                                                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                                dialogBuilder.setView(alertbuild);
+                                                AlertDialog alertDialog = dialogBuilder.create();
+                                                alertDialog.show();
+                                                dialogbutton.setOnClickListener(v3 -> {
+                                                    alertDialog.dismiss();
+                                                });
+                                            });
+                                }).addOnFailureListener(e -> {
+                                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                                    View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                                    Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                    dialogBuilder.setView(alertbuild);
+                                    AlertDialog alertDialog = dialogBuilder.create();
+                                    alertDialog.show();
+                                    dialogbutton.setOnClickListener(v4 -> {
+                                        alertDialog.dismiss();
+                                    });
+                                });
+                    }
+                    else
+                    {
+                        id = HomeFragment.voteid();
+                        sb.setLength(0);
+                        sb.append("Contestant");
+                        sb.append(voteoptionlist.getCheckedRadioButtonId());
+                        voterid = Navigation_HomeActivity.voteridreturn();
+                        FirebaseFirestore update = FirebaseFirestore.getInstance();
+
+                        DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
+                        Map<String,Object> voteupdate = new HashMap<>();
+                        voteupdate.put(String.valueOf(sb), FieldValue.increment(1));
+
+                        updateref.update(voteupdate).addOnSuccessListener(unused -> {
+                            DocumentReference updateuser = update.collection("Test_User").document(voterid);
+                            Map<String,Object> userupdate = new HashMap<>();
+                            userupdate.put(String.valueOf(id), FieldValue.increment(1));
+                            updateuser.update(userupdate).addOnSuccessListener(unused12 -> {
+                                AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(getContext());
+                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_positive, null);
+                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                alertdialogbuilder.setView(alertbuild);
+                                AlertDialog alertDialog = alertdialogbuilder.create();
+                                alertDialog.show();
+                                dialogbutton.setOnClickListener(v12 -> {
+                                    alertDialog.dismiss();
+                                    NavController navController = Navigation.findNavController(getView());
+                                    navController.navigate(R.id.home);
+                                });
+                            }).addOnFailureListener(e -> {
+                                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                dialogBuilder.setView(alertbuild);
+                                AlertDialog alertDialog = dialogBuilder.create();
+                                alertDialog.show();
+                                dialogbutton.setOnClickListener(v12 -> {
+                                    alertDialog.dismiss();
+                                });
+                            });
+                        }).addOnFailureListener(e -> {
+                            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                            View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                            Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                            dialogBuilder.setView(alertbuild);
+                            AlertDialog alertDialog = dialogBuilder.create();
+                            alertDialog.show();
+                            dialogbutton.setOnClickListener(v2 -> {
+                                alertDialog.dismiss();
+                            });
+                        });
+                    }
+                });
             }
         });
     }

@@ -12,6 +12,7 @@ color blue
 color blue_default
 color blue_selected
 color darknavyblue
+color green
 color icon_background
 color lightgreytext
 color navyblue
@@ -22,6 +23,7 @@ color teal_200
 color teal_700
 color white
 drawable baseline_account_circle_24
+drawable baseline_check_circle_outline_24
 drawable baseline_cottage_24
 drawable baseline_double_arrow_24
 drawable baseline_double_inactive_arrow_24
@@ -29,13 +31,16 @@ drawable baseline_how_to_vote_40
 drawable baseline_key_24
 drawable baseline_logout_24
 drawable baseline_menu_24
+drawable baseline_mood_bad_24
 drawable baseline_person_24
 drawable baseline_remember_me_24
 drawable bg_gradient
+drawable button_bg
 drawable icon_foreground
 drawable icon_foreground_login
 drawable linearlayoutbg
 drawable progress_bar_dots
+drawable round_button
 drawable rounded_corner
 font abeezee
 font acme
@@ -46,6 +51,7 @@ font lato
 font open_sans_light
 font open_sans_semibold
 id apptitle
+id btnDialog
 id button_no
 id button_yes
 id change_password
@@ -59,6 +65,7 @@ id enterpasswordlayout
 id enterusernamelayout
 id home
 id imageView
+id loadingprogress
 id loginbutton
 id loginpage
 id loginprogress
@@ -76,6 +83,9 @@ id newusername
 id password
 id profile_picture
 id submitbutton
+id textView
+id textView2
+id textView3
 id text_message
 id username
 id usernameconfirm
@@ -86,10 +96,13 @@ id voteoption
 id voteoption2
 id voterid
 id voteridview
+id votesubmitbuttonlayout
 id voting
 layout activity_main
 layout activity_navigation_home
 layout activity_splash
+layout dialog_negative
+layout dialog_positive
 layout fragment_change_password
 layout fragment_change_username
 layout fragment_enter_new_password

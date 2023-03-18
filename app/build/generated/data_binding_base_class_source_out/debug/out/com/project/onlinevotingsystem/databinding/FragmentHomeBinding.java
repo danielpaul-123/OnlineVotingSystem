@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.project.onlinevotingsystem.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -26,11 +27,15 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final ScrollView electionscroll;
 
+  @NonNull
+  public final LinearDotsLoader loadingprogress;
+
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout electionlinear,
-      @NonNull ScrollView electionscroll) {
+      @NonNull ScrollView electionscroll, @NonNull LinearDotsLoader loadingprogress) {
     this.rootView = rootView;
     this.electionlinear = electionlinear;
     this.electionscroll = electionscroll;
+    this.loadingprogress = loadingprogress;
   }
 
   @Override
@@ -72,7 +77,14 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, electionlinear, electionscroll);
+      id = R.id.loadingprogress;
+      LinearDotsLoader loadingprogress = ViewBindings.findChildViewById(rootView, id);
+      if (loadingprogress == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((FrameLayout) rootView, electionlinear, electionscroll,
+          loadingprogress);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
