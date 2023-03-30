@@ -4,12 +4,12 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\activity_navigation_home.xml",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_navigation_home.xml"
-    },
-    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\fragment_voting.xml",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_voting.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\activity_navigation_home.xml",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_navigation_home.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\dialog_positive.xml",
@@ -30,10 +30,6 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\dialog_negative.xml",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\dialog_negative.xml"
-    },
-    {
-        "merged": "com.project.onlinevotingsystem.app-mergeDebugResources-53:/layout/dialog_negative.xml",
-        "source": "com.project.onlinevotingsystem.app-main-56:/layout/dialog_negative.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\navigation_header.xml",

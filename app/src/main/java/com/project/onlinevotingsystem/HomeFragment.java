@@ -175,6 +175,7 @@ public class HomeFragment extends Fragment {
 
 
                 linearLayout.setOnClickListener(v -> {
+                    progressloader.setVisibility(View.VISIBLE);
                     id = linearLayout.getId();
                     System.out.println(id);
                     voterid = Navigation_HomeActivity.voteridreturn();
@@ -186,10 +187,11 @@ public class HomeFragment extends Fragment {
                         {
                             Double uservotestatus = documentSnapshot1.getDouble(String.valueOf(id));
                             System.out.println(uservotestatus);
-                            if (uservotestatus == 1)
+                            if (uservotestatus >0)
                             {
-                                Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_SHORT);
+                                Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_INDEFINITE);
                                 snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                                progressloader.setVisibility(View.GONE);
                                 snackbar.show();
                             }
                             else
@@ -200,20 +202,22 @@ public class HomeFragment extends Fragment {
                         }
                         else
                         {
-                            Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_SHORT);
+                            Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
                             snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                            progressloader.setVisibility(View.GONE);
                             snackbar.show();
                         }
                     }).addOnFailureListener(e -> {
-                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_SHORT);
+                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
                         snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                        progressloader.setVisibility(View.GONE);
                         snackbar.show();
                     });
                 });
 
             }
         }).addOnFailureListener(e -> Toast.makeText(getContext(),"Failed to Read Documents",Toast.LENGTH_LONG).show());
-
+        db.clearPersistence();
 
     }
 

@@ -2879,6 +2879,7 @@ drawable avd_show_password
 drawable baseline_account_circle_24
 drawable baseline_check_circle_outline_24
 drawable baseline_cottage_24
+drawable baseline_crisis_alert_24
 drawable baseline_double_arrow_24
 drawable baseline_double_inactive_arrow_24
 drawable baseline_how_to_vote_40
@@ -3210,6 +3211,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id election
 id electionlinear
 id electionscroll
 id embed
@@ -3522,7 +3524,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id textView3
 id text_input_end_icon

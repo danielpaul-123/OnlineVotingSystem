@@ -1,10 +1,7 @@
 package com.project.onlinevotingsystem;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                             userdata.putString("voterid",voterID);
                             Intent a = new Intent(MainActivity.this,Navigation_HomeActivity.class);
                             a.putExtra("userdatabundle",userdata);
+                            db.clearPersistence();
                             startActivity(a);
                             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                             finish();

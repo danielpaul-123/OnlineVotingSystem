@@ -22,6 +22,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final LinearLayout election;
+
+  @NonNull
   public final LinearLayout electionlinear;
 
   @NonNull
@@ -30,9 +33,11 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final LinearDotsLoader loadingprogress;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout electionlinear,
-      @NonNull ScrollView electionscroll, @NonNull LinearDotsLoader loadingprogress) {
+  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout election,
+      @NonNull LinearLayout electionlinear, @NonNull ScrollView electionscroll,
+      @NonNull LinearDotsLoader loadingprogress) {
     this.rootView = rootView;
+    this.election = election;
     this.electionlinear = electionlinear;
     this.electionscroll = electionscroll;
     this.loadingprogress = loadingprogress;
@@ -65,6 +70,12 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.election;
+      LinearLayout election = ViewBindings.findChildViewById(rootView, id);
+      if (election == null) {
+        break missingId;
+      }
+
       id = R.id.electionlinear;
       LinearLayout electionlinear = ViewBindings.findChildViewById(rootView, id);
       if (electionlinear == null) {
@@ -83,8 +94,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, electionlinear, electionscroll,
-          loadingprogress);
+      return new FragmentHomeBinding((FrameLayout) rootView, election, electionlinear,
+          electionscroll, loadingprogress);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -25,6 +25,7 @@ color white
 drawable baseline_account_circle_24
 drawable baseline_check_circle_outline_24
 drawable baseline_cottage_24
+drawable baseline_crisis_alert_24
 drawable baseline_double_arrow_24
 drawable baseline_double_inactive_arrow_24
 drawable baseline_how_to_vote_40
@@ -57,6 +58,7 @@ id button_yes
 id change_password
 id change_username
 id confirmnewpassword
+id election
 id electionlinear
 id electionscroll
 id enternewpassword
@@ -83,7 +85,6 @@ id newusername
 id password
 id profile_picture
 id submitbutton
-id textView
 id textView2
 id textView3
 id text_message

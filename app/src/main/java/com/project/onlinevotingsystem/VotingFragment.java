@@ -205,46 +205,47 @@ public class VotingFragment extends Fragment {
                         DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
                         Map<String,Object> voteupdate = new HashMap<>();
                         voteupdate.put("NOTA", FieldValue.increment(1));
-                        updateref.update(voteupdate)
-                                .addOnSuccessListener(unused -> {
-                                    DocumentReference updateuser = update.collection("Test_User").document(voterid);
-                                    Map<String,Object> userupdate = new HashMap<>();
-                                    userupdate.put(String.valueOf(id), FieldValue.increment(1));
-                                    updateuser.update(userupdate)
-                                            .addOnSuccessListener(unused1 -> {
-                                                AlertDialog.Builder alertdialog = new AlertDialog.Builder(getActivity(),R.style.MyAlertDialogStyle);
-                                                alertdialog.setIcon(R.drawable.baseline_how_to_vote_40);
-                                                alertdialog.setTitle(R.string.app_name);
-                                                alertdialog.setMessage("Congratulations! You have Voted Succesfully");
-                                                alertdialog.setCancelable(false);
-                                                alertdialog.setPositiveButton("Continue", (dialog, which) -> {
-                                                    NavController navController = Navigation.findNavController(getView());
-                                                    navController.navigate(R.id.home);
-                                                });
-                                                alertdialog.show();
-                                            })
-                                            .addOnFailureListener(e -> {
-                                                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
-                                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
-                                                dialogBuilder.setView(alertbuild);
-                                                AlertDialog alertDialog = dialogBuilder.create();
-                                                alertDialog.show();
-                                                dialogbutton.setOnClickListener(v3 -> {
-                                                    alertDialog.dismiss();
-                                                });
-                                            });
-                                }).addOnFailureListener(e -> {
-                                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                                    View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
-                                    Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
-                                    dialogBuilder.setView(alertbuild);
-                                    AlertDialog alertDialog = dialogBuilder.create();
-                                    alertDialog.show();
-                                    dialogbutton.setOnClickListener(v4 -> {
-                                        alertDialog.dismiss();
-                                    });
+                        updateref.update(voteupdate).addOnSuccessListener(unused -> {
+                            DocumentReference updateuser = update.collection("Test_User").document(voterid);
+                            Map<String,Object> userupdate = new HashMap<>();
+                            userupdate.put(String.valueOf(id), FieldValue.increment(1));
+                            updateuser.update(userupdate).addOnSuccessListener(unused1 -> {
+                                AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(getContext());
+                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_positive, null);
+                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                alertdialogbuilder.setView(alertbuild);
+                                alertdialogbuilder.setCancelable(false);
+                                AlertDialog alertDialog = alertdialogbuilder.create();
+                                alertDialog.show();
+                                dialogbutton.setOnClickListener(v12 -> {
+                                    alertDialog.dismiss();
+                                    NavController navController = Navigation.findNavController(getView());
+                                    navController.navigate(R.id.home);
                                 });
+                            }).addOnFailureListener(e -> {
+                                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                                View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                                Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                                dialogBuilder.setView(alertbuild);
+                                dialogBuilder.setCancelable(false);
+                                AlertDialog alertDialog = dialogBuilder.create();
+                                alertDialog.show();
+                                dialogbutton.setOnClickListener(v3 -> {
+                                    alertDialog.dismiss();
+                                });
+                            });
+                        }).addOnFailureListener(e -> {
+                            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+                            View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+                            Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+                            dialogBuilder.setView(alertbuild);
+                            dialogBuilder.setCancelable(false);
+                            AlertDialog alertDialog = dialogBuilder.create();
+                            alertDialog.show();
+                            dialogbutton.setOnClickListener(v4 -> {
+                                alertDialog.dismiss();
+                            });
+                        });
                     }
                     else
                     {
@@ -263,11 +264,15 @@ public class VotingFragment extends Fragment {
                             DocumentReference updateuser = update.collection("Test_User").document(voterid);
                             Map<String,Object> userupdate = new HashMap<>();
                             userupdate.put(String.valueOf(id), FieldValue.increment(1));
+
                             updateuser.update(userupdate).addOnSuccessListener(unused12 -> {
                                 AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(getContext());
+
                                 View alertbuild = getLayoutInflater().inflate(R.layout.dialog_positive, null);
                                 Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
+
                                 alertdialogbuilder.setView(alertbuild);
+                                alertdialogbuilder.setCancelable(false);
                                 AlertDialog alertDialog = alertdialogbuilder.create();
                                 alertDialog.show();
                                 dialogbutton.setOnClickListener(v12 -> {
@@ -275,22 +280,26 @@ public class VotingFragment extends Fragment {
                                     NavController navController = Navigation.findNavController(getView());
                                     navController.navigate(R.id.home);
                                 });
+
                             }).addOnFailureListener(e -> {
                                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
                                 View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
                                 Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
                                 dialogBuilder.setView(alertbuild);
+                                dialogBuilder.setCancelable(false);
                                 AlertDialog alertDialog = dialogBuilder.create();
                                 alertDialog.show();
                                 dialogbutton.setOnClickListener(v12 -> {
                                     alertDialog.dismiss();
                                 });
                             });
+
                         }).addOnFailureListener(e -> {
                             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
                             View alertbuild = getLayoutInflater().inflate(R.layout.dialog_negative, null);
                             Button dialogbutton = alertbuild.findViewById(R.id.btnDialog);
                             dialogBuilder.setView(alertbuild);
+                            dialogBuilder.setCancelable(false);
                             AlertDialog alertDialog = dialogBuilder.create();
                             alertDialog.show();
                             dialogbutton.setOnClickListener(v2 -> {

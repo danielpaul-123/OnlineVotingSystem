@@ -83,7 +83,6 @@
         <item name="colorAccent">@color/purple_200</item>
     </style>
     <style name="MyAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert">
-        <item name="android:colorAccent">#1E1E1E</item> 
     </style>
     <style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
