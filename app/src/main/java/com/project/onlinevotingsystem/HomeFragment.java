@@ -26,6 +26,14 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -99,7 +107,9 @@ public class HomeFragment extends Fragment {
     }
 
     protected void read(){
+        FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.setFirestoreSettings(firestoreSettings);
         CollectionReference collectionRef = db.collection("Election_Data");
         collectionRef.get().addOnSuccessListener(queryDocumentSnapshots -> {
             for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
@@ -177,47 +187,92 @@ public class HomeFragment extends Fragment {
                 linearLayout.setOnClickListener(v -> {
                     progressloader.setVisibility(View.VISIBLE);
                     id = linearLayout.getId();
-                    System.out.println(id);
                     voterid = Navigation_HomeActivity.voteridreturn();
-                    System.out.println(voterid);
+
+                    ZonedDateTime indiazoneddatetime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+                    LocalDateTime indiaLocalDateTime = indiazoneddatetime.toLocalDateTime();
+                    int indiatime = indiaLocalDateTime.getHour();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ENGLISH);
+                    String indiadate = indiaLocalDateTime.format(formatter);
+
                     FirebaseFirestore database = FirebaseFirestore.getInstance();
-                    DocumentReference documentReference = database.collection("Test_User").document(voterid);
-                    documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
-                        if(documentSnapshot1.exists())
+                    database.setFirestoreSettings(firestoreSettings);
+
+                    DocumentReference reference = database.collection("Election_Data").document(String.valueOf(id));
+                    reference.get().addOnSuccessListener(documentSnapshot2 -> {
+                        Map<String,Object> data = documentSnapshot2.getData();
+                        String date = data.get("Date").toString();
+                        if (indiadate.equals(date))
                         {
-                            Double uservotestatus = documentSnapshot1.getDouble(String.valueOf(id));
-                            System.out.println(uservotestatus);
-                            if (uservotestatus >0)
-                            {
-                                Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_INDEFINITE);
+                            DocumentReference documentReference = database.collection("Test_User").document(voterid);
+                            documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
+                                if(documentSnapshot1.exists())
+                                {
+                                    if(indiatime<9)
+                                    {
+                                        Snackbar snackbar = Snackbar.make(getView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
+                                        snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
+                                        progressloader.setVisibility(View.GONE);
+                                        snackbar.show();
+                                    }
+                                    else if (indiatime>14)
+                                    {
+                                        Snackbar snackbar = Snackbar.make(getView(),"The Election has already Ended",Snackbar.LENGTH_INDEFINITE);
+                                        snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
+                                        progressloader.setVisibility(View.GONE);
+                                        snackbar.show();
+                                    }
+                                    else
+                                    {
+                                        Double uservotestatus = documentSnapshot1.getDouble(String.valueOf(id));
+                                        if (uservotestatus >0)
+                                        {
+                                            Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_INDEFINITE);
+                                            snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                                            progressloader.setVisibility(View.GONE);
+                                            snackbar.show();
+                                        }
+                                        else
+                                        {
+                                            NavController navController = Navigation.findNavController(getView());
+                                            navController.navigate(R.id.voting);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
+                                    snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
+                                    progressloader.setVisibility(View.GONE);
+                                    snackbar.show();
+                                }
+                            }).addOnFailureListener(e -> {
+                                Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
                                 snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                                 progressloader.setVisibility(View.GONE);
                                 snackbar.show();
-                            }
-                            else
-                            {
-                                NavController navController = Navigation.findNavController(getView());
-                                navController.navigate(R.id.voting);
-                            }
+                            });
                         }
                         else
                         {
-                            Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
+                            Snackbar snackbar = Snackbar.make(getView(),"Please ensure that you attempt to vote on the day of the election.",Snackbar.LENGTH_INDEFINITE);
                             snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                             progressloader.setVisibility(View.GONE);
                             snackbar.show();
                         }
+
                     }).addOnFailureListener(e -> {
-                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
+                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again.",Snackbar.LENGTH_INDEFINITE);
                         snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                         progressloader.setVisibility(View.GONE);
                         snackbar.show();
                     });
+
+
                 });
 
             }
         }).addOnFailureListener(e -> Toast.makeText(getContext(),"Failed to Read Documents",Toast.LENGTH_LONG).show());
-        db.clearPersistence();
 
     }
 

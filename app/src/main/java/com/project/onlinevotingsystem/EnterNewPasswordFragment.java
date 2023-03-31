@@ -1,6 +1,12 @@
 package com.project.onlinevotingsystem;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
@@ -9,16 +15,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.transition.TransitionInflater;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
@@ -109,8 +108,9 @@ public class EnterNewPasswordFragment extends Fragment {
                 if (passwordnew.equals(newpasswordconfirm))
                 {
                     newpasswordhash = new Argon2PasswordEncoder(16, 32, 1, 1 << 14, 2).encode(passwordnew);
-
+                    FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    db.setFirestoreSettings(firestoreSettings);
                     DocumentReference ref = db.collection("Test_User").document(String.valueOf(voterid));
 
                     Map<String,Object> hashdata = new HashMap<>();

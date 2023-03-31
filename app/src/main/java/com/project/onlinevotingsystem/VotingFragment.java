@@ -28,6 +28,7 @@ import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -157,7 +158,6 @@ public class VotingFragment extends Fragment {
                         votecandidate.setId(i);
                         votecandidate.setTypeface(font);
                         votecandidate.setTextColor(textcolor);
-                        System.out.println(votecandidate.getId());
                         votecandidate.setTypeface(font2);
                         votecandidate.setButtonTintList(colorStateList);
                         votecandidate.setPadding(30,35,0,35);
@@ -174,7 +174,6 @@ public class VotingFragment extends Fragment {
                 votecandidate.setTextSize(21);
                 votecandidate.setId(notaid);
                 votecandidate.setTextColor(textcolor);
-                System.out.println(votecandidate.getId());
                 votecandidate.setTypeface(font2);
                 votecandidate.setButtonTintList(colorStateList);
                 votecandidate.setPadding(30,35,0,35);
@@ -254,8 +253,9 @@ public class VotingFragment extends Fragment {
                         sb.append("Contestant");
                         sb.append(voteoptionlist.getCheckedRadioButtonId());
                         voterid = Navigation_HomeActivity.voteridreturn();
+                        FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                         FirebaseFirestore update = FirebaseFirestore.getInstance();
-
+                        update.setFirestoreSettings(firestoreSettings);
                         DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
                         Map<String,Object> voteupdate = new HashMap<>();
                         voteupdate.put(String.valueOf(sb), FieldValue.increment(1));

@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
@@ -103,8 +104,9 @@ public class ChangeUsernameFragment extends Fragment {
             {
                 username = usernamefield.getText().toString();
                 password = passwordfield.getText().toString();
-
+                FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.setFirestoreSettings(firestoreSettings);
                 DocumentReference docRef = db.collection("Test_User").document(voterid);
                 docRef.get().addOnSuccessListener(documentSnapshot -> {
                             if (documentSnapshot.exists()) {

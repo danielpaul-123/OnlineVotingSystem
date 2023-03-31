@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
@@ -55,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 voterID = voterid.getText().toString();
                 userName = username.getText().toString();
                 passWord = password.getText().toString();
-
+                FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.setFirestoreSettings(firestoreSettings);
                 DocumentReference docRef = db.collection("Test_User").document(voterID);
                 docRef.get().addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
@@ -75,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                             userdata.putString("voterid",voterID);
                             Intent a = new Intent(MainActivity.this,Navigation_HomeActivity.class);
                             a.putExtra("userdatabundle",userdata);
-                            db.clearPersistence();
                             startActivity(a);
                             overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                             finish();

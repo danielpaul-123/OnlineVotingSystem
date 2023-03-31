@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
@@ -107,8 +108,9 @@ public class EnterNewUsernameFragment extends Fragment {
                 {
                     usernamenew = newusername.getText().toString();
                     newusernamehash = new Argon2PasswordEncoder(16, 32, 1, 1 << 14, 2).encode(usernamenew);
-
+                    FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    db.setFirestoreSettings(firestoreSettings);
                     DocumentReference ref = db.collection("Test_User").document(String.valueOf(voterid));
 
                     Map<String,Object> hashdata = new HashMap<>();
