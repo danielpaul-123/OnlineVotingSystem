@@ -198,6 +198,8 @@ public class VotingFragment extends Fragment {
                     }
                     else if (voteoptionlist.getCheckedRadioButtonId() == notaid)
                     {
+
+                        loadingprogress.setVisibility(View.VISIBLE);
                         id = HomeFragment.voteid();
                         voterid = Navigation_HomeActivity.voteridreturn();
                         FirebaseFirestore update = FirebaseFirestore.getInstance();
@@ -248,6 +250,8 @@ public class VotingFragment extends Fragment {
                     }
                     else
                     {
+
+                        loadingprogress.setVisibility(View.GONE);
                         id = HomeFragment.voteid();
                         sb.setLength(0);
                         sb.append("Contestant");

@@ -4,16 +4,24 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\fragment_voting.xml",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_voting.xml"
+        "merged": "com.project.onlinevotingsystem.app-mergeDebugResources-53:/layout/fragment_enter_new_password.xml",
+        "source": "com.project.onlinevotingsystem.app-main-56:/layout/fragment_enter_new_password.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\activity_navigation_home.xml",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\activity_navigation_home.xml"
     },
     {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\fragment_voting.xml",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_voting.xml"
+    },
+    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\dialog_positive.xml",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\dialog_positive.xml"
+    },
+    {
+        "merged": "com.project.onlinevotingsystem.app-mergeDebugResources-53:/layout/fragment_enter_new_username.xml",
+        "source": "com.project.onlinevotingsystem.app-main-56:/layout/fragment_enter_new_username.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\logout_confirm_popup.xml",
@@ -38,10 +46,6 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\fragment_enter_new_username.xml",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_enter_new_username.xml"
-    },
-    {
-        "merged": "com.project.onlinevotingsystem.app-mergeDebugResources-53:/layout/dialog_positive.xml",
-        "source": "com.project.onlinevotingsystem.app-main-56:/layout/dialog_positive.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-mergeDebugResources-53:\\layout\\activity_splash.xml",

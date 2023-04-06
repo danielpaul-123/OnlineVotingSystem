@@ -40,6 +40,7 @@ drawable button_bg
 drawable icon_foreground
 drawable icon_foreground_login
 drawable linearlayoutbg
+drawable outline_replay_24
 drawable progress_bar_dots
 drawable round_button
 drawable rounded_corner

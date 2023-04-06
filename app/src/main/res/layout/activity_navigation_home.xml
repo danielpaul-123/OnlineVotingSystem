@@ -43,7 +43,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/menubutton"></TextView>
+                app:layout_constraintLeft_toRightOf="@+id/menubutton"/>
 
             <ImageButton
                 android:id="@+id/logoutbuttonab"
@@ -57,7 +57,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RedundantDescriptionCheck"></ImageButton>
+                tools:ignore="RedundantDescriptionCheck"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         
@@ -124,14 +124,6 @@
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
                 android:text="@string/mti_thrissur"
-                android:textColor="#838383"
-                android:textSize="14sp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/abeezee"
-                android:gravity="center"
-                android:text="@string/all_rights_reserved"
                 android:textColor="#838383"
                 android:textSize="14sp" />
 

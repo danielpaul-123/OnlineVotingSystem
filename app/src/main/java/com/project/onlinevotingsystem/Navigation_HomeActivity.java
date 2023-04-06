@@ -30,7 +30,7 @@ public class Navigation_HomeActivity extends AppCompatActivity {
     NavigationView nav_menu;
     static String voterid;
     String username;
-    ImageButton logoutbutton;
+    ImageButton logoutbutton,reloadbutton;
 
 
 
@@ -92,6 +92,4 @@ public class Navigation_HomeActivity extends AppCompatActivity {
 
     }
     public static String voteridreturn() {return voterid;}
-
-
 }

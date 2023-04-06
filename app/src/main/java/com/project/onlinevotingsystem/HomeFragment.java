@@ -291,4 +291,5 @@ public class HomeFragment extends Fragment {
     };
 
     public static Integer voteid() {return id;}
+
 }

@@ -28,12 +28,12 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_logout_24.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_change_password.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_password.xml"
-    },
-    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_home.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_fragment_change_password.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\fragment_change_password.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_double_arrow_24.xml.flat",
@@ -92,6 +92,10 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\transition\\slide_in.xml"
     },
     {
+        "merged": "com.project.onlinevotingsystem.app-merged_res-54:/layout_fragment_enter_new_password.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-56:/layout/fragment_enter_new_password.xml"
+    },
+    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_remember_me_24.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_remember_me_24.xml"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\navigation_main.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\navigation\\main.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_outline_replay_24.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\outline_replay_24.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-hdpi_icon_round.png.flat",
@@ -204,8 +212,8 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\baseline_crisis_alert_24.xml"
     },
     {
-        "merged": "com.project.onlinevotingsystem.app-merged_res-54:/layout_dialog_positive.xml.flat",
-        "source": "com.project.onlinevotingsystem.app-main-56:/layout/dialog_positive.xml"
+        "merged": "com.project.onlinevotingsystem.app-merged_res-54:/layout_fragment_enter_new_username.xml.flat",
+        "source": "com.project.onlinevotingsystem.app-main-56:/layout/fragment_enter_new_username.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_open_sans_semibold.xml.flat",
@@ -232,12 +240,12 @@
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_dialog_negative.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\dialog_negative.xml"
-    },
-    {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_bg_gradient.xml.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\bg_gradient.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\layout_dialog_negative.xml.flat",
+        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\layout\\dialog_negative.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_baseline_account_circle_24.xml.flat",
@@ -250,10 +258,6 @@
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\mipmap-mdpi_icon.png.flat",
         "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\mipmap-mdpi\\icon.png"
-    },
-    {
-        "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\drawable_dialog_background.xml.flat",
-        "source": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-main-56:\\drawable\\dialog_background.xml"
     },
     {
         "merged": "E:\\AndroidStudioGradle\\daemon\\7.5\\com.project.onlinevotingsystem.app-merged_res-54:\\font_abeezee.xml.flat",
