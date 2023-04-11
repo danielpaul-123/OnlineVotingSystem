@@ -13,7 +13,7 @@
     <string name="mti_thrissur">MTI Thrissur</string>
     <string name="password">Password</string>
     <string name="user_name">User name</string>
-    <string name="v1_35_alpha">v1.35_alpha</string>
+    <string name="v1_35_alpha">v1.35_b</string>
     <string name="voter_s_id">Voter\'s ID</string>
     <style name="Theme.OnlineVotingSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         

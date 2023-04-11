@@ -202,20 +202,26 @@ public class HomeFragment extends Fragment {
                     reference.get().addOnSuccessListener(documentSnapshot2 -> {
                         Map<String,Object> data = documentSnapshot2.getData();
                         String date = data.get("Date").toString();
+                        Long startT = (Long) data.get("startTime");
+                        Long endT = (Long) data.get("endTime");
+                        Integer startTime = Math.toIntExact(startT);
+                        Integer endTime = Math.toIntExact(endT);
+                        System.out.println(startTime);
+                        System.out.println(endTime);
                         if (indiadate.equals(date))
                         {
                             DocumentReference documentReference = database.collection("Test_User").document(voterid);
                             documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
                                 if(documentSnapshot1.exists())
                                 {
-                                    if(indiatime<9)
+                                    if(indiatime<startTime)
                                     {
                                         Snackbar snackbar = Snackbar.make(getView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
                                         progressloader.setVisibility(View.GONE);
                                         snackbar.show();
                                     }
-                                    else if (indiatime>14)
+                                    else if (indiatime>endTime)
                                     {
                                         Snackbar snackbar = Snackbar.make(getView(),"The Election has already Ended",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
