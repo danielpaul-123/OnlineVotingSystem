@@ -149,9 +149,9 @@ public class HomeFragment extends Fragment {
 
                 linearLayout.setLayoutParams(layoutParams1);
                 linearLayout.setBackground(shape);
-                int textcolor = ContextCompat.getColor(getContext(),R.color.lightgreytext);
-                Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Regular.ttf");
-                Typeface datefont = Typeface.createFromAsset(getContext().getAssets(), "fonts/abeezee.ttf");
+                int textcolor = ContextCompat.getColor(requireContext(),R.color.lightgreytext);
+                Typeface font = Typeface.createFromAsset(requireContext().getAssets(), "fonts/Lato-Regular.ttf");
+                Typeface datefont = Typeface.createFromAsset(requireContext().getAssets(), "fonts/abeezee.ttf");
                 Typeface timefont = Typeface.createFromAsset(getContext().getAssets(), "fonts/Nunito.ttf");
 
                 // Create a new TextView for the data and add it to the Linear Layout
@@ -224,14 +224,14 @@ public class HomeFragment extends Fragment {
                                 {
                                     if(indiatime<startTime1)
                                     {
-                                        Snackbar snackbar = Snackbar.make(getView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
+                                        Snackbar snackbar = Snackbar.make(requireView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
                                         progressloader.setVisibility(View.GONE);
                                         snackbar.show();
                                     }
                                     else if (indiatime>=endTime1)
                                     {
-                                        Snackbar snackbar = Snackbar.make(getView(),"The Election has already Ended",Snackbar.LENGTH_INDEFINITE);
+                                        Snackbar snackbar = Snackbar.make(requireView(),"The Election has already Ended",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
                                         progressloader.setVisibility(View.GONE);
                                         snackbar.show();
@@ -241,27 +241,27 @@ public class HomeFragment extends Fragment {
                                         Double uservotestatus = documentSnapshot1.getDouble(String.valueOf(id));
                                         if (uservotestatus >0)
                                         {
-                                            Snackbar snackbar = Snackbar.make(getView(),"You Vote has already been Placed",Snackbar.LENGTH_INDEFINITE);
+                                            Snackbar snackbar = Snackbar.make(requireView(),"You Vote has already been Placed",Snackbar.LENGTH_INDEFINITE);
                                             snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                                             progressloader.setVisibility(View.GONE);
                                             snackbar.show();
                                         }
                                         else
                                         {
-                                            NavController navController = Navigation.findNavController(getView());
+                                            NavController navController = Navigation.findNavController(requireView());
                                             navController.navigate(R.id.voting);
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar snackbar = Snackbar.make(requireView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
                                     snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                                     progressloader.setVisibility(View.GONE);
                                     snackbar.show();
                                 }
                             }).addOnFailureListener(e -> {
-                                Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
+                                Snackbar snackbar = Snackbar.make(requireView(),"Failed to show details. Please Try Again",Snackbar.LENGTH_INDEFINITE);
                                 snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                                 progressloader.setVisibility(View.GONE);
                                 snackbar.show();
@@ -269,14 +269,14 @@ public class HomeFragment extends Fragment {
                         }
                         else
                         {
-                            Snackbar snackbar = Snackbar.make(getView(),"Please ensure that you attempt to vote on the day of the election.",Snackbar.LENGTH_INDEFINITE);
+                            Snackbar snackbar = Snackbar.make(requireView(),"Please ensure that you attempt to vote on the day of the election.",Snackbar.LENGTH_INDEFINITE);
                             snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                             progressloader.setVisibility(View.GONE);
                             snackbar.show();
                         }
 
                     }).addOnFailureListener(e -> {
-                        Snackbar snackbar = Snackbar.make(getView(),"Failed to show details. Please Try Again.",Snackbar.LENGTH_INDEFINITE);
+                        Snackbar snackbar = Snackbar.make(requireView(),"Failed to show details. Please Try Again.",Snackbar.LENGTH_INDEFINITE);
                         snackbar.setAction("Dismiss", v1 -> snackbar.dismiss());
                         progressloader.setVisibility(View.GONE);
                         snackbar.show();
