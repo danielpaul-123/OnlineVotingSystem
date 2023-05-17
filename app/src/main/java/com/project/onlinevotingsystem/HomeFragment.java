@@ -222,7 +222,7 @@ public class HomeFragment extends Fragment {
                             documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
                                 if(documentSnapshot1.exists())
                                 {
-                                    if(indiatime<=startTime1)
+                                    if(indiatime<startTime1)
                                     {
                                         Snackbar snackbar = Snackbar.make(getView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
