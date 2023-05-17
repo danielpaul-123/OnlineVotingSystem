@@ -1,0 +1,7 @@
+com.project.onlinevotingsystem.test.app-jetified-annotation-experimental-1.3.0-0 E:\AndroidStudioGradle\caches\transforms-3\81fcc2483add018c191e0a672aa82e6c\transformed\jetified-annotation-experimental-1.3.0\res
+com.project.onlinevotingsystem.test.app-jetified-core-1.5.0-1 E:\AndroidStudioGradle\caches\transforms-3\cb64ed6e73ea36f63af6d8b382dfb65a\transformed\jetified-core-1.5.0\res
+com.project.onlinevotingsystem.test.app-androidTest-2 E:\AndroidStudioProjects\OnlineVotingSystem\app\build\generated\res\resValues\androidTest\debug
+com.project.onlinevotingsystem.test.app-androidTest-3 E:\AndroidStudioProjects\OnlineVotingSystem\app\build\generated\res\rs\androidTest\debug
+com.project.onlinevotingsystem.test.app-mergeDebugAndroidTestResources-4 E:\AndroidStudioProjects\OnlineVotingSystem\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.project.onlinevotingsystem.test.app-mergeDebugAndroidTestResources-5 E:\AndroidStudioProjects\OnlineVotingSystem\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.project.onlinevotingsystem.test.app-merged_res-6 E:\AndroidStudioProjects\OnlineVotingSystem\app\build\intermediates\merged_res\debugAndroidTest
