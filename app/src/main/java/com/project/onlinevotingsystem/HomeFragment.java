@@ -116,6 +116,16 @@ public class HomeFragment extends Fragment {
                 name = documentSnapshot.getString("Name");
                 date = documentSnapshot.getString("Date");
                 id = Integer.valueOf(documentSnapshot.getId());
+                Long startT = (Long) documentSnapshot.get("startTime");
+                Long endT = (Long) documentSnapshot.get("endTime");
+                Integer startTime = Math.toIntExact(startT);
+                Integer endTime = Math.toIntExact(endT);
+                StringBuilder timeframe = new StringBuilder();
+                timeframe.append(startTime);
+                timeframe.append(":00:00 to ");
+                timeframe.append(endTime);
+                timeframe.append(":00:00");
+                System.out.println(timeframe);
 
                 LinearLayout linearLayout = new LinearLayout(getContext());
 
@@ -169,7 +179,7 @@ public class HomeFragment extends Fragment {
 
 
                 TextView timeview = new TextView(getContext());
-                timeview.setText("09:00 AM to 03:00 PM");
+                timeview.setText(timeframe);
                 timeview.setTypeface(timefont);
                 timeview.setTextSize(18);
                 timeview.setTextColor(textcolor);
@@ -202,26 +212,24 @@ public class HomeFragment extends Fragment {
                     reference.get().addOnSuccessListener(documentSnapshot2 -> {
                         Map<String,Object> data = documentSnapshot2.getData();
                         String date = data.get("Date").toString();
-                        Long startT = (Long) data.get("startTime");
-                        Long endT = (Long) data.get("endTime");
-                        Integer startTime = Math.toIntExact(startT);
-                        Integer endTime = Math.toIntExact(endT);
-                        System.out.println(startTime);
-                        System.out.println(endTime);
+                        Long startTm = (Long) data.get("startTime");
+                        Long endTm = (Long) data.get("endTime");
+                        Integer startTime1 = Math.toIntExact(startTm);
+                        Integer endTime1 = Math.toIntExact(endTm);
                         if (indiadate.equals(date))
                         {
                             DocumentReference documentReference = database.collection("Test_User").document(voterid);
                             documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
                                 if(documentSnapshot1.exists())
                                 {
-                                    if(indiatime<startTime)
+                                    if(indiatime<=startTime1)
                                     {
                                         Snackbar snackbar = Snackbar.make(getView(),"The Election has not yet Started",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
                                         progressloader.setVisibility(View.GONE);
                                         snackbar.show();
                                     }
-                                    else if (indiatime>endTime)
+                                    else if (indiatime>=endTime1)
                                     {
                                         Snackbar snackbar = Snackbar.make(getView(),"The Election has already Ended",Snackbar.LENGTH_INDEFINITE);
                                         snackbar.setAction("Dismiss", v15 -> snackbar.dismiss());
