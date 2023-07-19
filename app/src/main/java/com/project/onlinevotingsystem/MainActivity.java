@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                     voterid.startAnimation(fadein);
                     username.startAnimation(fadein);
                     password.startAnimation(fadein);
+                    voterid.bringToFront();
+                    username.bringToFront();
+                    password.bringToFront();
                     login.setVisibility(View.VISIBLE);
                     voterid.setVisibility(View.VISIBLE);
                     username.setVisibility(View.VISIBLE);
