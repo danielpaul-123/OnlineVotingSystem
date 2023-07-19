@@ -26,7 +26,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -40,6 +39,7 @@ import java.util.Map;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+@SuppressWarnings("All")
 public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -87,8 +87,7 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(),callback);
@@ -107,9 +106,7 @@ public class HomeFragment extends Fragment {
     }
 
     protected void read(){
-        FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.setFirestoreSettings(firestoreSettings);
         CollectionReference collectionRef = db.collection("Election_Data");
         collectionRef.get().addOnSuccessListener(queryDocumentSnapshots -> {
             for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
@@ -205,10 +202,7 @@ public class HomeFragment extends Fragment {
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ENGLISH);
                     String indiadate = indiaLocalDateTime.format(formatter);
 
-                    FirebaseFirestore database = FirebaseFirestore.getInstance();
-                    database.setFirestoreSettings(firestoreSettings);
-
-                    DocumentReference reference = database.collection("Election_Data").document(String.valueOf(id));
+                    DocumentReference reference = db.collection("Election_Data").document(String.valueOf(id));
                     reference.get().addOnSuccessListener(documentSnapshot2 -> {
                         Map<String,Object> data = documentSnapshot2.getData();
                         String date = data.get("Date").toString();
@@ -218,7 +212,7 @@ public class HomeFragment extends Fragment {
                         Integer endTime1 = Math.toIntExact(endTm);
                         if (indiadate.equals(date))
                         {
-                            DocumentReference documentReference = database.collection("Test_User").document(voterid);
+                            DocumentReference documentReference = db.collection("Test_User").document(voterid);
                             documentReference.get().addOnSuccessListener(documentSnapshot1 -> {
                                 if(documentSnapshot1.exists())
                                 {

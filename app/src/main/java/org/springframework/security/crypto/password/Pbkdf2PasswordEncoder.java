@@ -48,25 +48,25 @@ import org.springframework.security.crypto.util.EncodingUtils;
  */
 public class Pbkdf2PasswordEncoder implements PasswordEncoder {
 
-	private static final int DEFAULT_SALT_LENGTH = 16;
+    private static final int DEFAULT_SALT_LENGTH = 16;
 
-	private static final SecretKeyFactoryAlgorithm DEFAULT_ALGORITHM = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256;
+    private static final SecretKeyFactoryAlgorithm DEFAULT_ALGORITHM = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256;
 
-	private static final int DEFAULT_HASH_WIDTH = 256; // SHA-256
+    private static final int DEFAULT_HASH_WIDTH = 256; // SHA-256
 
-	private static final int DEFAULT_ITERATIONS = 310000;
+    private static final int DEFAULT_ITERATIONS = 310000;
 
-	private final BytesKeyGenerator saltGenerator;
+    private final BytesKeyGenerator saltGenerator;
 
-	private final byte[] secret;
+    private final byte[] secret;
 
-	private final int iterations;
+    private final int iterations;
 
-	private String algorithm = DEFAULT_ALGORITHM.name();
+    private String algorithm = DEFAULT_ALGORITHM.name();
 
-	private int hashWidth = DEFAULT_HASH_WIDTH;
+    private int hashWidth = DEFAULT_HASH_WIDTH;
 
-	// @formatter:off
+    // @formatter:off
 	/*
 	The length of the hash should be derived from the hashing algorithm.
 
@@ -80,168 +80,172 @@ public class Pbkdf2PasswordEncoder implements PasswordEncoder {
 	In order to preserve backwards compatibility, the variable 'overrideHashWidth' has been introduced
 	to indicate usage of the deprecated constructor that honors the hashWidth parameter.
 	 */
-	// @formatter:on
-	private boolean overrideHashWidth = true;
+    // @formatter:on
+    private boolean overrideHashWidth = true;
 
-	private boolean encodeHashAsBase64;
+    private boolean encodeHashAsBase64;
 
-	/**
-	 * Constructs a PBKDF2 password encoder with a secret value as well as salt length,
-	 * iterations and hash width.
-	 * @param secret the secret
-	 * @param saltLength the salt length (in bytes)
-	 * @param iterations the number of iterations. Users should aim for taking about .5
-	 * seconds on their own system.
-	 * @param hashWidth the size of the hash (in bits)
-	 * @since 5.5
-	 * @deprecated Use
-	 * {@link #Pbkdf2PasswordEncoder(CharSequence, int, int, SecretKeyFactoryAlgorithm)}
-	 * instead
-	 */
-	@Deprecated
-	public Pbkdf2PasswordEncoder(CharSequence secret, int saltLength, int iterations, int hashWidth) {
-		this.secret = Utf8.encode(secret);
-		this.saltGenerator = KeyGenerators.secureRandom(saltLength);
-		this.iterations = iterations;
-		this.hashWidth = hashWidth;
-		this.algorithm = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1.name();
-		this.overrideHashWidth = false; // Honor 'hashWidth' to preserve backwards
-										// compatibility
-	}
+    /**
+     * Constructs a PBKDF2 password encoder with a secret value as well as salt length,
+     * iterations and hash width.
+     *
+     * @param secret     the secret
+     * @param saltLength the salt length (in bytes)
+     * @param iterations the number of iterations. Users should aim for taking about .5
+     *                   seconds on their own system.
+     * @param hashWidth  the size of the hash (in bits)
+     * @since 5.5
+     * @deprecated Use
+     * {@link #Pbkdf2PasswordEncoder(CharSequence, int, int, SecretKeyFactoryAlgorithm)}
+     * instead
+     */
+    @Deprecated
+    public Pbkdf2PasswordEncoder(CharSequence secret, int saltLength, int iterations, int hashWidth) {
+        this.secret = Utf8.encode(secret);
+        this.saltGenerator = KeyGenerators.secureRandom(saltLength);
+        this.iterations = iterations;
+        this.hashWidth = hashWidth;
+        this.algorithm = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1.name();
+        this.overrideHashWidth = false; // Honor 'hashWidth' to preserve backwards
+        // compatibility
+    }
 
-	/**
-	 * Constructs a PBKDF2 password encoder with a secret value as well as salt length,
-	 * iterations and algorithm.
-	 * @param secret the secret
-	 * @param saltLength the salt length (in bytes)
-	 * @param iterations the number of iterations. Users should aim for taking about .5
-	 * seconds on their own system.
-	 * @param secretKeyFactoryAlgorithm the algorithm to use
-	 * @since 5.8
-	 */
-	public Pbkdf2PasswordEncoder(CharSequence secret, int saltLength, int iterations,
-			SecretKeyFactoryAlgorithm secretKeyFactoryAlgorithm) {
-		this.secret = Utf8.encode(secret);
-		this.saltGenerator = KeyGenerators.secureRandom(saltLength);
-		this.iterations = iterations;
-		setAlgorithm(secretKeyFactoryAlgorithm);
-	}
+    /**
+     * Constructs a PBKDF2 password encoder with a secret value as well as salt length,
+     * iterations and algorithm.
+     *
+     * @param secret                    the secret
+     * @param saltLength                the salt length (in bytes)
+     * @param iterations                the number of iterations. Users should aim for taking about .5
+     *                                  seconds on their own system.
+     * @param secretKeyFactoryAlgorithm the algorithm to use
+     * @since 5.8
+     */
+    public Pbkdf2PasswordEncoder(CharSequence secret, int saltLength, int iterations,
+                                 SecretKeyFactoryAlgorithm secretKeyFactoryAlgorithm) {
+        this.secret = Utf8.encode(secret);
+        this.saltGenerator = KeyGenerators.secureRandom(saltLength);
+        this.iterations = iterations;
+        setAlgorithm(secretKeyFactoryAlgorithm);
+    }
 
-	/**
-	 * Constructs a PBKDF2 password encoder with no additional secret value. There will be
-	 * a salt length of 8 bytes, 185,000 iterations, SHA-1 algorithm and a hash length of
-	 * 256 bits. The default is based upon aiming for .5 seconds to validate the password
-	 * when this class was added. Users should tune password verification to their own
-	 * systems.
-	 * @return the {@link Pbkdf2PasswordEncoder}
-	 * @since 5.8
-	 * @deprecated Use {@link #defaultsForSpringSecurity_v5_8()} instead
-	 */
-	@Deprecated
-	public static Pbkdf2PasswordEncoder defaultsForSpringSecurity_v5_5() {
-		return new Pbkdf2PasswordEncoder("", 8, 185000, 256);
-	}
+    /**
+     * Constructs a PBKDF2 password encoder with no additional secret value. There will be
+     * a salt length of 8 bytes, 185,000 iterations, SHA-1 algorithm and a hash length of
+     * 256 bits. The default is based upon aiming for .5 seconds to validate the password
+     * when this class was added. Users should tune password verification to their own
+     * systems.
+     *
+     * @return the {@link Pbkdf2PasswordEncoder}
+     * @since 5.8
+     * @deprecated Use {@link #defaultsForSpringSecurity_v5_8()} instead
+     */
+    @Deprecated
+    public static Pbkdf2PasswordEncoder defaultsForSpringSecurity_v5_5() {
+        return new Pbkdf2PasswordEncoder("", 8, 185000, 256);
+    }
 
-	/**
-	 * Constructs a PBKDF2 password encoder with no additional secret value. There will be
-	 * a salt length of 16 bytes, 310,000 iterations, SHA-256 algorithm and a hash length
-	 * of 256 bits. The default is based upon aiming for .5 seconds to validate the
-	 * password when this class was added. Users should tune password verification to
-	 * their own systems.
-	 * @return the {@link Pbkdf2PasswordEncoder}
-	 * @since 5.8
-	 */
-	public static Pbkdf2PasswordEncoder defaultsForSpringSecurity_v5_8() {
-		return new Pbkdf2PasswordEncoder("", DEFAULT_SALT_LENGTH, DEFAULT_ITERATIONS, DEFAULT_ALGORITHM);
-	}
+    /**
+     * Constructs a PBKDF2 password encoder with no additional secret value. There will be
+     * a salt length of 16 bytes, 310,000 iterations, SHA-256 algorithm and a hash length
+     * of 256 bits. The default is based upon aiming for .5 seconds to validate the
+     * password when this class was added. Users should tune password verification to
+     * their own systems.
+     *
+     * @return the {@link Pbkdf2PasswordEncoder}
+     * @since 5.8
+     */
+    public static Pbkdf2PasswordEncoder defaultsForSpringSecurity_v5_8() {
+        return new Pbkdf2PasswordEncoder("", DEFAULT_SALT_LENGTH, DEFAULT_ITERATIONS, DEFAULT_ALGORITHM);
+    }
 
-	/**
-	 * Sets the algorithm to use. See <a href=
-	 * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#SecretKeyFactory">SecretKeyFactory
-	 * Algorithms</a>
-	 * @param secretKeyFactoryAlgorithm the algorithm to use (i.e.
-	 * {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1},
-	 * {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256},
-	 * {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA512})
-	 * @since 5.0
-	 */
-	public void setAlgorithm(SecretKeyFactoryAlgorithm secretKeyFactoryAlgorithm) {
-		if (secretKeyFactoryAlgorithm == null) {
-			throw new IllegalArgumentException("secretKeyFactoryAlgorithm cannot be null");
-		}
-		String algorithmName = secretKeyFactoryAlgorithm.name();
-		try {
-			SecretKeyFactory.getInstance(algorithmName);
-			this.algorithm = algorithmName;
-		}
-		catch (NoSuchAlgorithmException ex) {
-			throw new IllegalArgumentException("Invalid algorithm '" + algorithmName + "'.", ex);
-		}
-		if (this.overrideHashWidth) {
-			this.hashWidth = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1.equals(secretKeyFactoryAlgorithm) ? 160
-					: SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256.equals(secretKeyFactoryAlgorithm) ? 256 : 512;
-		}
-	}
+    /**
+     * Sets the algorithm to use. See <a href=
+     * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#SecretKeyFactory">SecretKeyFactory
+     * Algorithms</a>
+     *
+     * @param secretKeyFactoryAlgorithm the algorithm to use (i.e.
+     *                                  {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1},
+     *                                  {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256},
+     *                                  {@code SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA512})
+     * @since 5.0
+     */
+    public void setAlgorithm(SecretKeyFactoryAlgorithm secretKeyFactoryAlgorithm) {
+        if (secretKeyFactoryAlgorithm == null) {
+            throw new IllegalArgumentException("secretKeyFactoryAlgorithm cannot be null");
+        }
+        String algorithmName = secretKeyFactoryAlgorithm.name();
+        try {
+            SecretKeyFactory.getInstance(algorithmName);
+            this.algorithm = algorithmName;
+        } catch (NoSuchAlgorithmException ex) {
+            throw new IllegalArgumentException("Invalid algorithm '" + algorithmName + "'.", ex);
+        }
+        if (this.overrideHashWidth) {
+            this.hashWidth = SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1.equals(secretKeyFactoryAlgorithm) ? 160
+                    : SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256.equals(secretKeyFactoryAlgorithm) ? 256 : 512;
+        }
+    }
 
-	/**
-	 * Sets if the resulting hash should be encoded as Base64. The default is false which
-	 * means it will be encoded in Hex.
-	 * @param encodeHashAsBase64 true if encode as Base64, false if should use Hex
-	 * (default)
-	 */
-	public void setEncodeHashAsBase64(boolean encodeHashAsBase64) {
-		this.encodeHashAsBase64 = encodeHashAsBase64;
-	}
+    /**
+     * Sets if the resulting hash should be encoded as Base64. The default is false which
+     * means it will be encoded in Hex.
+     *
+     * @param encodeHashAsBase64 true if encode as Base64, false if should use Hex
+     *                           (default)
+     */
+    public void setEncodeHashAsBase64(boolean encodeHashAsBase64) {
+        this.encodeHashAsBase64 = encodeHashAsBase64;
+    }
 
-	@Override
-	public String encode(CharSequence rawPassword) {
-		byte[] salt = this.saltGenerator.generateKey();
-		byte[] encoded = encode(rawPassword, salt);
-		return encode(encoded);
-	}
+    @Override
+    public String encode(CharSequence rawPassword) {
+        byte[] salt = this.saltGenerator.generateKey();
+        byte[] encoded = encode(rawPassword, salt);
+        return encode(encoded);
+    }
 
-	private String encode(byte[] bytes) {
-		if (this.encodeHashAsBase64) {
-			return Base64.getEncoder().encodeToString(bytes);
-		}
-		return String.valueOf(Hex.encode(bytes));
-	}
+    private String encode(byte[] bytes) {
+        if (this.encodeHashAsBase64) {
+            return Base64.getEncoder().encodeToString(bytes);
+        }
+        return String.valueOf(Hex.encode(bytes));
+    }
 
-	@Override
-	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		byte[] digested = decode(encodedPassword);
-		byte[] salt = EncodingUtils.subArray(digested, 0, this.saltGenerator.getKeyLength());
-		return MessageDigest.isEqual(digested, encode(rawPassword, salt));
-	}
+    @Override
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        byte[] digested = decode(encodedPassword);
+        byte[] salt = EncodingUtils.subArray(digested, 0, this.saltGenerator.getKeyLength());
+        return MessageDigest.isEqual(digested, encode(rawPassword, salt));
+    }
 
-	private byte[] decode(String encodedBytes) {
-		if (this.encodeHashAsBase64) {
-			return Base64.getDecoder().decode(encodedBytes);
-		}
-		return Hex.decode(encodedBytes);
-	}
+    private byte[] decode(String encodedBytes) {
+        if (this.encodeHashAsBase64) {
+            return Base64.getDecoder().decode(encodedBytes);
+        }
+        return Hex.decode(encodedBytes);
+    }
 
-	private byte[] encode(CharSequence rawPassword, byte[] salt) {
-		try {
-			PBEKeySpec spec = new PBEKeySpec(rawPassword.toString().toCharArray(),
-					EncodingUtils.concatenate(salt, this.secret), this.iterations, this.hashWidth);
-			SecretKeyFactory skf = SecretKeyFactory.getInstance(this.algorithm);
-			return EncodingUtils.concatenate(salt, skf.generateSecret(spec).getEncoded());
-		}
-		catch (GeneralSecurityException ex) {
-			throw new IllegalStateException("Could not create hash", ex);
-		}
-	}
+    private byte[] encode(CharSequence rawPassword, byte[] salt) {
+        try {
+            PBEKeySpec spec = new PBEKeySpec(rawPassword.toString().toCharArray(),
+                    EncodingUtils.concatenate(salt, this.secret), this.iterations, this.hashWidth);
+            SecretKeyFactory skf = SecretKeyFactory.getInstance(this.algorithm);
+            return EncodingUtils.concatenate(salt, skf.generateSecret(spec).getEncoded());
+        } catch (GeneralSecurityException ex) {
+            throw new IllegalStateException("Could not create hash", ex);
+        }
+    }
 
-	/**
-	 * The Algorithm used for creating the {@link SecretKeyFactory}
-	 *
-	 * @since 5.0
-	 */
-	public enum SecretKeyFactoryAlgorithm {
+    /**
+     * The Algorithm used for creating the {@link SecretKeyFactory}
+     *
+     * @since 5.0
+     */
+    public enum SecretKeyFactoryAlgorithm {
 
-		PBKDF2WithHmacSHA1, PBKDF2WithHmacSHA256, PBKDF2WithHmacSHA512
+        PBKDF2WithHmacSHA1, PBKDF2WithHmacSHA256, PBKDF2WithHmacSHA512
 
-	}
+    }
 
 }

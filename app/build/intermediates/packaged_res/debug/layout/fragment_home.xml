@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:orientation="vertical"
-                android:id="@+id/electionlinear"/>
+                android:id="@+id/electionlinear" />
 
             <com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader
                 android:id="@+id/loadingprogress"
@@ -47,7 +47,7 @@
                 app:loader_showRunningShadow="true"
                 app:loader_firstShadowColor="@color/blue_selected"
                 app:loader_secondShadowColor="@color/blue_default"
-                android:visibility="visible"/>
+                android:visibility="visible" />
 
         </LinearLayout>
 

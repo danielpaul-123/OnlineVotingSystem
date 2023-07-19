@@ -28,7 +28,6 @@ import com.agrawalsuneet.dotsloader.loaders.LinearDotsLoader;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,6 +37,7 @@ import java.util.Map;
  * Use the {@link VotingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+@SuppressWarnings("ALL")
 public class VotingFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -79,11 +79,12 @@ public class VotingFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     Integer id;
     Integer notaid = 4862;
-    LinearLayout votedata,votedata2,votesubmitbuttonlayout;
+    LinearLayout votedata, votedata2, votesubmitbuttonlayout;
     TextView votenametext;
-    String name,date,candidate,voterid;
+    String name, date, candidate, voterid;
     StringBuilder sb = new StringBuilder();
     LinearDotsLoader loadingprogress;
 
@@ -112,13 +113,12 @@ public class VotingFragment extends Fragment {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference documentReference = db.collection("Election_Data").document(String.valueOf(id));
         documentReference.get().addOnSuccessListener(documentSnapshot -> {
-            if(documentSnapshot.exists())
-            {
-                Map<String,Object> data = documentSnapshot.getData();
+            if (documentSnapshot.exists()) {
+                Map<String, Object> data = documentSnapshot.getData();
                 name = data.get("Name").toString();
                 date = data.get("Date").toString();
 
-                int textcolor = ContextCompat.getColor(getContext(),R.color.lightgreytext);
+                int textcolor = ContextCompat.getColor(getContext(), R.color.lightgreytext);
                 Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Regular.ttf");
                 Typeface font2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/abeezee.ttf");
 
@@ -131,7 +131,7 @@ public class VotingFragment extends Fragment {
                 );
 
                 StateListDrawable stateListDrawable = new StateListDrawable();
-                stateListDrawable.addState(new int[]{android.R.attr.state_checked}, new ColorDrawable(Color.rgb(35,62,154)));
+                stateListDrawable.addState(new int[]{android.R.attr.state_checked}, new ColorDrawable(Color.rgb(35, 62, 154)));
                 stateListDrawable.addState(new int[]{-android.R.attr.state_checked}, new ColorDrawable(Color.BLUE));
 
                 ColorStateList colorStateList = new ColorStateList(
@@ -140,7 +140,7 @@ public class VotingFragment extends Fragment {
                                 new int[]{-android.R.attr.state_checked}
                         },
                         new int[]{
-                                Color.rgb(49,82,194),
+                                Color.rgb(49, 82, 194),
                                 Color.WHITE
                         }
                 );
@@ -149,8 +149,7 @@ public class VotingFragment extends Fragment {
                     sb.setLength(0);
                     sb.append("Contestant");
                     sb.append(i);
-                    if(documentSnapshot.contains(String.valueOf(sb)))
-                    {
+                    if (documentSnapshot.contains(String.valueOf(sb))) {
                         candidate = data.get(String.valueOf(sb)).toString();
                         RadioButton votecandidate = new RadioButton(getContext());
                         votecandidate.setText(candidate);
@@ -160,12 +159,10 @@ public class VotingFragment extends Fragment {
                         votecandidate.setTextColor(textcolor);
                         votecandidate.setTypeface(font2);
                         votecandidate.setButtonTintList(colorStateList);
-                        votecandidate.setPadding(30,35,0,35);
+                        votecandidate.setPadding(30, 35, 0, 35);
                         voteoptionlist.addView(votecandidate, voteoptionlayout);
-                    }
-                    else
-                    {
-                        i=11;
+                    } else {
+                        i = 11;
                     }
                 }
 
@@ -176,7 +173,7 @@ public class VotingFragment extends Fragment {
                 votecandidate.setTextColor(textcolor);
                 votecandidate.setTypeface(font2);
                 votecandidate.setButtonTintList(colorStateList);
-                votecandidate.setPadding(30,35,0,35);
+                votecandidate.setPadding(30, 35, 0, 35);
                 voteoptionlist.addView(votecandidate, voteoptionlayout);
 
                 Button votesubmit = new Button(getContext());
@@ -192,23 +189,19 @@ public class VotingFragment extends Fragment {
 
                 votesubmit.setOnClickListener(v -> {
                     votecandidate.setError(null);
-                    if (voteoptionlist.getCheckedRadioButtonId() <=0)
-                    {
+                    if (voteoptionlist.getCheckedRadioButtonId() <= 0) {
                         votecandidate.setError("Please select your option");
-                    }
-                    else if (voteoptionlist.getCheckedRadioButtonId() == notaid)
-                    {
+                    } else if (voteoptionlist.getCheckedRadioButtonId() == notaid) {
 
                         loadingprogress.setVisibility(View.VISIBLE);
                         id = HomeFragment.voteid();
                         voterid = Navigation_HomeActivity.voteridreturn();
-                        FirebaseFirestore update = FirebaseFirestore.getInstance();
-                        DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
-                        Map<String,Object> voteupdate = new HashMap<>();
+                        DocumentReference updateref = db.collection("Election_Stats").document(String.valueOf(id));
+                        Map<String, Object> voteupdate = new HashMap<>();
                         voteupdate.put("NOTA", FieldValue.increment(1));
                         updateref.update(voteupdate).addOnSuccessListener(unused -> {
-                            DocumentReference updateuser = update.collection("Test_User").document(voterid);
-                            Map<String,Object> userupdate = new HashMap<>();
+                            DocumentReference updateuser = db.collection("Test_User").document(voterid);
+                            Map<String, Object> userupdate = new HashMap<>();
                             userupdate.put(String.valueOf(id), FieldValue.increment(1));
                             updateuser.update(userupdate).addOnSuccessListener(unused1 -> {
                                 AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(getContext());
@@ -247,9 +240,7 @@ public class VotingFragment extends Fragment {
                                 alertDialog.dismiss();
                             });
                         });
-                    }
-                    else
-                    {
+                    } else {
 
                         loadingprogress.setVisibility(View.GONE);
                         id = HomeFragment.voteid();
@@ -257,16 +248,13 @@ public class VotingFragment extends Fragment {
                         sb.append("Contestant");
                         sb.append(voteoptionlist.getCheckedRadioButtonId());
                         voterid = Navigation_HomeActivity.voteridreturn();
-                        FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
-                        FirebaseFirestore update = FirebaseFirestore.getInstance();
-                        update.setFirestoreSettings(firestoreSettings);
-                        DocumentReference updateref = update.collection("Election_Stats").document(String.valueOf(id));
-                        Map<String,Object> voteupdate = new HashMap<>();
+                        DocumentReference updateref = db.collection("Election_Stats").document(String.valueOf(id));
+                        Map<String, Object> voteupdate = new HashMap<>();
                         voteupdate.put(String.valueOf(sb), FieldValue.increment(1));
 
                         updateref.update(voteupdate).addOnSuccessListener(unused -> {
-                            DocumentReference updateuser = update.collection("Test_User").document(voterid);
-                            Map<String,Object> userupdate = new HashMap<>();
+                            DocumentReference updateuser = db.collection("Test_User").document(voterid);
+                            Map<String, Object> userupdate = new HashMap<>();
                             userupdate.put(String.valueOf(id), FieldValue.increment(1));
 
                             updateuser.update(userupdate).addOnSuccessListener(unused12 -> {

@@ -27,6 +27,7 @@ import java.util.Map;
  * Use the {@link ChangePasswordFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+@SuppressWarnings("ALL")
 public class ChangePasswordFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -67,10 +68,10 @@ public class ChangePasswordFragment extends Fragment {
 
     }
 
-    EditText usernamefield,passwordfield;
+    EditText usernamefield, passwordfield;
     Button submitbutton;
-    String username,password,userNamehash,passWordhash;
-    Boolean usrcheck,pswdcheck;
+    String username, password, userNamehash, passWordhash;
+    Boolean usrcheck, pswdcheck;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -94,16 +95,11 @@ public class ChangePasswordFragment extends Fragment {
         String voterid = Navigation_HomeActivity.voteridreturn();
 
         submitbutton.setOnClickListener(v -> {
-            if(usernamefield.getText().toString().isEmpty())
-            {
+            if (usernamefield.getText().toString().isEmpty()) {
                 usernamefield.setError("Please Enter Your Username");
-            }
-            else if(passwordfield.getText().toString().isEmpty())
-            {
+            } else if (passwordfield.getText().toString().isEmpty()) {
                 passwordfield.setError("Please Enter Your Password");
-            }
-            else
-            {
+            } else {
                 username = usernamefield.getText().toString();
                 password = passwordfield.getText().toString();
 
@@ -112,32 +108,27 @@ public class ChangePasswordFragment extends Fragment {
                 db.setFirestoreSettings(firestoreSettings);
                 DocumentReference docRef = db.collection("Test_User").document(voterid);
                 docRef.get().addOnSuccessListener(documentSnapshot -> {
-                    if (documentSnapshot.exists()) {
+                            if (documentSnapshot.exists()) {
 
-                        Map<String, Object> data = documentSnapshot.getData();
-                        userNamehash = data.get("Username").toString();
-                        passWordhash = data.get("Password").toString();
+                                Map<String, Object> data = documentSnapshot.getData();
+                                userNamehash = data.get("Username").toString();
+                                passWordhash = data.get("Password").toString();
 
-                        usrcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(username, userNamehash);
-                        pswdcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(password, passWordhash);
+                                usrcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(username, userNamehash);
+                                pswdcheck = Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8().matches(password, passWordhash);
 
-                        if(usrcheck && pswdcheck)
-                            {
-                                Toast.makeText(getActivity(),"Username and Password Correct",Toast.LENGTH_LONG).show();
-                                navController.navigate(R.id.enternewpassword);
+                                if (usrcheck && pswdcheck) {
+                                    Toast.makeText(getActivity(), "Username and Password Correct", Toast.LENGTH_LONG).show();
+                                    navController.navigate(R.id.enternewpassword);
 
+                                } else {
+                                    Toast.makeText(getActivity(), "Incorrect Username or Password. Please Try Again", Toast.LENGTH_LONG).show();
+                                }
+                            } else {
+                                Toast.makeText(getActivity(), "No User Account Found. Please Try Again", Toast.LENGTH_LONG).show();
                             }
-                            else
-                            {
-                                Toast.makeText(getActivity(),"Incorrect Username or Password. Please Try Again",Toast.LENGTH_LONG).show();
-                            }
-                        }
-                        else
-                            {
-                                Toast.makeText(getActivity(),"No User Account Found. Please Try Again",Toast.LENGTH_LONG).show();
-                            }
-                    })
-                .addOnFailureListener(e -> Toast.makeText(getActivity(),"Failed to Connect to Server. Please Try Again",Toast.LENGTH_LONG).show());
+                        })
+                        .addOnFailureListener(e -> Toast.makeText(getActivity(), "Failed to Connect to Server. Please Try Again", Toast.LENGTH_LONG).show());
             }
         });
 

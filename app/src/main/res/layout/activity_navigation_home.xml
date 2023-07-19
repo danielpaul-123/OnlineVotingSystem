@@ -30,7 +30,7 @@
                 android:paddingRight="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/apptitle"
@@ -43,7 +43,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/menubutton"/>
+                app:layout_constraintLeft_toRightOf="@+id/menubutton" />
 
             <ImageButton
                 android:id="@+id/logoutbuttonab"
@@ -57,10 +57,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RedundantDescriptionCheck"/>
+                tools:ignore="RedundantDescriptionCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
+
         <fragment
             android:layout_width="match_parent"
             android:layout_height="0dp"

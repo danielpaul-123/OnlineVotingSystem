@@ -28,6 +28,7 @@ import java.util.Map;
  * Use the {@link EnterNewUsernameFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+@SuppressWarnings("ALL")
 public class EnterNewUsernameFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -60,10 +61,10 @@ public class EnterNewUsernameFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    Button submit;
-    EditText newusername,confirmnewusername;
-    String usernamenew,newusernamehash,voterid;
 
+    Button submit;
+    EditText newusername, confirmnewusername;
+    String usernamenew, newusernamehash, voterid;
 
 
     @Override
@@ -94,18 +95,12 @@ public class EnterNewUsernameFragment extends Fragment {
         voterid = Navigation_HomeActivity.voteridreturn();
         submit.setOnClickListener(v -> {
 
-            if(newusername.getText().toString().isEmpty())
-            {
+            if (newusername.getText().toString().isEmpty()) {
                 newusername.setError("Please Enter Your Username");
-            }
-            else if(confirmnewusername.getText().toString().isEmpty())
-            {
+            } else if (confirmnewusername.getText().toString().isEmpty()) {
                 confirmnewusername.setError("Please Enter Your Password");
-            }
-            else
-            {
-                if ((newusername.getText().toString()).equals(confirmnewusername.getText().toString()))
-                {
+            } else {
+                if ((newusername.getText().toString()).equals(confirmnewusername.getText().toString())) {
                     usernamenew = newusername.getText().toString();
                     newusernamehash = new Argon2PasswordEncoder(16, 32, 1, 1 << 14, 2).encode(usernamenew);
                     FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
@@ -113,21 +108,19 @@ public class EnterNewUsernameFragment extends Fragment {
                     db.setFirestoreSettings(firestoreSettings);
                     DocumentReference ref = db.collection("Test_User").document(String.valueOf(voterid));
 
-                    Map<String,Object> hashdata = new HashMap<>();
-                    hashdata.put("Username",newusernamehash);
+                    Map<String, Object> hashdata = new HashMap<>();
+                    hashdata.put("Username", newusernamehash);
 
                     ref.update(hashdata)
                             .addOnSuccessListener(unused -> {
-                                Toast.makeText(getActivity(),"Username Updated Successfully ",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Username Updated Successfully ", Toast.LENGTH_LONG).show();
                                 navController.navigate(R.id.home);
 
                             })
-                            .addOnFailureListener(e -> Toast.makeText(getActivity(),"Failed to Update Username. Please Try Again",Toast.LENGTH_LONG).show());
+                            .addOnFailureListener(e -> Toast.makeText(getActivity(), "Failed to Update Username. Please Try Again", Toast.LENGTH_LONG).show());
 
-                }
-                else
-                {
-                    Toast.makeText(getActivity(),"Usernames do not match. Please Try Again",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getActivity(), "Usernames do not match. Please Try Again", Toast.LENGTH_LONG).show();
                 }
             }
 

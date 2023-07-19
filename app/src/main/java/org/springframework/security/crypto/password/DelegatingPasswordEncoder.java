@@ -24,7 +24,7 @@ import java.util.Map;
  * identifier.
  *
  * <h2>Constructing an instance</h2>
- *
+ * <p>
  * You can easily construct an instance using
  * {@link org.springframework.security.crypto.factory.PasswordEncoderFactories}.
  * Alternatively, you may create your own custom instance. For example:
@@ -43,20 +43,20 @@ import java.util.Map;
  *
  *
  * <h2>Password Storage Format</h2>
- *
+ * <p>
  * The general format for a password is:
  *
  * <pre>
  * {id}encodedPassword
  * </pre>
- *
+ * <p>
  * Such that "id" is an identifier used to look up which {@link PasswordEncoder} should be
  * used and "encodedPassword" is the original encoded password for the selected
  * {@link PasswordEncoder}. The "id" must be at the beginning of the password, start with
  * "{" (id prefix) and end with "}" (id suffix). Both id prefix and id suffix can be
  * customized via {@link #DelegatingPasswordEncoder(String, Map, String, String)}. If the
  * "id" cannot be found, the "id" will be null.
- *
+ * <p>
  * For example, the following might be a list of passwords encoded using different "id".
  * All of the original passwords are "password".
  *
@@ -67,7 +67,7 @@ import java.util.Map;
  * {scrypt}$e0801$8bWJaSu2IKSn9Z9kM+TPXfOc/9bdYSrN1oD9qfVThWEwdRTnO7re7Ei+fUZRJ68k9lTyuTeUp4of4g24hHnazw==$OAOec05+bXxvuu/1qZ6NUR+xQYvYv7BeL1QxwRpY5Pc=
  * {sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0
  * </pre>
- *
+ * <p>
  * For the DelegatingPasswordEncoder that we constructed above:
  *
  * <ol>
@@ -94,7 +94,7 @@ import java.util.Map;
  * </ol>
  *
  * <h2>Password Encoding</h2>
- *
+ * <p>
  * The {@code idForEncode} passed into the constructor determines which
  * {@link PasswordEncoder} will be used for encoding passwords. In the
  * {@code DelegatingPasswordEncoder} we constructed above, that means that the result of
@@ -106,11 +106,11 @@ import java.util.Map;
  * </pre>
  *
  * <h2>Password Matching</h2>
- *
+ * <p>
  * Matching is done based upon the "id" and the mapping of the "id" to the
  * {@link PasswordEncoder} provided in the constructor. Our example in "Password Storage
  * Format" provides a working example of how this is done.
- *
+ * <p>
  * By default the result of invoking {@link #matches(CharSequence, String)} with a
  * password with an "id" that is not mapped (including a null id) will result in an
  * {@link IllegalArgumentException}. This behavior can be customized using
@@ -120,175 +120,177 @@ import java.util.Map;
  * @author Michael Simons
  * @author heowc
  * @author Jihoon Cha
- * @since 5.0
  * @see org.springframework.security.crypto.factory.PasswordEncoderFactories
+ * @since 5.0
  */
 public class DelegatingPasswordEncoder implements PasswordEncoder {
 
-	private static final String DEFAULT_ID_PREFIX = "{";
+    private static final String DEFAULT_ID_PREFIX = "{";
 
-	private static final String DEFAULT_ID_SUFFIX = "}";
+    private static final String DEFAULT_ID_SUFFIX = "}";
 
-	private final String idPrefix;
+    private final String idPrefix;
 
-	private final String idSuffix;
+    private final String idSuffix;
 
-	private final String idForEncode;
+    private final String idForEncode;
 
-	private final PasswordEncoder passwordEncoderForEncode;
+    private final PasswordEncoder passwordEncoderForEncode;
 
-	private final Map<String, PasswordEncoder> idToPasswordEncoder;
+    private final Map<String, PasswordEncoder> idToPasswordEncoder;
 
-	private PasswordEncoder defaultPasswordEncoderForMatches = new UnmappedIdPasswordEncoder();
+    private PasswordEncoder defaultPasswordEncoderForMatches = new UnmappedIdPasswordEncoder();
 
-	/**
-	 * Creates a new instance
-	 * @param idForEncode the id used to lookup which {@link PasswordEncoder} should be
-	 * used for {@link #encode(CharSequence)}
-	 * @param idToPasswordEncoder a Map of id to {@link PasswordEncoder} used to determine
-	 * which {@link PasswordEncoder} should be used for
-	 * {@link #matches(CharSequence, String)}
-	 */
-	public DelegatingPasswordEncoder(String idForEncode, Map<String, PasswordEncoder> idToPasswordEncoder) {
-		this(idForEncode, idToPasswordEncoder, DEFAULT_ID_PREFIX, DEFAULT_ID_SUFFIX);
-	}
+    /**
+     * Creates a new instance
+     *
+     * @param idForEncode         the id used to lookup which {@link PasswordEncoder} should be
+     *                            used for {@link #encode(CharSequence)}
+     * @param idToPasswordEncoder a Map of id to {@link PasswordEncoder} used to determine
+     *                            which {@link PasswordEncoder} should be used for
+     *                            {@link #matches(CharSequence, String)}
+     */
+    public DelegatingPasswordEncoder(String idForEncode, Map<String, PasswordEncoder> idToPasswordEncoder) {
+        this(idForEncode, idToPasswordEncoder, DEFAULT_ID_PREFIX, DEFAULT_ID_SUFFIX);
+    }
 
-	/**
-	 * Creates a new instance
-	 * @param idForEncode the id used to lookup which {@link PasswordEncoder} should be
-	 * used for {@link #encode(CharSequence)}
-	 * @param idToPasswordEncoder a Map of id to {@link PasswordEncoder} used to determine
-	 * which {@link PasswordEncoder} should be used for
-	 * @param idPrefix the prefix that denotes the start of the id in the encoded results
-	 * @param idSuffix the suffix that denotes the end of an id in the encoded results
-	 * {@link #matches(CharSequence, String)}
-	 */
-	public DelegatingPasswordEncoder(String idForEncode, Map<String, PasswordEncoder> idToPasswordEncoder,
-			String idPrefix, String idSuffix) {
-		if (idForEncode == null) {
-			throw new IllegalArgumentException("idForEncode cannot be null");
-		}
-		if (idPrefix == null) {
-			throw new IllegalArgumentException("prefix cannot be null");
-		}
-		if (idSuffix == null || idSuffix.isEmpty()) {
-			throw new IllegalArgumentException("suffix cannot be empty");
-		}
-		if (idPrefix.contains(idSuffix)) {
-			throw new IllegalArgumentException("idPrefix " + idPrefix + " cannot contain idSuffix " + idSuffix);
-		}
+    /**
+     * Creates a new instance
+     *
+     * @param idForEncode         the id used to lookup which {@link PasswordEncoder} should be
+     *                            used for {@link #encode(CharSequence)}
+     * @param idToPasswordEncoder a Map of id to {@link PasswordEncoder} used to determine
+     *                            which {@link PasswordEncoder} should be used for
+     * @param idPrefix            the prefix that denotes the start of the id in the encoded results
+     * @param idSuffix            the suffix that denotes the end of an id in the encoded results
+     *                            {@link #matches(CharSequence, String)}
+     */
+    public DelegatingPasswordEncoder(String idForEncode, Map<String, PasswordEncoder> idToPasswordEncoder,
+                                     String idPrefix, String idSuffix) {
+        if (idForEncode == null) {
+            throw new IllegalArgumentException("idForEncode cannot be null");
+        }
+        if (idPrefix == null) {
+            throw new IllegalArgumentException("prefix cannot be null");
+        }
+        if (idSuffix == null || idSuffix.isEmpty()) {
+            throw new IllegalArgumentException("suffix cannot be empty");
+        }
+        if (idPrefix.contains(idSuffix)) {
+            throw new IllegalArgumentException("idPrefix " + idPrefix + " cannot contain idSuffix " + idSuffix);
+        }
 
-		if (!idToPasswordEncoder.containsKey(idForEncode)) {
-			throw new IllegalArgumentException(
-					"idForEncode " + idForEncode + "is not found in idToPasswordEncoder " + idToPasswordEncoder);
-		}
-		for (String id : idToPasswordEncoder.keySet()) {
-			if (id == null) {
-				continue;
-			}
-			if (!idPrefix.isEmpty() && id.contains(idPrefix)) {
-				throw new IllegalArgumentException("id " + id + " cannot contain " + idPrefix);
-			}
-			if (id.contains(idSuffix)) {
-				throw new IllegalArgumentException("id " + id + " cannot contain " + idSuffix);
-			}
-		}
-		this.idForEncode = idForEncode;
-		this.passwordEncoderForEncode = idToPasswordEncoder.get(idForEncode);
-		this.idToPasswordEncoder = new HashMap<>(idToPasswordEncoder);
-		this.idPrefix = idPrefix;
-		this.idSuffix = idSuffix;
-	}
+        if (!idToPasswordEncoder.containsKey(idForEncode)) {
+            throw new IllegalArgumentException(
+                    "idForEncode " + idForEncode + "is not found in idToPasswordEncoder " + idToPasswordEncoder);
+        }
+        for (String id : idToPasswordEncoder.keySet()) {
+            if (id == null) {
+                continue;
+            }
+            if (!idPrefix.isEmpty() && id.contains(idPrefix)) {
+                throw new IllegalArgumentException("id " + id + " cannot contain " + idPrefix);
+            }
+            if (id.contains(idSuffix)) {
+                throw new IllegalArgumentException("id " + id + " cannot contain " + idSuffix);
+            }
+        }
+        this.idForEncode = idForEncode;
+        this.passwordEncoderForEncode = idToPasswordEncoder.get(idForEncode);
+        this.idToPasswordEncoder = new HashMap<>(idToPasswordEncoder);
+        this.idPrefix = idPrefix;
+        this.idSuffix = idSuffix;
+    }
 
-	/**
-	 * Sets the {@link PasswordEncoder} to delegate to for
-	 * {@link #matches(CharSequence, String)} if the id is not mapped to a
-	 * {@link PasswordEncoder}.
-	 *
-	 * <p>
-	 * The encodedPassword provided will be the full password passed in including the
-	 * {"id"} portion.* For example, if the password of "{notmapped}foobar" was used, the
-	 * "id" would be "notmapped" and the encodedPassword passed into the
-	 * {@link PasswordEncoder} would be "{notmapped}foobar".
-	 * </p>
-	 * @param defaultPasswordEncoderForMatches the encoder to use. The default is to throw
-	 * an {@link IllegalArgumentException}
-	 */
-	public void setDefaultPasswordEncoderForMatches(PasswordEncoder defaultPasswordEncoderForMatches) {
-		if (defaultPasswordEncoderForMatches == null) {
-			throw new IllegalArgumentException("defaultPasswordEncoderForMatches cannot be null");
-		}
-		this.defaultPasswordEncoderForMatches = defaultPasswordEncoderForMatches;
-	}
+    /**
+     * Sets the {@link PasswordEncoder} to delegate to for
+     * {@link #matches(CharSequence, String)} if the id is not mapped to a
+     * {@link PasswordEncoder}.
+     *
+     * <p>
+     * The encodedPassword provided will be the full password passed in including the
+     * {"id"} portion.* For example, if the password of "{notmapped}foobar" was used, the
+     * "id" would be "notmapped" and the encodedPassword passed into the
+     * {@link PasswordEncoder} would be "{notmapped}foobar".
+     * </p>
+     *
+     * @param defaultPasswordEncoderForMatches the encoder to use. The default is to throw
+     *                                         an {@link IllegalArgumentException}
+     */
+    public void setDefaultPasswordEncoderForMatches(PasswordEncoder defaultPasswordEncoderForMatches) {
+        if (defaultPasswordEncoderForMatches == null) {
+            throw new IllegalArgumentException("defaultPasswordEncoderForMatches cannot be null");
+        }
+        this.defaultPasswordEncoderForMatches = defaultPasswordEncoderForMatches;
+    }
 
-	@Override
-	public String encode(CharSequence rawPassword) {
-		return this.idPrefix + this.idForEncode + this.idSuffix + this.passwordEncoderForEncode.encode(rawPassword);
-	}
+    @Override
+    public String encode(CharSequence rawPassword) {
+        return this.idPrefix + this.idForEncode + this.idSuffix + this.passwordEncoderForEncode.encode(rawPassword);
+    }
 
-	@Override
-	public boolean matches(CharSequence rawPassword, String prefixEncodedPassword) {
-		if (rawPassword == null && prefixEncodedPassword == null) {
-			return true;
-		}
-		String id = extractId(prefixEncodedPassword);
-		PasswordEncoder delegate = this.idToPasswordEncoder.get(id);
-		if (delegate == null) {
-			return this.defaultPasswordEncoderForMatches.matches(rawPassword, prefixEncodedPassword);
-		}
-		String encodedPassword = extractEncodedPassword(prefixEncodedPassword);
-		return delegate.matches(rawPassword, encodedPassword);
-	}
+    @Override
+    public boolean matches(CharSequence rawPassword, String prefixEncodedPassword) {
+        if (rawPassword == null && prefixEncodedPassword == null) {
+            return true;
+        }
+        String id = extractId(prefixEncodedPassword);
+        PasswordEncoder delegate = this.idToPasswordEncoder.get(id);
+        if (delegate == null) {
+            return this.defaultPasswordEncoderForMatches.matches(rawPassword, prefixEncodedPassword);
+        }
+        String encodedPassword = extractEncodedPassword(prefixEncodedPassword);
+        return delegate.matches(rawPassword, encodedPassword);
+    }
 
-	private String extractId(String prefixEncodedPassword) {
-		if (prefixEncodedPassword == null) {
-			return null;
-		}
-		int start = prefixEncodedPassword.indexOf(this.idPrefix);
-		if (start != 0) {
-			return null;
-		}
-		int end = prefixEncodedPassword.indexOf(this.idSuffix, start);
-		if (end < 0) {
-			return null;
-		}
-		return prefixEncodedPassword.substring(start + this.idPrefix.length(), end);
-	}
+    private String extractId(String prefixEncodedPassword) {
+        if (prefixEncodedPassword == null) {
+            return null;
+        }
+        int start = prefixEncodedPassword.indexOf(this.idPrefix);
+        if (start != 0) {
+            return null;
+        }
+        int end = prefixEncodedPassword.indexOf(this.idSuffix, start);
+        if (end < 0) {
+            return null;
+        }
+        return prefixEncodedPassword.substring(start + this.idPrefix.length(), end);
+    }
 
-	@Override
-	public boolean upgradeEncoding(String prefixEncodedPassword) {
-		String id = extractId(prefixEncodedPassword);
-		if (!this.idForEncode.equalsIgnoreCase(id)) {
-			return true;
-		}
-		else {
-			String encodedPassword = extractEncodedPassword(prefixEncodedPassword);
-			return this.idToPasswordEncoder.get(id).upgradeEncoding(encodedPassword);
-		}
-	}
+    @Override
+    public boolean upgradeEncoding(String prefixEncodedPassword) {
+        String id = extractId(prefixEncodedPassword);
+        if (!this.idForEncode.equalsIgnoreCase(id)) {
+            return true;
+        } else {
+            String encodedPassword = extractEncodedPassword(prefixEncodedPassword);
+            return this.idToPasswordEncoder.get(id).upgradeEncoding(encodedPassword);
+        }
+    }
 
-	private String extractEncodedPassword(String prefixEncodedPassword) {
-		int start = prefixEncodedPassword.indexOf(this.idSuffix);
-		return prefixEncodedPassword.substring(start + this.idSuffix.length());
-	}
+    private String extractEncodedPassword(String prefixEncodedPassword) {
+        int start = prefixEncodedPassword.indexOf(this.idSuffix);
+        return prefixEncodedPassword.substring(start + this.idSuffix.length());
+    }
 
-	/**
-	 * Default {@link PasswordEncoder} that throws an exception telling that a suitable
-	 * {@link PasswordEncoder} for the id could not be found.
-	 */
-	private class UnmappedIdPasswordEncoder implements PasswordEncoder {
+    /**
+     * Default {@link PasswordEncoder} that throws an exception telling that a suitable
+     * {@link PasswordEncoder} for the id could not be found.
+     */
+    private class UnmappedIdPasswordEncoder implements PasswordEncoder {
 
-		@Override
-		public String encode(CharSequence rawPassword) {
-			throw new UnsupportedOperationException("encode is not supported");
-		}
+        @Override
+        public String encode(CharSequence rawPassword) {
+            throw new UnsupportedOperationException("encode is not supported");
+        }
 
-		@Override
-		public boolean matches(CharSequence rawPassword, String prefixEncodedPassword) {
-			String id = extractId(prefixEncodedPassword);
-			throw new IllegalArgumentException("There is no PasswordEncoder mapped for the id \"" + id + "\"");
-		}
+        @Override
+        public boolean matches(CharSequence rawPassword, String prefixEncodedPassword) {
+            String id = extractId(prefixEncodedPassword);
+            throw new IllegalArgumentException("There is no PasswordEncoder mapped for the id \"" + id + "\"");
+        }
 
-	}
+    }
 
 }

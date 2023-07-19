@@ -39,107 +39,97 @@ import javax.crypto.spec.PBEParameterSpec;
  */
 final class CipherUtils {
 
-	private CipherUtils() {
-	}
+    private CipherUtils() {
+    }
 
-	/**
-	 * Generates a SecretKey.
-	 */
-	static SecretKey newSecretKey(String algorithm, String password) {
-		return newSecretKey(algorithm, new PBEKeySpec(password.toCharArray()));
-	}
+    /**
+     * Generates a SecretKey.
+     */
+    static SecretKey newSecretKey(String algorithm, String password) {
+        return newSecretKey(algorithm, new PBEKeySpec(password.toCharArray()));
+    }
 
-	/**
-	 * Generates a SecretKey.
-	 */
-	static SecretKey newSecretKey(String algorithm, PBEKeySpec keySpec) {
-		try {
-			SecretKeyFactory factory = SecretKeyFactory.getInstance(algorithm);
-			return factory.generateSecret(keySpec);
-		}
-		catch (NoSuchAlgorithmException ex) {
-			throw new IllegalArgumentException("Not a valid encryption algorithm", ex);
-		}
-		catch (InvalidKeySpecException ex) {
-			throw new IllegalArgumentException("Not a valid secret key", ex);
-		}
-	}
+    /**
+     * Generates a SecretKey.
+     */
+    static SecretKey newSecretKey(String algorithm, PBEKeySpec keySpec) {
+        try {
+            SecretKeyFactory factory = SecretKeyFactory.getInstance(algorithm);
+            return factory.generateSecret(keySpec);
+        } catch (NoSuchAlgorithmException ex) {
+            throw new IllegalArgumentException("Not a valid encryption algorithm", ex);
+        } catch (InvalidKeySpecException ex) {
+            throw new IllegalArgumentException("Not a valid secret key", ex);
+        }
+    }
 
-	/**
-	 * Constructs a new Cipher.
-	 */
-	static Cipher newCipher(String algorithm) {
-		try {
-			return Cipher.getInstance(algorithm);
-		}
-		catch (NoSuchAlgorithmException ex) {
-			throw new IllegalArgumentException("Not a valid encryption algorithm", ex);
-		}
-		catch (NoSuchPaddingException ex) {
-			throw new IllegalStateException("Should not happen", ex);
-		}
-	}
+    /**
+     * Constructs a new Cipher.
+     */
+    static Cipher newCipher(String algorithm) {
+        try {
+            return Cipher.getInstance(algorithm);
+        } catch (NoSuchAlgorithmException ex) {
+            throw new IllegalArgumentException("Not a valid encryption algorithm", ex);
+        } catch (NoSuchPaddingException ex) {
+            throw new IllegalStateException("Should not happen", ex);
+        }
+    }
 
-	/**
-	 * Initializes the Cipher for use.
-	 */
-	static <T extends AlgorithmParameterSpec> T getParameterSpec(Cipher cipher, Class<T> parameterSpecClass) {
-		try {
-			return cipher.getParameters().getParameterSpec(parameterSpecClass);
-		}
-		catch (InvalidParameterSpecException ex) {
-			throw new IllegalArgumentException("Unable to access parameter", ex);
-		}
-	}
+    /**
+     * Initializes the Cipher for use.
+     */
+    static <T extends AlgorithmParameterSpec> T getParameterSpec(Cipher cipher, Class<T> parameterSpecClass) {
+        try {
+            return cipher.getParameters().getParameterSpec(parameterSpecClass);
+        } catch (InvalidParameterSpecException ex) {
+            throw new IllegalArgumentException("Unable to access parameter", ex);
+        }
+    }
 
-	/**
-	 * Initializes the Cipher for use.
-	 */
-	static void initCipher(Cipher cipher, int mode, SecretKey secretKey) {
-		initCipher(cipher, mode, secretKey, null);
-	}
+    /**
+     * Initializes the Cipher for use.
+     */
+    static void initCipher(Cipher cipher, int mode, SecretKey secretKey) {
+        initCipher(cipher, mode, secretKey, null);
+    }
 
-	/**
-	 * Initializes the Cipher for use.
-	 */
-	static void initCipher(Cipher cipher, int mode, SecretKey secretKey, byte[] salt, int iterationCount) {
-		initCipher(cipher, mode, secretKey, new PBEParameterSpec(salt, iterationCount));
-	}
+    /**
+     * Initializes the Cipher for use.
+     */
+    static void initCipher(Cipher cipher, int mode, SecretKey secretKey, byte[] salt, int iterationCount) {
+        initCipher(cipher, mode, secretKey, new PBEParameterSpec(salt, iterationCount));
+    }
 
-	/**
-	 * Initializes the Cipher for use.
-	 */
-	static void initCipher(Cipher cipher, int mode, SecretKey secretKey, AlgorithmParameterSpec parameterSpec) {
-		try {
-			if (parameterSpec != null) {
-				cipher.init(mode, secretKey, parameterSpec);
-			}
-			else {
-				cipher.init(mode, secretKey);
-			}
-		}
-		catch (InvalidKeyException ex) {
-			throw new IllegalArgumentException("Unable to initialize due to invalid secret key", ex);
-		}
-		catch (InvalidAlgorithmParameterException ex) {
-			throw new IllegalStateException("Unable to initialize due to invalid decryption parameter spec", ex);
-		}
-	}
+    /**
+     * Initializes the Cipher for use.
+     */
+    static void initCipher(Cipher cipher, int mode, SecretKey secretKey, AlgorithmParameterSpec parameterSpec) {
+        try {
+            if (parameterSpec != null) {
+                cipher.init(mode, secretKey, parameterSpec);
+            } else {
+                cipher.init(mode, secretKey);
+            }
+        } catch (InvalidKeyException ex) {
+            throw new IllegalArgumentException("Unable to initialize due to invalid secret key", ex);
+        } catch (InvalidAlgorithmParameterException ex) {
+            throw new IllegalStateException("Unable to initialize due to invalid decryption parameter spec", ex);
+        }
+    }
 
-	/**
-	 * Invokes the Cipher to perform encryption or decryption (depending on the
-	 * initialized mode).
-	 */
-	static byte[] doFinal(Cipher cipher, byte[] input) {
-		try {
-			return cipher.doFinal(input);
-		}
-		catch (IllegalBlockSizeException ex) {
-			throw new IllegalStateException("Unable to invoke Cipher due to illegal block size", ex);
-		}
-		catch (BadPaddingException ex) {
-			throw new IllegalStateException("Unable to invoke Cipher due to bad padding", ex);
-		}
-	}
+    /**
+     * Invokes the Cipher to perform encryption or decryption (depending on the
+     * initialized mode).
+     */
+    static byte[] doFinal(Cipher cipher, byte[] input) {
+        try {
+            return cipher.doFinal(input);
+        } catch (IllegalBlockSizeException ex) {
+            throw new IllegalStateException("Unable to invoke Cipher due to illegal block size", ex);
+        } catch (BadPaddingException ex) {
+            throw new IllegalStateException("Unable to invoke Cipher due to bad padding", ex);
+        }
+    }
 
 }

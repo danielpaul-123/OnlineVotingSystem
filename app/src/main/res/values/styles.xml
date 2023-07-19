@@ -12,8 +12,40 @@
         <item name="colorAccent">@color/purple_200</item>
     </style>
 
-    <style name="MyAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+    <style name="MyAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert" />
+
+    <style name="dashboard_data_bg">
+        <item name="android:orientation">vertical</item>
+        <item name="background">@drawable/dashboard_data_bg</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="dashboard_data_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/lightgreytext</item>
+    </style>
+
+    <style name="dashboard_data_date">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/abeezee</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/lightgreytext</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="dashboard_data_time">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/lightgreytext</item>
+        <item name="android:textSize">22sp</item>
+    </style>
 </resources>
 

@@ -23,9 +23,6 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView imageView;
-
-  @NonNull
   public final Button loginbutton;
 
   @NonNull
@@ -33,6 +30,9 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final LinearDotsLoader loginprogress;
+
+  @NonNull
+  public final ImageView logo;
 
   @NonNull
   public final EditText password;
@@ -43,15 +43,15 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final EditText voterid;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView,
-      @NonNull Button loginbutton, @NonNull ConstraintLayout loginpage,
-      @NonNull LinearDotsLoader loginprogress, @NonNull EditText password,
-      @NonNull EditText username, @NonNull EditText voterid) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button loginbutton,
+      @NonNull ConstraintLayout loginpage, @NonNull LinearDotsLoader loginprogress,
+      @NonNull ImageView logo, @NonNull EditText password, @NonNull EditText username,
+      @NonNull EditText voterid) {
     this.rootView = rootView;
-    this.imageView = imageView;
     this.loginbutton = loginbutton;
     this.loginpage = loginpage;
     this.loginprogress = loginprogress;
+    this.logo = logo;
     this.password = password;
     this.username = username;
     this.voterid = voterid;
@@ -84,12 +84,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
-        break missingId;
-      }
-
       id = R.id.loginbutton;
       Button loginbutton = ViewBindings.findChildViewById(rootView, id);
       if (loginbutton == null) {
@@ -101,6 +95,12 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.loginprogress;
       LinearDotsLoader loginprogress = ViewBindings.findChildViewById(rootView, id);
       if (loginprogress == null) {
+        break missingId;
+      }
+
+      id = R.id.logo;
+      ImageView logo = ViewBindings.findChildViewById(rootView, id);
+      if (logo == null) {
         break missingId;
       }
 
@@ -122,8 +122,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, imageView, loginbutton, loginpage,
-          loginprogress, password, username, voterid);
+      return new ActivityMainBinding((ConstraintLayout) rootView, loginbutton, loginpage,
+          loginprogress, logo, password, username, voterid);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

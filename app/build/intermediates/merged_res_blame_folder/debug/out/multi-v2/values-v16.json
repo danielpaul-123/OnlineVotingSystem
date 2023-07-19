@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-52:/values-v16/values-v16.xml",
+            "outputFile": "com.project.onlinevotingsystem.app-mergeDebugResources-51:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\7fc5a28e9b3439055681e2452656b3d1\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Daniel Paul\\.gradle\\caches\\transforms-3\\2ed30a9306a58db86b4daf039e5adc0b\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Daniel Paul\\.gradle\\caches\\transforms-3\\afcb02c013d3e43008200284e504df0e\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "E:\\AndroidStudioGradle\\caches\\transforms-3\\2a6b8d47231ddcb1817ffe241541665b\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

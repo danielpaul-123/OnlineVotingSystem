@@ -2,7 +2,9 @@ R_DEF: Internal format may change without notice
 local
 anim fade_in
 anim fade_out
+anim scaler
 anim translate
+anim translator
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -37,6 +39,7 @@ drawable baseline_person_24
 drawable baseline_remember_me_24
 drawable bg_gradient
 drawable button_bg
+drawable dashboard_data_bg
 drawable icon_foreground
 drawable icon_foreground_login
 drawable linearlayoutbg
@@ -50,6 +53,7 @@ font actor
 font advent_pro_bold
 font advent_pro_thin
 font lato
+font nunito
 font open_sans_light
 font open_sans_semibold
 id apptitle
@@ -59,6 +63,7 @@ id button_yes
 id change_password
 id change_username
 id confirmnewpassword
+id dashboard_data
 id election
 id electionlinear
 id electionscroll
@@ -103,6 +108,7 @@ id voting
 layout activity_main
 layout activity_navigation_home
 layout activity_splash
+layout dashboard_data
 layout dialog_negative
 layout dialog_positive
 layout fragment_change_password
@@ -160,6 +166,10 @@ style Theme.OnlineVotingSystem
 style Theme.OnlineVotingSystem.AppBarOverlay
 style Theme.OnlineVotingSystem.NoActionBar
 style Theme.OnlineVotingSystem.PopupOverlay
+style dashboard_data_bg
+style dashboard_data_date
+style dashboard_data_name
+style dashboard_data_time
 transition slide_in
 transition slide_out
 xml backup_rules

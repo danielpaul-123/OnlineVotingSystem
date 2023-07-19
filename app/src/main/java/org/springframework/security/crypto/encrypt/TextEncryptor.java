@@ -23,14 +23,14 @@ package org.springframework.security.crypto.encrypt;
  */
 public interface TextEncryptor {
 
-	/**
-	 * Encrypt the raw text string.
-	 */
-	String encrypt(String text);
+    /**
+     * Encrypt the raw text string.
+     */
+    String encrypt(String text);
 
-	/**
-	 * Decrypt the encrypted text string.
-	 */
-	String decrypt(String encryptedText);
+    /**
+     * Decrypt the encrypted text string.
+     */
+    String decrypt(String encryptedText);
 
 }

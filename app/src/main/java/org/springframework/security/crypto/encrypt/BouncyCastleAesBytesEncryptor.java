@@ -28,27 +28,26 @@ import org.springframework.security.crypto.keygen.KeyGenerators;
  * Base class for AES-256 encryption using Bouncy Castle.
  *
  * @author William Tran
- *
  */
 abstract class BouncyCastleAesBytesEncryptor implements BytesEncryptor {
 
-	final KeyParameter secretKey;
+    final KeyParameter secretKey;
 
-	final BytesKeyGenerator ivGenerator;
+    final BytesKeyGenerator ivGenerator;
 
-	BouncyCastleAesBytesEncryptor(String password, CharSequence salt) {
-		this(password, salt, KeyGenerators.secureRandom(16));
-	}
+    BouncyCastleAesBytesEncryptor(String password, CharSequence salt) {
+        this(password, salt, KeyGenerators.secureRandom(16));
+    }
 
-	BouncyCastleAesBytesEncryptor(String password, CharSequence salt, BytesKeyGenerator ivGenerator) {
-		if (ivGenerator.getKeyLength() != 16) {
-			throw new IllegalArgumentException("ivGenerator key length != block size 16");
-		}
-		this.ivGenerator = ivGenerator;
-		PBEParametersGenerator keyGenerator = new PKCS5S2ParametersGenerator();
-		byte[] pkcs12PasswordBytes = PBEParametersGenerator.PKCS5PasswordToUTF8Bytes(password.toCharArray());
-		keyGenerator.init(pkcs12PasswordBytes, Hex.decode(salt), 1024);
-		this.secretKey = (KeyParameter) keyGenerator.generateDerivedParameters(256);
-	}
+    BouncyCastleAesBytesEncryptor(String password, CharSequence salt, BytesKeyGenerator ivGenerator) {
+        if (ivGenerator.getKeyLength() != 16) {
+            throw new IllegalArgumentException("ivGenerator key length != block size 16");
+        }
+        this.ivGenerator = ivGenerator;
+        PBEParametersGenerator keyGenerator = new PKCS5S2ParametersGenerator();
+        byte[] pkcs12PasswordBytes = PBEParametersGenerator.PKCS5PasswordToUTF8Bytes(password.toCharArray());
+        keyGenerator.init(pkcs12PasswordBytes, Hex.decode(salt), 1024);
+        this.secretKey = (KeyParameter) keyGenerator.generateDerivedParameters(256);
+    }
 
 }

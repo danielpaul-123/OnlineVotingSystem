@@ -36,51 +36,50 @@ import org.springframework.security.crypto.util.EncodingUtils;
  */
 public class BouncyCastleAesCbcBytesEncryptor extends BouncyCastleAesBytesEncryptor {
 
-	public BouncyCastleAesCbcBytesEncryptor(String password, CharSequence salt) {
-		super(password, salt);
-	}
+    public BouncyCastleAesCbcBytesEncryptor(String password, CharSequence salt) {
+        super(password, salt);
+    }
 
-	public BouncyCastleAesCbcBytesEncryptor(String password, CharSequence salt, BytesKeyGenerator ivGenerator) {
-		super(password, salt, ivGenerator);
-	}
+    public BouncyCastleAesCbcBytesEncryptor(String password, CharSequence salt, BytesKeyGenerator ivGenerator) {
+        super(password, salt, ivGenerator);
+    }
 
-	@Override
-	@SuppressWarnings("deprecation")
-	public byte[] encrypt(byte[] bytes) {
-		byte[] iv = this.ivGenerator.generateKey();
-		PaddedBufferedBlockCipher blockCipher = new PaddedBufferedBlockCipher(
-				new CBCBlockCipher(new org.bouncycastle.crypto.engines.AESFastEngine()), new PKCS7Padding());
-		blockCipher.init(true, new ParametersWithIV(this.secretKey, iv));
-		byte[] encrypted = process(blockCipher, bytes);
-		return (iv != null) ? EncodingUtils.concatenate(iv, encrypted) : encrypted;
-	}
+    @Override
+    @SuppressWarnings("deprecation")
+    public byte[] encrypt(byte[] bytes) {
+        byte[] iv = this.ivGenerator.generateKey();
+        PaddedBufferedBlockCipher blockCipher = new PaddedBufferedBlockCipher(
+                new CBCBlockCipher(new org.bouncycastle.crypto.engines.AESFastEngine()), new PKCS7Padding());
+        blockCipher.init(true, new ParametersWithIV(this.secretKey, iv));
+        byte[] encrypted = process(blockCipher, bytes);
+        return (iv != null) ? EncodingUtils.concatenate(iv, encrypted) : encrypted;
+    }
 
-	@Override
-	@SuppressWarnings("deprecation")
-	public byte[] decrypt(byte[] encryptedBytes) {
-		byte[] iv = EncodingUtils.subArray(encryptedBytes, 0, this.ivGenerator.getKeyLength());
-		encryptedBytes = EncodingUtils.subArray(encryptedBytes, this.ivGenerator.getKeyLength(), encryptedBytes.length);
-		PaddedBufferedBlockCipher blockCipher = new PaddedBufferedBlockCipher(
-				new CBCBlockCipher(new org.bouncycastle.crypto.engines.AESFastEngine()), new PKCS7Padding());
-		blockCipher.init(false, new ParametersWithIV(this.secretKey, iv));
-		return process(blockCipher, encryptedBytes);
-	}
+    @Override
+    @SuppressWarnings("deprecation")
+    public byte[] decrypt(byte[] encryptedBytes) {
+        byte[] iv = EncodingUtils.subArray(encryptedBytes, 0, this.ivGenerator.getKeyLength());
+        encryptedBytes = EncodingUtils.subArray(encryptedBytes, this.ivGenerator.getKeyLength(), encryptedBytes.length);
+        PaddedBufferedBlockCipher blockCipher = new PaddedBufferedBlockCipher(
+                new CBCBlockCipher(new org.bouncycastle.crypto.engines.AESFastEngine()), new PKCS7Padding());
+        blockCipher.init(false, new ParametersWithIV(this.secretKey, iv));
+        return process(blockCipher, encryptedBytes);
+    }
 
-	private byte[] process(BufferedBlockCipher blockCipher, byte[] in) {
-		byte[] buf = new byte[blockCipher.getOutputSize(in.length)];
-		int bytesWritten = blockCipher.processBytes(in, 0, in.length, buf, 0);
-		try {
-			bytesWritten += blockCipher.doFinal(buf, bytesWritten);
-		}
-		catch (InvalidCipherTextException ex) {
-			throw new IllegalStateException("unable to encrypt/decrypt", ex);
-		}
-		if (bytesWritten == buf.length) {
-			return buf;
-		}
-		byte[] out = new byte[bytesWritten];
-		System.arraycopy(buf, 0, out, 0, bytesWritten);
-		return out;
-	}
+    private byte[] process(BufferedBlockCipher blockCipher, byte[] in) {
+        byte[] buf = new byte[blockCipher.getOutputSize(in.length)];
+        int bytesWritten = blockCipher.processBytes(in, 0, in.length, buf, 0);
+        try {
+            bytesWritten += blockCipher.doFinal(buf, bytesWritten);
+        } catch (InvalidCipherTextException ex) {
+            throw new IllegalStateException("unable to encrypt/decrypt", ex);
+        }
+        if (bytesWritten == buf.length) {
+            return buf;
+        }
+        byte[] out = new byte[bytesWritten];
+        System.arraycopy(buf, 0, out, 0, bytesWritten);
+        return out;
+    }
 
 }

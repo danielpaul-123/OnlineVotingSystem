@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/acme</item>
         <item>@font/lato</item>
+        <item>@font/nunito</item>
         <item>@font/open_sans_light</item>
         <item>@font/open_sans_semibold</item>
     </array>

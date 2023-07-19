@@ -30,12 +30,13 @@
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.OnlineVotingSystem" >
         <activity
             android:name="com.project.onlinevotingsystem.Navigation_HomeActivity"
             android:exported="false" />
         <activity
-            android:name="com.project.onlinevotingsystem.SplashActivity"
+            android:name="com.project.onlinevotingsystem.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,9 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.project.onlinevotingsystem.MainActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

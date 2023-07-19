@@ -63,10 +63,11 @@
                     app:loader_showRunningShadow="true"
                     app:loader_firstShadowColor="@color/blue_selected"
                     app:loader_secondShadowColor="@color/blue_default"
-                    android:visibility="visible"/>
+                    android:visibility="visible" />
 
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -76,7 +77,6 @@
             android:id="@+id/votesubmitbuttonlayout"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:gravity="center">
-        </LinearLayout>
+            android:gravity="center" />
     </LinearLayout>
 </FrameLayout>

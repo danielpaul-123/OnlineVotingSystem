@@ -24,16 +24,16 @@
         android:id="@+id/enternewusername"
         android:name="com.project.onlinevotingsystem.EnterNewUsernameFragment"
         android:label="Enter New Username"
-        tools:layout="@layout/fragment_enter_new_username"/>
+        tools:layout="@layout/fragment_enter_new_username" />
     <fragment
         android:id="@+id/enternewpassword"
         android:name="com.project.onlinevotingsystem.EnterNewPasswordFragment"
         android:label="Enter New Password"
-        tools:layout="@layout/fragment_enter_new_password"/>
+        tools:layout="@layout/fragment_enter_new_password" />
     <fragment
         android:id="@+id/voting"
         android:name="com.project.onlinevotingsystem.VotingFragment"
         android:label="Place Your Vote"
-        tools:layout="@layout/fragment_voting"/>
+        tools:layout="@layout/fragment_voting" />
 
 </navigation>

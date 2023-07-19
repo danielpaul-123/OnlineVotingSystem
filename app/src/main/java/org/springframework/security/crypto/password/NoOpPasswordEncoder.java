@@ -19,7 +19,7 @@ package org.springframework.security.crypto.password;
 /**
  * This {@link PasswordEncoder} is provided for legacy and testing purposes only and is
  * not considered secure.
- *
+ * <p>
  * A password encoder that does nothing. Useful for testing where working with plain text
  * passwords may be preferred.
  *
@@ -33,26 +33,26 @@ package org.springframework.security.crypto.password;
 @Deprecated
 public final class NoOpPasswordEncoder implements PasswordEncoder {
 
-	private static final PasswordEncoder INSTANCE = new NoOpPasswordEncoder();
+    private static final PasswordEncoder INSTANCE = new NoOpPasswordEncoder();
 
-	private NoOpPasswordEncoder() {
-	}
+    private NoOpPasswordEncoder() {
+    }
 
-	@Override
-	public String encode(CharSequence rawPassword) {
-		return rawPassword.toString();
-	}
+    @Override
+    public String encode(CharSequence rawPassword) {
+        return rawPassword.toString();
+    }
 
-	@Override
-	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		return rawPassword.toString().equals(encodedPassword);
-	}
+    @Override
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        return rawPassword.toString().equals(encodedPassword);
+    }
 
-	/**
-	 * Get the singleton {@link NoOpPasswordEncoder}.
-	 */
-	public static PasswordEncoder getInstance() {
-		return INSTANCE;
-	}
+    /**
+     * Get the singleton {@link NoOpPasswordEncoder}.
+     */
+    public static PasswordEncoder getInstance() {
+        return INSTANCE;
+    }
 
 }

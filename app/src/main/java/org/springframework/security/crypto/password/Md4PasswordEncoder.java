@@ -26,14 +26,14 @@ import org.springframework.security.crypto.keygen.StringKeyGenerator;
 /**
  * This {@link PasswordEncoder} is provided for legacy purposes only and is not considered
  * secure.
- *
+ * <p>
  * Encodes passwords using MD4. The general format of the password is:
  *
  * <pre>
  * s = salt == null ? "" : "{" + salt + "}"
  * s + md4(password + s)
  * </pre>
- *
+ * <p>
  * Such that "salt" is the salt, md4 is the digest method, and password is the actual
  * password. For example with a password of "password", and a salt of "thisissalt":
  *
@@ -43,19 +43,19 @@ import org.springframework.security.crypto.keygen.StringKeyGenerator;
  * "{thisissalt}" + md4(password + "{thisissalt}")
  * "{thisissalt}6cc7924dad12ade79dfb99e424f25260"
  * </pre>
- *
+ * <p>
  * If the salt does not exist, then omit "{salt}" like this:
  *
  * <pre>
  * md4(password)
  * </pre>
- *
+ * <p>
  * If the salt is an empty String, then only use "{}" like this:
  *
  * <pre>
  * "{}" + md4(password + "{}")
  * </pre>
- *
+ * <p>
  * The format is intended to work with the Md4PasswordEncoder that was found in the Spring
  * Security core module. However, the passwords will need to be migrated to include any
  * salt with the password since this API provides Salt internally vs making it the
@@ -80,75 +80,77 @@ import org.springframework.security.crypto.keygen.StringKeyGenerator;
 @Deprecated
 public class Md4PasswordEncoder implements PasswordEncoder {
 
-	private static final String PREFIX = "{";
+    private static final String PREFIX = "{";
 
-	private static final String SUFFIX = "}";
+    private static final String SUFFIX = "}";
 
-	private StringKeyGenerator saltGenerator = new Base64StringKeyGenerator();
+    private StringKeyGenerator saltGenerator = new Base64StringKeyGenerator();
 
-	private boolean encodeHashAsBase64;
+    private boolean encodeHashAsBase64;
 
-	public void setEncodeHashAsBase64(boolean encodeHashAsBase64) {
-		this.encodeHashAsBase64 = encodeHashAsBase64;
-	}
+    public void setEncodeHashAsBase64(boolean encodeHashAsBase64) {
+        this.encodeHashAsBase64 = encodeHashAsBase64;
+    }
 
-	/**
-	 * Encodes the rawPass using a MessageDigest. If a salt is specified it will be merged
-	 * with the password before encoding.
-	 * @param rawPassword The plain text password
-	 * @return Hex string of password digest (or base64 encoded string if
-	 * encodeHashAsBase64 is enabled.
-	 */
-	@Override
-	public String encode(CharSequence rawPassword) {
-		String salt = PREFIX + this.saltGenerator.generateKey() + SUFFIX;
-		return digest(salt, rawPassword);
-	}
+    /**
+     * Encodes the rawPass using a MessageDigest. If a salt is specified it will be merged
+     * with the password before encoding.
+     *
+     * @param rawPassword The plain text password
+     * @return Hex string of password digest (or base64 encoded string if
+     * encodeHashAsBase64 is enabled.
+     */
+    @Override
+    public String encode(CharSequence rawPassword) {
+        String salt = PREFIX + this.saltGenerator.generateKey() + SUFFIX;
+        return digest(salt, rawPassword);
+    }
 
-	private String digest(String salt, CharSequence rawPassword) {
-		if (rawPassword == null) {
-			rawPassword = "";
-		}
-		String saltedPassword = rawPassword + salt;
-		byte[] saltedPasswordBytes = Utf8.encode(saltedPassword);
-		Md4 md4 = new Md4();
-		md4.update(saltedPasswordBytes, 0, saltedPasswordBytes.length);
-		byte[] digest = md4.digest();
-		String encoded = encode(digest);
-		return salt + encoded;
-	}
+    private String digest(String salt, CharSequence rawPassword) {
+        if (rawPassword == null) {
+            rawPassword = "";
+        }
+        String saltedPassword = rawPassword + salt;
+        byte[] saltedPasswordBytes = Utf8.encode(saltedPassword);
+        Md4 md4 = new Md4();
+        md4.update(saltedPasswordBytes, 0, saltedPasswordBytes.length);
+        byte[] digest = md4.digest();
+        String encoded = encode(digest);
+        return salt + encoded;
+    }
 
-	private String encode(byte[] digest) {
-		if (this.encodeHashAsBase64) {
-			return Utf8.decode(Base64.getEncoder().encode(digest));
-		}
-		return new String(Hex.encode(digest));
-	}
+    private String encode(byte[] digest) {
+        if (this.encodeHashAsBase64) {
+            return Utf8.decode(Base64.getEncoder().encode(digest));
+        }
+        return new String(Hex.encode(digest));
+    }
 
-	/**
-	 * Takes a previously encoded password and compares it with a rawpassword after mixing
-	 * in the salt and encoding that value
-	 * @param rawPassword plain text password
-	 * @param encodedPassword previously encoded password
-	 * @return true or false
-	 */
-	@Override
-	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		String salt = extractSalt(encodedPassword);
-		String rawPasswordEncoded = digest(salt, rawPassword);
-		return PasswordEncoderUtils.equals(encodedPassword.toString(), rawPasswordEncoded);
-	}
+    /**
+     * Takes a previously encoded password and compares it with a rawpassword after mixing
+     * in the salt and encoding that value
+     *
+     * @param rawPassword     plain text password
+     * @param encodedPassword previously encoded password
+     * @return true or false
+     */
+    @Override
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        String salt = extractSalt(encodedPassword);
+        String rawPasswordEncoded = digest(salt, rawPassword);
+        return PasswordEncoderUtils.equals(encodedPassword.toString(), rawPasswordEncoded);
+    }
 
-	private String extractSalt(String prefixEncodedPassword) {
-		int start = prefixEncodedPassword.indexOf(PREFIX);
-		if (start != 0) {
-			return "";
-		}
-		int end = prefixEncodedPassword.indexOf(SUFFIX, start);
-		if (end < 0) {
-			return "";
-		}
-		return prefixEncodedPassword.substring(start, end + 1);
-	}
+    private String extractSalt(String prefixEncodedPassword) {
+        int start = prefixEncodedPassword.indexOf(PREFIX);
+        if (start != 0) {
+            return "";
+        }
+        int end = prefixEncodedPassword.indexOf(SUFFIX, start);
+        if (end < 0) {
+            return "";
+        }
+        return prefixEncodedPassword.substring(start, end + 1);
+    }
 
 }

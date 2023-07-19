@@ -47,7 +47,9 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim scaler
 anim translate
+anim translator
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -2918,6 +2920,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable dashboard_data_bg
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3024,6 +3027,7 @@ font actor
 font advent_pro_bold
 font advent_pro_thin
 font lato
+font nunito
 font open_sans_light
 font open_sans_semibold
 id ALT
@@ -3177,6 +3181,7 @@ id custom
 id customPanel
 id cut
 id dark
+id dashboard_data
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3700,6 +3705,7 @@ layout activity_main
 layout activity_navigation_home
 layout activity_splash
 layout custom_dialog
+layout dashboard_data
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -5126,6 +5132,10 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style dashboard_data_bg
+style dashboard_data_date
+style dashboard_data_name
+style dashboard_data_time
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

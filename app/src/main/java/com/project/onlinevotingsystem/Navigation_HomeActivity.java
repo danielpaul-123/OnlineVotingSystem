@@ -22,16 +22,16 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.makeramen.roundedimageview.RoundedImageView;
 
+@SuppressWarnings("AssignmentToStaticFieldFromInstanceMethod")
 public class Navigation_HomeActivity extends AppCompatActivity {
 
     DrawerLayout navigationlayout;
     RoundedImageView profile_image;
-    TextView usernameview,voteridview,title;
+    TextView usernameview, voteridview, title;
     NavigationView nav_menu;
     static String voterid;
     String username;
-    ImageButton logoutbutton,reloadbutton;
-
+    ImageButton logoutbutton, reloadbutton;
 
 
     @Override
@@ -41,7 +41,7 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         navigationlayout = findViewById(R.id.navigationlayout);
         nav_menu = findViewById(R.id.nav_menu);
         title = findViewById(R.id.apptitle);
-        NavController navController = Navigation.findNavController(this,R.id.navigation_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.navigation_host_fragment);
         NavigationUI.setupWithNavController(nav_menu, navController);
         navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> title.setText(navDestination.getLabel()));
 
@@ -60,14 +60,14 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         usernameview.setText(username);
         voteridview.setText(voterid);
 
-        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("user_profile/"+voterid);
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("user_profile/" + voterid);
 
         storageRef.getBytes(Long.MAX_VALUE).addOnSuccessListener(bytes -> {
 
             Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
             profile_image.setImageBitmap(bitmap);
 
-        }).addOnFailureListener(e -> Toast.makeText(Navigation_HomeActivity.this,"Failed to Load Profile Image",Toast.LENGTH_LONG).show());
+        }).addOnFailureListener(e -> Toast.makeText(Navigation_HomeActivity.this, "Failed to Load Profile Image", Toast.LENGTH_LONG).show());
         usernameview.setText(username);
         voteridview.setText(voterid);
 
@@ -78,18 +78,21 @@ public class Navigation_HomeActivity extends AppCompatActivity {
         logoutbutton.bringToFront();
         logoutbutton.setEnabled(true);
         findViewById(R.id.logoutbuttonab).setOnClickListener(v -> {
-            AlertDialog.Builder logoutalert = new AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
+            AlertDialog.Builder logoutalert = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
             logoutalert.setIcon(R.drawable.baseline_how_to_vote_40).setTitle(R.string.app_name);
             logoutalert.setMessage("Are you sure you want to logout?");
             logoutalert.setPositiveButton("Yes", (dialog, which) -> {
                 Intent a = new Intent(this, MainActivity.class);
                 startActivity(a);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
-            }).setNegativeButton("Cancel",null);
+            }).setNegativeButton("Cancel", null);
             logoutalert.show();
         });
 
     }
-    public static String voteridreturn() {return voterid;}
+
+    public static String voteridreturn() {
+        return voterid;
+    }
 }

@@ -1,3 +1,0 @@
-com.project.onlinevotingsystem.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

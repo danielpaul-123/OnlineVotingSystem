@@ -29,6 +29,7 @@ import java.util.Map;
  * Use the {@link EnterNewPasswordFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+@SuppressWarnings("ALL")
 public class EnterNewPasswordFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -71,9 +72,10 @@ public class EnterNewPasswordFragment extends Fragment {
         }
 
     }
-    EditText newpassword,confirmpassword;
+
+    EditText newpassword, confirmpassword;
     Button Submit;
-    String passwordnew,newpasswordconfirm,voterid,newpasswordhash;
+    String passwordnew, newpasswordconfirm, voterid, newpasswordhash;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,7 +84,7 @@ public class EnterNewPasswordFragment extends Fragment {
         newpassword = view.findViewById(R.id.newpassword);
         confirmpassword = view.findViewById(R.id.confirmnewpassword);
         Submit = view.findViewById(R.id.submitbutton);
-        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(),callback);
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
         return view;
     }
 
@@ -93,45 +95,38 @@ public class EnterNewPasswordFragment extends Fragment {
 
         voterid = Navigation_HomeActivity.voteridreturn();
         Submit.setOnClickListener(v -> {
-            if(newpassword.getText().toString().isEmpty())
-            {
+            if (newpassword.getText().toString().isEmpty()) {
                 newpassword.setError("Please Enter Your Username");
-            }
-            else if(confirmpassword.getText().toString().isEmpty())
-            {
+            } else if (confirmpassword.getText().toString().isEmpty()) {
                 confirmpassword.setError("Please Enter Your Password");
-            }
-            else
-            {
+            } else {
                 passwordnew = newpassword.getText().toString();
                 newpasswordconfirm = confirmpassword.getText().toString();
-                if (passwordnew.equals(newpasswordconfirm))
-                {
+                if (passwordnew.equals(newpasswordconfirm)) {
                     newpasswordhash = new Argon2PasswordEncoder(16, 32, 1, 1 << 14, 2).encode(passwordnew);
                     FirebaseFirestoreSettings firestoreSettings = new FirebaseFirestoreSettings.Builder().setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED).build();
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
                     db.setFirestoreSettings(firestoreSettings);
                     DocumentReference ref = db.collection("Test_User").document(String.valueOf(voterid));
 
-                    Map<String,Object> hashdata = new HashMap<>();
-                    hashdata.put("Password",newpasswordhash);
+                    Map<String, Object> hashdata = new HashMap<>();
+                    hashdata.put("Password", newpasswordhash);
 
                     ref.update(hashdata)
-                        .addOnSuccessListener(unused -> {
-                            Toast.makeText(getActivity(),"Password Updated Successfully ",Toast.LENGTH_LONG).show();
-                            navController.navigate(R.id.home);
+                            .addOnSuccessListener(unused -> {
+                                Toast.makeText(getActivity(), "Password Updated Successfully ", Toast.LENGTH_LONG).show();
+                                navController.navigate(R.id.home);
 
-                        })
-                        .addOnFailureListener(e -> Toast.makeText(getActivity(),"Failed to Update Password. Please Try Again",Toast.LENGTH_LONG).show());
+                            })
+                            .addOnFailureListener(e -> Toast.makeText(getActivity(), "Failed to Update Password. Please Try Again", Toast.LENGTH_LONG).show());
 
-                }
-                else
-                {
-                    Toast.makeText(getActivity(),"Passwords do not match. Please Try Again",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getActivity(), "Passwords do not match. Please Try Again", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
+
     OnBackPressedCallback callback = new OnBackPressedCallback(true) {
         @Override
         public void handleOnBackPressed() {
