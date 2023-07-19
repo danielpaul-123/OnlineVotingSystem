@@ -40,32 +40,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         linearDotsLoader = findViewById(R.id.loginprogress);
 
-        new Thread(() -> {
-            try {
-                Thread.sleep(750);
-                runOnUiThread(() -> {
-                    Animation logotranslate = AnimationUtils.loadAnimation(this, R.anim.translator);
-                    logo.startAnimation(logotranslate);
-                });
-                Thread.sleep(500);
-                runOnUiThread(() -> {
-                    Animation fadein = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-                    login.startAnimation(fadein);
-                    voterid.startAnimation(fadein);
-                    username.startAnimation(fadein);
-                    password.startAnimation(fadein);
-                    voterid.bringToFront();
-                    username.bringToFront();
-                    password.bringToFront();
-                    login.setVisibility(View.VISIBLE);
-                    voterid.setVisibility(View.VISIBLE);
-                    username.setVisibility(View.VISIBLE);
-                    password.setVisibility(View.VISIBLE);
-                });
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
+        thread.start();
 
         login.setOnClickListener(v -> {
 
@@ -116,6 +91,33 @@ public class MainActivity extends AppCompatActivity {
                         });
             }
         });
+
     }
 
+    Thread thread = new Thread(() -> {
+        try {
+            Thread.sleep(750);
+            runOnUiThread(() -> {
+                Animation logotranslate = AnimationUtils.loadAnimation(this, R.anim.translator);
+                logo.startAnimation(logotranslate);
+            });
+            Thread.sleep(500);
+            runOnUiThread(() -> {
+                Animation fadein = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+                login.startAnimation(fadein);
+                voterid.startAnimation(fadein);
+                username.startAnimation(fadein);
+                password.startAnimation(fadein);
+                voterid.bringToFront();
+                username.bringToFront();
+                password.bringToFront();
+                login.setVisibility(View.VISIBLE);
+                voterid.setVisibility(View.VISIBLE);
+                username.setVisibility(View.VISIBLE);
+                password.setVisibility(View.VISIBLE);
+            });
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    });
 }
